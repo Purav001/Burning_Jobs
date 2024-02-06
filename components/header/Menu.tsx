@@ -29,9 +29,6 @@ const Menu = () => {
 
   return (
     <>
-      <div className="hidden md:block">
-        <SearchBox />
-      </div>
       <div>
         <ul className="flex items-stretch">
           <i>
