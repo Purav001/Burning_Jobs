@@ -1,7 +1,7 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
-import { SearchBox } from './SearchBox'
 
 const Header = () => {
   return (
@@ -9,7 +9,10 @@ const Header = () => {
       <nav>
         <div className="navbar justify-between bg-base-300">
           <div>
-            <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
+            <label
+              htmlFor="my-drawer"
+              className="btn btn-square btn-ghost md:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -25,14 +28,25 @@ const Header = () => {
               </svg>
             </label>
             <Link href="/" className="btn btn-ghost text-lg">
-              Next Amazona V2
+              Nani&apos;s Bilona Ghee
             </Link>
+            <div className="flex space-x-4 hidden md:block">
+              <a href="#" className="text-white">
+                Products
+              </a>
+              <a href="#" className="text-white">
+                Our Story
+              </a>
+              <a href="#" className="text-white">
+                Contact Us
+              </a>
+              <a href="#" className="text-white">
+                Blogs
+              </a>
+            </div>
           </div>
 
           <Menu />
-        </div>
-        <div className="bg-base-300 block md:hidden text-center pb-3">
-          <SearchBox />
         </div>
       </nav>
     </header>
