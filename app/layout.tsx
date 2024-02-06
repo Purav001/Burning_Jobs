@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Nani Bilona Ghee',
-  description: 'A2 Organic Ghee Website',
+
+  description: 'Nani Bilona Ghee Website',
+
 }
 
 export default function RootLayout({
@@ -30,7 +32,9 @@ export default function RootLayout({
                 {children}
                 <footer className="footer footer-center p-4 bg-base-300 text-base-content">
                   <p>
+
                     Copyright © 2024 - All right reserved by Nani's Bilona Ghee
+
                   </p>
                 </footer>
               </div>

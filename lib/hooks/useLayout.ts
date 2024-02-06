@@ -32,5 +32,10 @@ export default function useLayoutService() {
         drawerOpen: !drawerOpen,
       })
     },
+    closeDrower: () => {
+      layoutStore.setState({
+        drawerOpen: false,
+      })
+    },
   }
 }
