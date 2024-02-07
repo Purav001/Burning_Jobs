@@ -1,6 +1,7 @@
 import data from '@/lib/data'
 import dbConnect from '@/lib/dbConnect'
 import ProductModel from '@/lib/models/ProductModel'
+import SocialModel from '@/lib/models/SocialModel'
 import UserModel from '@/lib/models/UserModel'
 import { NextRequest, NextResponse } from 'next/server'
 
@@ -13,9 +14,13 @@ export const GET = async (request: NextRequest) => {
   await ProductModel.deleteMany()
   await ProductModel.insertMany(products)
 
+  // await SocialModel.deleteMany()
+  // await SocialModel.insertMany(socials)
+
   return NextResponse.json({
     message: 'seeded successfully',
     users,
     products,
+    // socials,
   })
 }
