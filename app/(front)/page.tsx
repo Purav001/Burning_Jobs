@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import ProductItem from '@/components/products/ProductItem'
+import SocialMediaItem from '@/components/socials/SocialMediaItem'
 import data from '@/lib/data'
 import productService from '@/lib/services/productService'
 import { convertDocToObj } from '@/lib/utils'
@@ -16,9 +17,10 @@ export const metadata: Metadata = {
 export default async function Home() {
   const featuredProducts = await productService.getFeatured()
   const latestProducts = await productService.getLatest()
+  const latestSocialMedia = await productService.getSocialMedia()
   return (
     <>
-      <div className="w-full carousel rounded-box mt-4">
+      <div className="w-full carousel rounded-box">
         {featuredProducts.map((product, index) => (
           <div
             key={product._id}
@@ -59,6 +61,14 @@ export default async function Home() {
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}
       </div>
+
+      <h2 className="text-2xl py-2">Join us on Social Media</h2>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+        {latestSocialMedia.map((social) => (
+          <SocialMediaItem key={social.slug} social={convertDocToObj(social)} />
+        ))}
+      </div>
+
     </>
   )
 }

@@ -1,6 +1,7 @@
 import { cache } from 'react'
 import dbConnect from '@/lib/dbConnect'
 import ProductModel, { Product } from '@/lib/models/ProductModel'
+import SocialModel, { Social } from '@/lib/models/SocialModel'
 
 export const revalidate = 3600
 
@@ -116,11 +117,18 @@ const getCategories = cache(async () => {
   return categories
 })
 
+const getSocialMedia = cache(async () => {
+  await dbConnect()
+  const socials = await SocialModel.find({}).sort({ _id: -1 }).limit(6).lean()
+  return socials as Social[]
+})
+
 const productService = {
   getLatest,
   getFeatured,
   getBySlug,
   getByQuery,
   getCategories,
+  getSocialMedia,
 }
 export default productService
