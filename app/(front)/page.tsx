@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import ProductItem from '@/components/products/ProductItem'
-import SocialMediaItem from '@/components/socials/SocialMediaItem'
+import SocialItem from '@/components/socials/SocialItem'
 import data from '@/lib/data'
 import productService from '@/lib/services/productService'
 import { convertDocToObj } from '@/lib/utils'
@@ -69,7 +69,7 @@ export default async function Home() {
       </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {latestSocialMedia.map((social) => (
-          <SocialMediaItem key={social.slug} social={convertDocToObj(social)} />
+          <SocialItem key={social.slug} social={convertDocToObj(social)} />
         ))}
       </div>
     </>

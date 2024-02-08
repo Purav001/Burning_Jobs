@@ -12,14 +12,14 @@ const socialSchema = new mongoose.Schema(
 )
 
 const SocialModel =
-  mongoose.models.Product || mongoose.model('Social', socialSchema)
+  mongoose.models.Social || mongoose.model('Social', socialSchema)
 
 export default SocialModel
 
 export type Social = {
- _id?: string
- slug: string
- name:string
+  _id?: string
+  slug: string
+  name: string
   image: string
   colors?: []
   sizes?: []
