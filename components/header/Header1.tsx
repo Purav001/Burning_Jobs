@@ -2,8 +2,13 @@
 import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 
 const Header = () => {
+  const scrollToTop = () => {
+    scroll.scrollToTop()
+  }
+
   return (
     <header>
       <nav>
@@ -31,18 +36,29 @@ const Header = () => {
               Nani&apos;s Bilona Ghee
             </Link>
             <div className="flex space-x-4 hidden md:block">
-              <a href="#" className="text-white">
+              <ScrollLink
+                to="product-section"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer btn btn-ghost"
+              >
                 Products
-              </a>
+              </ScrollLink>
+
               <a href="#" className="text-white">
                 Our Story
               </a>
               <a href="#" className="text-white">
                 Contact Us
               </a>
-              <a href="#" className="text-white">
-                Blogs
-              </a>
+              <ScrollLink
+                to="social-media-section"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer btn btn-ghost"
+              >
+                Social Media
+              </ScrollLink>
             </div>
           </div>
 
