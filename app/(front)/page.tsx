@@ -55,20 +55,23 @@ export default async function Home() {
           </div>
         ))}
       </div>
-      <h2 className="text-2xl py-2">Latest Products</h2>
+      <h2 className="text-2xl py-2" id="product-section">
+        Latest Products
+      </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {latestProducts.map((product) => (
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}
       </div>
 
-      <h2 className="text-2xl py-2">Join us on Social Media</h2>
+      <h2 className="text-2xl py-2" id="social-media-section">
+        Join us on Social Media
+      </h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {latestSocialMedia.map((social) => (
           <SocialMediaItem key={social.slug} social={convertDocToObj(social)} />
         ))}
       </div>
-
     </>
   )
 }
