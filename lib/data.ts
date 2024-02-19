@@ -57,6 +57,18 @@ const data = {
       image: '/images/S2.png',
     },
   ],
+  banners: [
+    {
+      name: 'Label front',
+      slug: 'label-front',
+      image: '/images/banner3.png',
+    },
+    {
+      name: 'Label Back',
+      slug: 'label-back',
+      image: '/images/banner4.png',
+    },
+  ],
 }
 
 export default data

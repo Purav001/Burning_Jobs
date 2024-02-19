@@ -2,6 +2,7 @@ import { cache } from 'react'
 import dbConnect from '@/lib/dbConnect'
 import ProductModel, { Product } from '@/lib/models/ProductModel'
 import SocialModel, { Social } from '@/lib/models/SocialModel'
+import BannerModel, { Banner } from '../models/BannerModel'
 
 export const revalidate = 3600
 
@@ -123,6 +124,12 @@ const getSocialMedia = cache(async () => {
   return socials as Social[]
 })
 
+const getBanners = cache(async () => {
+  await dbConnect()
+  const banners = await BannerModel.find({}).sort({ _id: -1 }).limit(6).lean()
+  return banners as Banner[]
+})
+
 const productService = {
   getLatest,
   getFeatured,
@@ -130,5 +137,6 @@ const productService = {
   getByQuery,
   getCategories,
   getSocialMedia,
+  getBanners,
 }
 export default productService

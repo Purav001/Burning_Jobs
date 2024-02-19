@@ -18,17 +18,18 @@ export default async function Home() {
   const featuredProducts = await productService.getFeatured()
   const latestProducts = await productService.getLatest()
   const latestSocialMedia = await productService.getSocialMedia()
+  const latestBanners = await productService.getBanners()
   return (
     <>
-      <div className="w-full carousel rounded-box">
-        {featuredProducts.map((product, index) => (
+      <div className="w-full carousel rounded-box overflow-hidden">
+        {latestBanners.map((banner, index) => (
           <div
-            key={product._id}
+            key={banner._id}
             id={`slide-${index}`}
             className="carousel-item relative w-full"
           >
-            <Link href={`/product/${product.slug}`}>
-              <img src={product.banner} className="w-full" alt={product.name} />
+            <Link href={`/product/${banner.slug}`}>
+              <img src={banner.image} className="w-full" alt={banner.name} />
             </Link>
 
             <div
