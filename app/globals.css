@@ -24,8 +24,18 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  padding-top: 60px;
 }
 
 .btn {
   text-transform: none;
+}
+
+/* Add a fixed position to the header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust z-index as needed to ensure the header appears above other elements */
 }

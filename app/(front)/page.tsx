@@ -18,17 +18,18 @@ export default async function Home() {
   const featuredProducts = await productService.getFeatured()
   const latestProducts = await productService.getLatest()
   const latestSocialMedia = await productService.getSocialMedia()
+  const latestBanners = await productService.getBanners()
   return (
     <>
-      <div className="w-full carousel rounded-box">
-        {featuredProducts.map((product, index) => (
+      <div className="w-full carousel rounded-box overflow-hidden">
+        {latestBanners.map((banner, index) => (
           <div
-            key={product._id}
+            key={banner._id}
             id={`slide-${index}`}
             className="carousel-item relative w-full"
           >
-            <Link href={`/product/${product.slug}`}>
-              <img src={product.banner} className="w-full" alt={product.name} />
+            <Link href={`/product/${banner.slug}`}>
+              <img src={banner.image} className="w-full" alt={banner.name} />
             </Link>
 
             <div
@@ -55,18 +56,29 @@ export default async function Home() {
           </div>
         ))}
       </div>
-      <h2 className="text-2xl py-2" id="product-section">
+      <h2
+        className={`text-4xl py-2 ${
+          latestProducts.length === 2 ? 'text-center' : ''
+        } text-yellow-500`}
+        id="product-section"
+      >
         Latest Products
       </h2>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <div
+        className={`grid ${
+          latestProducts.length === 2
+            ? 'grid-cols-2'
+            : 'md:grid-cols-3 lg:grid-cols-4'
+        } gap-4`}
+      >
         {latestProducts.map((product) => (
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}
       </div>
 
-      <h2 className="text-2xl py-2" id="social-media-section">
+      <h1 className="text-2xl py-2" id="social-media-section">
         Join us on Social Media
-      </h2>
+      </h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {latestSocialMedia.map((social) => (
           <SocialItem key={social.slug} social={convertDocToObj(social)} />

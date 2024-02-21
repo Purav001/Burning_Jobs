@@ -6,7 +6,7 @@ import { Rating } from './Rating'
 
 export default function ProductItem({ product }: { product: Product }) {
   return (
-    <div className="card bg-base-300 shadow-xl mb-4">
+    <div className="card bg-base-300 shadow-xl mb-4 transition-transform transform hover:scale-105">
       <figure>
         <Link href={`/product/${product.slug}`}>
           <Image
@@ -18,14 +18,19 @@ export default function ProductItem({ product }: { product: Product }) {
           />
         </Link>
       </figure>
-      <div className="card-body">
+      <div className="card-body p-4">
         <Link href={`/product/${product.slug}`}>
-          <h2 className="card-title font-normal">{product.name}</h2>
+          <h2 className="card-title font-semibold text-lg mb-2">
+            {product.name}
+          </h2>
         </Link>
-        <Rating value={product.rating} caption={`(${product.numReviews})`} />
+        <Rating
+          value={product.rating}
+          caption={`(${product.numReviews} Reviews)`}
+        />
         <p className="mb-2">{product.brand}</p>
         <div className="card-actions flex items-center justify-between">
-          <span className="text-2xl">${product.price}</span>
+          <span className="text-2xl font-bold">${product.price}</span>
         </div>
       </div>
     </div>
