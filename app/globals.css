@@ -39,3 +39,25 @@ header {
   width: 100%;
   z-index: 1000; /* Adjust z-index as needed to ensure the header appears above other elements */
 }
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-on-hover:hover {
+  animation: shake 0.5s ease-in-out;
+}
