@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import ProductItem from '@/components/products/ProductItem'
 import SocialItem from '@/components/socials/SocialItem'
-import data from '@/lib/data'
 import productService from '@/lib/services/productService'
 import { convertDocToObj } from '@/lib/utils'
 import { Metadata } from 'next'
 import Link from 'next/link'
+import FrequentlyAskedQuestions from '@/components/faq/FrequentlyAskedQuestions'
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Nani Bilona Ghee',
@@ -19,6 +19,7 @@ export default async function Home() {
   const latestProducts = await productService.getLatest()
   const latestSocialMedia = await productService.getSocialMedia()
   const latestBanners = await productService.getBanners()
+  const latestFaqs = await productService.getFaq()
   return (
     <>
       <div className="w-full carousel rounded-box overflow-hidden">
@@ -84,6 +85,8 @@ export default async function Home() {
           <SocialItem key={social.slug} social={convertDocToObj(social)} />
         ))}
       </div>
+
+      <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
     </>
   )
 }
