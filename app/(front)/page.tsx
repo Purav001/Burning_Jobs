@@ -7,6 +7,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import FrequentlyAskedQuestions from '@/components/faq/FrequentlyAskedQuestions'
 import Card from '@/components/Benifits'
+import WhatsAppWidget from '@/components/WhatsAppWidget'
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Nani Bilona Ghee',
@@ -135,6 +136,8 @@ export default async function Home() {
         <h1 className="text-3xl font-bold mb-4">Benefits of A2 Cow Ghee</h1>
         <Card cards={cards} />
       </div>
+
+      <WhatsAppWidget></WhatsAppWidget>
     </>
   )
 }
