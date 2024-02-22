@@ -6,6 +6,7 @@ import { convertDocToObj } from '@/lib/utils'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import FrequentlyAskedQuestions from '@/components/faq/FrequentlyAskedQuestions'
+import Card from '@/components/Benifits'
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Nani Bilona Ghee',
@@ -13,7 +14,49 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_APP_DESC ||
     'Nextjs, Server components, Next auth, daisyui, zustand',
 }
-
+const cards = [
+  {
+    imageSrc: 'benefits/1.png',
+    heading: 'Boosts Immune System & Prevents Infections.',
+  },
+  {
+    imageSrc: 'benefits/2.png',
+    heading: 'Maintains Healthy Heart',
+  },
+  {
+    imageSrc: 'benefits/3.png',
+    heading: 'Slow Down Ageing Process',
+  },
+  {
+    imageSrc: 'benefits/4.png',
+    heading: 'Promotes Healthy Pregnancy',
+  },
+  {
+    imageSrc: 'benefits/5.png',
+    heading: 'Improves Eye Sight/Vision',
+  },
+  {
+    imageSrc: 'benefits/6.png',
+    heading: 'Promotes Digestion & Boosts Energy Level',
+  },
+  {
+    imageSrc: 'benefits/7.png',
+    heading: 'Lubricates Joints & Reduces Pain',
+  },
+  {
+    imageSrc: 'benefits/8.png',
+    heading: 'Promotes Bone Density & Strength',
+  },
+  {
+    imageSrc: 'benefits/9.png',
+    heading: 'Cleanses Liver',
+  },
+  {
+    imageSrc: 'benefits/10.png',
+    heading: 'Helps in Weight Management',
+  },
+  // Add more cards as needed
+]
 export default async function Home() {
   const featuredProducts = await productService.getFeatured()
   const latestProducts = await productService.getLatest()
@@ -87,6 +130,11 @@ export default async function Home() {
       </div>
 
       <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
+
+      <div className="container mx-auto my-8">
+        <h1 className="text-3xl font-bold mb-4">Benefits of A2 Cow Ghee</h1>
+        <Card cards={cards} />
+      </div>
     </>
   )
 }
