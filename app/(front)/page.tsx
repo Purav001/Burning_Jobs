@@ -8,6 +8,8 @@ import Link from 'next/link'
 import FrequentlyAskedQuestions from '@/components/faq/FrequentlyAskedQuestions'
 import Card from '@/components/Benifits'
 import WhatsAppWidget from '@/components/WhatsAppWidget'
+import InstagramEmbed from '@/components/InstagramEmbed'
+import SocialMedia from '@/components/socialMedia/SocialMedia'
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Nani Bilona Ghee',
@@ -138,6 +140,9 @@ export default async function Home() {
       </div>
 
       <WhatsAppWidget></WhatsAppWidget>
+
+      {/* <InstagramEmbed></InstagramEmbed> */}
+      <SocialMedia></SocialMedia>
     </>
   )
 }
