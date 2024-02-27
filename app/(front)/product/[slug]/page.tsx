@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Rating } from '@/components/products/Rating'
 import { Gallery } from '@/components/products/gallery'
+import ProductTabs from '@/components/products/product-tabs/ProductTabs'
 
 export async function generateMetadata({
   params,
@@ -39,7 +40,7 @@ export default async function ProductDetails({
       <div className="my-2">
         <Link href="/">back to products</Link>
       </div>
-      <div className="grid md:grid-cols-4 md:gap-3">
+      <div className="grid md:grid-cols-3 md:gap-3">
         <div className="md:col-span-2">
           <Gallery
             images={product.images.map((image: Image) => ({
@@ -63,12 +64,44 @@ export default async function ProductDetails({
             <li>
               <div className="divider"></div>
             </li>
-            <li>
+            {/* <li>
               Description: <p>{product.description}</p>
+            </li> */}
+          </ul>
+          <div className="card md:mt-0">
+            <div className="card-body">
+              <div className="mb-2 flex justify-between">
+                <div>Price</div>
+                <div>${product.price}</div>
+              </div>
+              <div className="mb-2 flex justify-between">
+                <div>Status</div>
+                <div>
+                  {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
+                </div>
+              </div>
+              {product.countInStock !== 0 && (
+                <div className="card-actions justify-center">
+                  <AddToCart
+                    item={{
+                      ...convertDocToObj(product),
+                      qty: 0,
+                      color: '',
+                      size: '',
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+          <ProductTabs product={product}></ProductTabs>
+          <ul>
+            <li>
+              <p>{product.description}</p>
             </li>
           </ul>
         </div>
-        <div>
+        {/* <div>
           <div className="card  bg-base-300 shadow-xl mt-3 md:mt-0">
             <div className="card-body">
               <div className="mb-2 flex justify-between">
@@ -95,7 +128,7 @@ export default async function ProductDetails({
               )}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )

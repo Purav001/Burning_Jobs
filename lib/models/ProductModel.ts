@@ -24,6 +24,13 @@ const productSchema = new mongoose.Schema(
         altText: { type: String, required: true },
       },
     ],
+    source: { type: String, required: true },
+    origin_country: { type: String, required: true, default: 'India' },
+    making: {
+      type: String,
+      required: true,
+      default: 'Ayurvedic Bilona Method',
+    },
   },
   {
     timestamps: true,
@@ -51,4 +58,7 @@ export type Product = {
   colors?: []
   sizes?: [][]
   images: Image[]
+  making: string
+  origin_country: string
+  source: string
 }

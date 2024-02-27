@@ -17,16 +17,17 @@ const data = {
   ],
   products: [
     {
-      name: '500ml Ghee',
-      slug: '500ml-Ghee',
+      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method',
+      slug: 'a2-cow-ghee',
       category: 'Ghee',
       image: '/images/Ghee.png',
       price: 800,
-      brand: 'A2-Pure Ghee',
+      brand: "Nani's Bilona Ghee",
       rating: 4.5,
       numReviews: 3,
       countInStock: 20,
-      description: 'Pure ghee made with bilona',
+      description:
+        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
       isFeatured: true,
       banner: '/images/banner2.jpg',
       images: [
@@ -38,18 +39,22 @@ const data = {
         { url: '/images/cow-ghee/IMG_9828.JPG', altText: 'Alt text 6' },
         { url: '/images/cow-ghee/IMG_9869.JPG', altText: 'Alt text 7' },
       ],
+      source: 'Shaiwal Cow',
+      making: 'Ayurvedic Bilona Method',
+      origin_country: 'India',
     },
     {
-      name: '1l Ghee',
-      slug: '1l-Ghee',
+      name: 'Organic Buffalo Ghee | Ayurvedic bilona method',
+      slug: 'organic-buffalo-ghee',
       category: 'Ghee',
       image: '/images/Ghee.png',
       price: 800,
-      brand: 'A2-Pure Ghee',
+      brand: "Nani's Bilona Ghee",
       rating: 4.5,
       numReviews: 3,
       countInStock: 20,
-      description: 'Pure ghee made with bilona',
+      description:
+        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
       isFeatured: true,
       banner: '/images/banner2.jpg',
       images: [
@@ -61,6 +66,9 @@ const data = {
         { url: '/images/cow-ghee/IMG_9828.JPG', altText: 'Alt text 6' },
         { url: '/images/cow-ghee/IMG_9869.JPG', altText: 'Alt text 7' },
       ],
+      source: 'Buffalo',
+      making: 'Ayurvedic Bilona Method',
+      origin_country: 'India',
     },
   ],
   socials: [
