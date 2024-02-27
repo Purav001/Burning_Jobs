@@ -7,7 +7,7 @@ const InstagramEmbed: React.FC = () => {
       <blockquote
         className="instagram-media"
         data-instgrm-captioned
-        data-instgrm-permalink="https://www.instagram.com/p/BgPrjlfHcoB/"
+        data-instgrm-permalink="https://www.instagram.com/p/C21xrCxRkeE/"
         data-instgrm-version="8"
         style={{
           background: '#FFF',
@@ -42,7 +42,7 @@ const InstagramEmbed: React.FC = () => {
           </div>
           <p style={{ margin: '8px 0 0 0', padding: '0 4px' }}>
             <a
-              href="https://www.instagram.com/p/BgPrjlfHcoB/"
+              href="https://www.instagram.com/p/C21xrCxRkeE/"
               style={{
                 color: '#000',
                 fontFamily: 'Arial, sans-serif',
@@ -76,7 +76,7 @@ const InstagramEmbed: React.FC = () => {
           >
             A post shared by{' '}
             <a
-              href="https://www.instagram.com/jervoisakl/"
+              href="https://www.instagram.com/nani_bilona_ghee/"
               style={{
                 color: '#c9c8cd',
                 fontFamily: 'Arial, sans-serif',

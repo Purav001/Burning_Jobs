@@ -142,7 +142,7 @@ export default async function Home() {
       <WhatsAppWidget></WhatsAppWidget>
 
       {/* <InstagramEmbed></InstagramEmbed> */}
-      <SocialMedia></SocialMedia>
+      {/* <SocialMedia></SocialMedia> */}
     </>
   )
 }

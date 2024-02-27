@@ -4,6 +4,7 @@ import productService from '@/lib/services/productService'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Rating } from '@/components/products/Rating'
+import { Gallery } from '@/components/products/gallery'
 
 export async function generateMetadata({
   params,
@@ -18,6 +19,10 @@ export async function generateMetadata({
     title: product.name,
     description: product.description,
   }
+}
+interface Image {
+  url: string
+  altText: string
 }
 
 export default async function ProductDetails({
@@ -36,17 +41,12 @@ export default async function ProductDetails({
       </div>
       <div className="grid md:grid-cols-4 md:gap-3">
         <div className="md:col-span-2">
-          <Image
-            src={product.image}
-            alt={product.name}
-            width={640}
-            height={640}
-            sizes="100vw"
-            style={{
-              width: '100%',
-              height: 'auto',
-            }}
-          ></Image>
+          <Gallery
+            images={product.images.map((image: Image) => ({
+              src: image.url,
+              altText: image.altText,
+            }))}
+          ></Gallery>
         </div>
         <div>
           <ul className="space-y-4">

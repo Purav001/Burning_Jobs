@@ -29,6 +29,15 @@ const data = {
       description: 'Pure ghee made with bilona',
       isFeatured: true,
       banner: '/images/banner2.jpg',
+      images: [
+        { url: '/images/cow-ghee/IMG_9685.JPG', altText: 'Alt text 1' },
+        { url: '/images/cow-ghee/IMG_9770.JPG', altText: 'Alt text 2' },
+        { url: '/images/cow-ghee/IMG_9782.JPG', altText: 'Alt text 3' },
+        { url: '/images/cow-ghee/IMG_9813.JPG', altText: 'Alt text 4' },
+        { url: '/images/cow-ghee/IMG_9821.JPG', altText: 'Alt text 5' },
+        { url: '/images/cow-ghee/IMG_9828.JPG', altText: 'Alt text 6' },
+        { url: '/images/cow-ghee/IMG_9869.JPG', altText: 'Alt text 7' },
+      ],
     },
     {
       name: '1l Ghee',
@@ -43,6 +52,15 @@ const data = {
       description: 'Pure ghee made with bilona',
       isFeatured: true,
       banner: '/images/banner2.jpg',
+      images: [
+        { url: '/images/cow-ghee/IMG_9685.JPG', altText: 'Alt text 1' },
+        { url: '/images/cow-ghee/IMG_9770.JPG', altText: 'Alt text 2' },
+        { url: '/images/cow-ghee/IMG_9782.JPG', altText: 'Alt text 3' },
+        { url: '/images/cow-ghee/IMG_9813.JPG', altText: 'Alt text 4' },
+        { url: '/images/cow-ghee/IMG_9821.JPG', altText: 'Alt text 5' },
+        { url: '/images/cow-ghee/IMG_9828.JPG', altText: 'Alt text 6' },
+        { url: '/images/cow-ghee/IMG_9869.JPG', altText: 'Alt text 7' },
+      ],
     },
   ],
   socials: [

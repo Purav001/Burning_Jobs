@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 interface SmallCardProps {
@@ -9,9 +10,11 @@ const SmallCard: React.FC<SmallCardProps> = ({ imageSrc, heading }) => {
   return (
     <div className="bg-purple-50 p-4 rounded-md shadow-md relative overflow-hidden group">
       <div className="bg-white p-4 rounded-md shadow-md relative overflow-hidden group">
-        <img
-          src={imageSrc}
+        <Image
+          src={'/' + imageSrc}
           alt={heading}
+          width={40}
+          height={40}
           className="w-full h-full object-cover mb-4 square-image group-hover:scale-105 transition-transform rounded-md"
           style={{ padding: '5px' }} // Added padding to the image
         />

@@ -1,5 +1,9 @@
 import mongoose from 'mongoose'
 
+export type Image = {
+  url: string
+  altText: string
+}
 const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
@@ -14,6 +18,12 @@ const productSchema = new mongoose.Schema(
     description: { type: String, required: true },
     isFeatured: { type: Boolean, default: false },
     banner: String,
+    images: [
+      {
+        url: { type: String, required: true },
+        altText: { type: String, required: true },
+      },
+    ],
   },
   {
     timestamps: true,
@@ -39,5 +49,6 @@ export type Product = {
   numReviews: number
   countInStock: number
   colors?: []
-  sizes?: []
+  sizes?: [][]
+  images: Image[]
 }
