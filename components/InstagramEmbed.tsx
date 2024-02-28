@@ -7,7 +7,7 @@ const InstagramEmbed: React.FC = () => {
       <blockquote
         className="instagram-media"
         data-instgrm-captioned
-        data-instgrm-permalink="https://www.instagram.com/p/C21xrCxRkeE/"
+        // data-instgrm-permalink="https://www.instagram.com/p/C21xrCxRkeE/"
         data-instgrm-version="8"
         style={{
           background: '#FFF',

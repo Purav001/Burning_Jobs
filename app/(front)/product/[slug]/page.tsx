@@ -68,6 +68,9 @@ export default async function ProductDetails({
               Description: <p>{product.description}</p>
             </li> */}
           </ul>
+          <div className="card p-2 bg-[#fbbf24] shadow-md rounded-md w-max">
+            <h3 className="text-lg font-semibold mb-2">Size: {product.size}</h3>
+          </div>
           <div className="card md:mt-0">
             <div className="card-body">
               <div className="mb-2 flex justify-between">
