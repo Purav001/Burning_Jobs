@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Rating } from '@/components/products/Rating'
 import { Gallery } from '@/components/products/gallery'
 import ProductTabs from '@/components/products/product-tabs/ProductTabs'
+import ProductItem from '@/components/products/ProductItem'
 
 export async function generateMetadata({
   params,
@@ -32,6 +33,10 @@ export default async function ProductDetails({
   params: { slug: string }
 }) {
   const product = await productService.getBySlug(params.slug)
+  const latestProducts = await productService.getLatest()
+  const relatedProducts = latestProducts.filter(
+    (curproduct) => curproduct.slug !== product.slug
+  )
   if (!product) {
     return <div>Product not found</div>
   }
@@ -132,6 +137,27 @@ export default async function ProductDetails({
             </div>
           </div>
         </div> */}
+      </div>
+      <div className="product-page-constraint">
+        <div className="flex flex-col items-center text-center mb-16">
+          <span className="text-4xl font-semibold text-[#fbbf24] mb-6">
+            Related products
+          </span>
+          <p className="text-2xl-regular text-ui-fg-base max-w-lg">
+            You might also want to check out these products.
+          </p>
+        </div>
+
+        <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
+          {relatedProducts.map((product) => (
+            <li key={product.slug}>
+              <ProductItem
+                key={product.slug}
+                product={convertDocToObj(product)}
+              />
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   )
