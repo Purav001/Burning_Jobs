@@ -3,10 +3,10 @@ import { convertDocToObj } from '@/lib/utils'
 import productService from '@/lib/services/productService'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Rating } from '@/components/products/Rating'
 import { Gallery } from '@/components/products/gallery'
 import ProductTabs from '@/components/products/product-tabs/ProductTabs'
 import ProductItem from '@/components/products/ProductItem'
+import Rating from '@/components/products/Rating'
 
 export async function generateMetadata({
   params,
@@ -60,10 +60,7 @@ export default async function ProductDetails({
               <h1 className="text-xl">{product.name}</h1>
             </li>
             <li>
-              <Rating
-                value={product.rating}
-                caption={`${product.numReviews} ratings`}
-              />
+              <Rating rating={product.rating} />
             </li>
             <li> {product.brand}</li>
             <li>
@@ -148,7 +145,7 @@ export default async function ProductDetails({
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
+        <ul className="grid grid-cols-3 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
           {relatedProducts.map((product) => (
             <li key={product.slug}>
               <ProductItem

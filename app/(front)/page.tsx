@@ -115,7 +115,7 @@ export default async function Home() {
         className={`grid ${
           latestProducts.length === 2
             ? 'grid-cols-2'
-            : 'md:grid-cols-3 lg:grid-cols-4'
+            : 'md:grid-cols-3 lg:grid-cols-3'
         } gap-4`}
       >
         {latestProducts.map((product) => (
