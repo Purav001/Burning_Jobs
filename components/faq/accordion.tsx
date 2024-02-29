@@ -27,9 +27,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer, index }) => {
       >
         <div className="py-3">
           <div className="flex items-center justify-between h-14 text-left">
-            <span className="ml-2 font-medium lg:font-semibold lg:text-xl text-sm text-sky-600">
-              {question}
-            </span>
+            <span className="mb-4 font-bold">{question}</span>
             <div>
               {active == index ? (
                 <Image src={'minus.svg'} alt="" width={20} height={20} />
@@ -45,11 +43,11 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer, index }) => {
             <div
               className={
                 active == index
-                  ? 'text-DarkGrayishBlue text-[0.6rem] w-[15rem] md:w-[20rem] p-0 m-0 cursor-pointer'
+                  ? 'text-DarkGrayishBlue text-[0.6rem] w-full md:w-full p-0 m-0 cursor-pointer'
                   : 'invisible max-h-0'
               }
             >
-              <p className="py-1 font-normal leading-normal text-justify whitespace-pre-line text-xs lg:text-lg">
+              <p className="mb-6 text-gray-500 dark:text-neutral-300 w-full">
                 {answer}
               </p>
             </div>
