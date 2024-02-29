@@ -66,6 +66,7 @@ export default async function Home() {
   const latestSocialMedia = await productService.getSocialMedia()
   const latestBanners = await productService.getBanners()
   const latestFaqs = await productService.getFaq()
+  const photoGallery = await productService.getPhotos()
   return (
     <>
       <div className="w-full carousel rounded-box overflow-hidden">
@@ -123,14 +124,14 @@ export default async function Home() {
         ))}
       </div>
 
-      <h1 className="text-2xl py-2" id="social-media-section">
+      {/* <h1 className="text-2xl py-2" id="social-media-section">
         Join us on Social Media
       </h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {latestSocialMedia.map((social) => (
           <SocialItem key={social.slug} social={convertDocToObj(social)} />
         ))}
-      </div>
+      </div> */}
 
       <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
 

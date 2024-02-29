@@ -4,6 +4,7 @@ import ProductModel, { Product } from '@/lib/models/ProductModel'
 import SocialModel, { Social } from '@/lib/models/SocialModel'
 import BannerModel, { Banner } from '../models/BannerModel'
 import FaqModel, { Faq } from '../models/FaqModel'
+import PhotoModel, { Photo } from '../models/PhotoModel'
 
 export const revalidate = 3600
 
@@ -11,6 +12,12 @@ const getLatest = cache(async () => {
   await dbConnect()
   const products = await ProductModel.find({}).sort({ _id: -1 }).limit(6).lean()
   return products as Product[]
+})
+
+const getPhotos = cache(async () => {
+  await dbConnect()
+  const photos = await PhotoModel.find({}).sort({ _id: -1 }).lean()
+  return photos as Photo[]
 })
 
 const getFeatured = cache(async () => {
@@ -29,6 +36,12 @@ const getBySlug = cache(async (slug: string) => {
   await dbConnect()
   const product = await ProductModel.findOne({ slug }).lean()
   return product as Product
+})
+
+const getPhotoById = cache(async (id: number) => {
+  await dbConnect()
+  const photo = await PhotoModel.findOne({ id }).lean()
+  return photo as Photo
 })
 
 const PAGE_SIZE = 3
@@ -146,5 +159,7 @@ const productService = {
   getCategories,
   getSocialMedia,
   getBanners,
+  getPhotos,
+  getPhotoById,
 }
 export default productService
