@@ -67,3 +67,12 @@ header {
     8px
   ); /* You can adjust the pixel value based on your preference */
 }
+@layer base {
+  html {
+    @apply text-[#4f4f4f];
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
+}

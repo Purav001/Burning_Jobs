@@ -6,6 +6,7 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     '//www.instagram.com/embed.js',
+    './node_modules/tw-elements/dist/js/**/*.js',
   ],
   daisyui: {
     themes: [
@@ -30,6 +31,6 @@ const config: Config = {
     ],
   },
   darkMode: ['class', '["dark"]'],
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'), require('tw-elements/dist/plugin.cjs')],
 }
 export default config

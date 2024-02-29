@@ -10,6 +10,13 @@ import Card from '@/components/Benifits'
 import WhatsAppWidget from '@/components/WhatsAppWidget'
 import InstagramEmbed from '@/components/InstagramEmbed'
 import SocialMedia from '@/components/socialMedia/SocialMedia'
+import dynamic from 'next/dynamic'
+// import Slider from '@/components/slider/Slider'
+// import UseSlider from '@/components/slider/UseSlider'
+
+const Slider = dynamic(() => import('@/components/slider/Slider'), {
+  ssr: false,
+})
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME || 'Nani Bilona Ghee',
@@ -144,6 +151,10 @@ export default async function Home() {
 
       {/* <InstagramEmbed></InstagramEmbed> */}
       {/* <SocialMedia></SocialMedia> */}
+
+      <Slider photos={photoGallery}></Slider>
+
+      {/* <UseSlider photos={photoGallery}></UseSlider> */}
     </>
   )
 }
