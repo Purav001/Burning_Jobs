@@ -8,9 +8,11 @@ import Link from 'next/link'
 import FrequentlyAskedQuestions from '@/components/faq/FrequentlyAskedQuestions'
 import Card from '@/components/Benifits'
 import WhatsAppWidget from '@/components/WhatsAppWidget'
-import InstagramEmbed from '@/components/InstagramEmbed'
 import SocialMedia from '@/components/socialMedia/SocialMedia'
 import dynamic from 'next/dynamic'
+import GheeMaking from '@/components/GheeMaking'
+import CustomerReviewVideo from '@/components/CustomerReviewVideo'
+import VideoCarousel from '@/components/videoCarousel/VideoCarousel'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
 
@@ -155,6 +157,22 @@ export default async function Home() {
       <Slider photos={photoGallery}></Slider>
 
       {/* <UseSlider photos={photoGallery}></UseSlider> */}
+
+      {/* <GheeMaking></GheeMaking> */}
+
+      {/* <CustomerReviewVideo></CustomerReviewVideo> */}
+      {/* <div>
+        <iframe
+          class="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl"
+          src="https://www.youtube.com/embed/jlig6cBYidY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div> */}
+
+      <VideoCarousel></VideoCarousel>
     </>
   )
 }
