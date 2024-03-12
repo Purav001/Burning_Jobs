@@ -1,10 +1,15 @@
 import mongoose from 'mongoose'
 
+export type Image = {
+  url: string
+  altText: string
+}
 const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     slug: { type: String, required: true, unique: true },
     category: { type: String, required: true },
+    size: { type: String, required: true },
     image: { type: String, required: true },
     price: { type: Number, required: true },
     brand: { type: String, required: true },
@@ -14,6 +19,19 @@ const productSchema = new mongoose.Schema(
     description: { type: String, required: true },
     isFeatured: { type: Boolean, default: false },
     banner: String,
+    images: [
+      {
+        url: { type: String, required: true },
+        altText: { type: String, required: true },
+      },
+    ],
+    source: { type: String, required: true },
+    origin_country: { type: String, required: true, default: 'India' },
+    making: {
+      type: String,
+      required: true,
+      default: 'Ayurvedic Bilona Method',
+    },
   },
   {
     timestamps: true,
@@ -39,5 +57,10 @@ export type Product = {
   numReviews: number
   countInStock: number
   colors?: []
-  sizes?: []
+  sizes?: [][]
+  images: Image[]
+  making: string
+  origin_country: string
+  source: string
+  size: string
 }

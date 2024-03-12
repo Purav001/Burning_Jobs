@@ -2,30 +2,36 @@ import { Product } from '@/lib/models/ProductModel'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Rating } from './Rating'
+import { ShoppingCartIcon } from '@heroicons/react/24/outline'
+import Rating from './Rating'
 
 export default function ProductItem({ product }: { product: Product }) {
   return (
-    <div className="card bg-base-300 shadow-xl mb-4">
+    <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure>
-        <Link href={`/product/${product.slug}`}>
-          <Image
-            src={product.image}
-            alt={product.name}
-            width={300}
-            height={300}
-            className="object-cover h-64 w-full"
-          />
-        </Link>
+        <Image
+          src={product.image}
+          alt={product.name}
+          width={384}
+          height={140}
+        />
       </figure>
       <div className="card-body">
-        <Link href={`/product/${product.slug}`}>
-          <h2 className="card-title font-normal">{product.name}</h2>
-        </Link>
-        <Rating value={product.rating} caption={`(${product.numReviews})`} />
-        <p className="mb-2">{product.brand}</p>
-        <div className="card-actions flex items-center justify-between">
-          <span className="text-2xl">${product.price}</span>
+        <div className="text-sm text-slate-500">
+          {' '}
+          {/* {type.replaceAll(`_nbsp_`, ` `).replaceAll(`_amp_`, `&`)} */}
+        </div>
+        <h2 className="card-title">{product.name}</h2>
+        <p className="font-medium text-slate-500">{product.brand}</p>
+        <Rating rating={product.rating} disabled />
+        <div className="card-actions justify-end">
+          <button className="btn">
+            ${product.price}
+            <ShoppingCartIcon className="h-6 w-6" />
+          </button>
+          <Link href={`/product/${product.slug}`} className="btn btn-info">
+            View Details
+          </Link>
         </div>
       </div>
     </div>

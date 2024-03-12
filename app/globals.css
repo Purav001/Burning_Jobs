@@ -24,8 +24,55 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  padding-top: 60px;
 }
 
 .btn {
   text-transform: none;
+}
+
+/* Add a fixed position to the header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust z-index as needed to ensure the header appears above other elements */
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-on-hover:hover {
+  animation: shake 0.5s ease-in-out;
+}
+
+.blur {
+  filter: blur(
+    8px
+  ); /* You can adjust the pixel value based on your preference */
+}
+@layer base {
+  html {
+    @apply text-[#4f4f4f];
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
 }
