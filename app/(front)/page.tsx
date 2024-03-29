@@ -13,6 +13,7 @@ import dynamic from 'next/dynamic'
 import GheeMaking from '@/components/GheeMaking'
 import CustomerReviewVideo from '@/components/CustomerReviewVideo'
 import VideoCarousel from '@/components/videoCarousel/VideoCarousel'
+import CustomerReviewCarousel from '@/components/CustomerReviewCarousel'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
 
@@ -69,6 +70,24 @@ const cards = [
   },
   // Add more cards as needed
 ]
+
+interface CarouselItem {
+  title: string
+  description: string
+  image: string
+}
+
+const items: CarouselItem[] = [
+  { title: 'Card 1', description: 'Description 1', image: '/images/logo.jpg' },
+  {
+    title: 'Card 2',
+    description: 'Description 2',
+    image: '/images/logo-white.jpg',
+  },
+  { title: 'Card 3', description: 'Description 3', image: '/images/logo.jpg' },
+  // Add more items as needed
+]
+
 export default async function Home() {
   const featuredProducts = await productService.getFeatured()
   const latestProducts = await productService.getLatest()
@@ -78,7 +97,8 @@ export default async function Home() {
   const photoGallery = await productService.getPhotos()
   return (
     <>
-      <div className="w-full carousel rounded-box overflow-hidden">
+      <VideoCarousel></VideoCarousel>
+      {/* <div className="w-full carousel rounded-box overflow-hidden">
         {latestBanners.map((banner, index) => (
           <div
             key={banner._id}
@@ -112,25 +132,29 @@ export default async function Home() {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       <h2
-        className={`text-4xl py-2 ${
-          latestProducts.length === 2 ? 'text-center' : ''
-        } text-yellow-500`}
+        className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-#1b2528 md:text-4xl lg:text-5xl text-center py-6"
         id="product-section"
       >
         Latest Products
       </h2>
-      <div
-        className={`grid ${
-          latestProducts.length === 2
-            ? 'grid-cols-2'
-            : 'md:grid-cols-3 lg:grid-cols-3'
-        } gap-4`}
-      >
+      <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center m-auto">
         {latestProducts.map((product) => (
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}
+      </div>
+
+      <div style={{ backgroundColor: '#fffbe8' }} className="pt-10 pb-10 mt-10">
+        <div
+          className="container m-auto"
+          style={{ backgroundColor: '#fffbe8' }}
+        >
+          <h1 className="text-3xl font-bold mb-4 text-center">
+            Customer Reviews
+          </h1>
+          <CustomerReviewCarousel items={items} />
+        </div>
       </div>
 
       {/* <h1 className="text-2xl py-2" id="social-media-section">
@@ -142,10 +166,10 @@ export default async function Home() {
         ))}
       </div> */}
 
-      <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
-
-      <div className="container mx-auto my-8">
-        <h1 className="text-3xl font-bold mb-4">Benefits of A2 Cow Ghee</h1>
+      <div className="my-8 m-auto pt-10" style={{ backgroundColor: '#1b2528' }}>
+        <h1 className="text-4xl font-bold mb-4 text-center text-primary">
+          Benefits of A2 Cow Ghee
+        </h1>
         <Card cards={cards} />
       </div>
 
@@ -155,6 +179,8 @@ export default async function Home() {
       {/* <SocialMedia></SocialMedia> */}
 
       <Slider photos={photoGallery}></Slider>
+
+      <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
 
       {/* <UseSlider photos={photoGallery}></UseSlider> */}
 
@@ -171,8 +197,6 @@ export default async function Home() {
           allowfullscreen
         ></iframe>
       </div> */}
-
-      <VideoCarousel></VideoCarousel>
     </>
   )
 }

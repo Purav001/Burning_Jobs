@@ -18,6 +18,7 @@ export default function VideoCarousel({}: {}) {
       class="relative"
       data-te-carousel-init
       data-te-ride="carousel"
+      className="m-auto"
     >
       <div
         class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"

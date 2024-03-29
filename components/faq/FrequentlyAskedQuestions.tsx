@@ -14,15 +14,18 @@ export default function FrequentlyAskedQuestions({
     <div class="container my-24 mx-auto md:px-6">
       <section class="mb-32">
         <div class="container mx-auto text-center lg:text-left xl:px-32">
-          <div class="flex grid items-center lg:grid-cols-2">
+          <div class="flex grid items-center lg:grid-cols-1">
             <div class="mb-12 lg:mb-0">
-              <div class="block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 lg:-mr-14 backdrop-blur-[30px]">
-                <h3 class="mb-3 text-2xl font-bold">
-                  We know how valuable your time is
-                </h3>
-                <h5 class="mb-12 text-lg font-bold text-primary dark:text-primary-400 lg:mb-10 xl:mb-12">
-                  Let us answer your questions
-                </h5>
+              <div class="block rounded-lg">
+                <h2 class="mb-4 text-3xl font-bold">
+                  Frequently asked questions
+                </h2>
+                <p className="mb-12 text-gray-400">
+                  Didn't find your answer in the FAQ?{' '}
+                  <a href="#" style={{ color: '#3b71ca' }}>
+                    Contact our sales team.{' '}
+                  </a>
+                </p>
 
                 {AllFaq.map((item: Faq, index: number) => {
                   return (
@@ -38,19 +41,10 @@ export default function FrequentlyAskedQuestions({
               </div>
             </div>
 
-            <div className="bg-[#ffffff] rounded-md w-full rounded-lg shadow-lg dark:shadow-black/20">
-              {/* <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/768px-Black_colour.jpg"
-                class="w-full rounded-lg shadow-lg dark:shadow-black/20"
-                alt=""
-              /> */}
-
+            {/* <div className="bg-[#ffffff] rounded-md w-full rounded-lg shadow-lg dark:shadow-black/20">
               <div class="container my-24 mx-auto md:px-6 ml-6">
                 <section class="mb-32 text-center">
                   <div class="mx-auto max-w-[700px] md:px-3">
-                    <h2 class="mb-4 text-3xl font-bold">
-                      Frequently asked questions
-                    </h2>
                     <p className="mb-12 text-primary">
                       Didn't find your answer in the FAQ? Contact our sales
                       team.
@@ -126,7 +120,7 @@ export default function FrequentlyAskedQuestions({
                   </div>
                 </section>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

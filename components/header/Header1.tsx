@@ -11,9 +11,13 @@ const Header = () => {
 
   return (
     <header>
-      <nav>
-        <div className="navbar justify-between bg-base-300">
-          <div>
+      <nav style={{ backgroundColor: '#1b2528' }}>
+        {' '}
+        {/* 1. Set background color of navbar */}
+        <div className="navbar justify-between items-center px-6 text-white">
+          {' '}
+          {/* 2. Set text color to white */}
+          <div className="flex items-center">
             <label
               htmlFor="my-drawer"
               className="btn btn-square btn-ghost md:hidden"
@@ -32,36 +36,34 @@ const Header = () => {
                 ></path>
               </svg>
             </label>
-            <Link href="/" className="btn btn-ghost text-lg">
-              Nani&apos;s Bilona Ghee
+            <Link href="/" className="flex items-center">
+              {/* <img
+                src="/images/logo-white.png"
+                alt="Logo"
+                className="h-10 w-auto font-bold mr-4"
+              /> */}
+              <span
+                className="text-lg font-extrabold tracking-tight"
+                style={{ color: '#daa407' }}
+              >
+                Nani's Bilona Ghee
+              </span>
             </Link>
-            <div className="flex space-x-4 hidden md:block">
-              <ScrollLink
-                to="product-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer btn btn-ghost"
-              >
-                Products
-              </ScrollLink>
-
-              <a href="#" className="text-white">
-                Our Story
-              </a>
-              <a href="#" className="text-white">
-                Contact Us
-              </a>
-              <ScrollLink
-                to="social-media-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer btn btn-ghost"
-              >
-                Social Media
-              </ScrollLink>
-            </div>
           </div>
-
+          <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
+            <a href="#" className="text-white font-bold mr-6">
+              Products
+            </a>
+            <a href="#" className="text-white font-bold mr-6">
+              Our Story
+            </a>
+            <a href="#" className="text-white font-bold mr-6">
+              Contact Us
+            </a>
+            <a href="#" className="text-white font-bold">
+              Social Media
+            </a>
+          </div>
           <Menu />
         </div>
       </nav>

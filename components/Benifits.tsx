@@ -8,9 +8,9 @@ interface SmallCardProps {
 
 const SmallCard: React.FC<SmallCardProps> = ({ imageSrc, heading }) => {
   return (
-    <div className="bg-purple-50 p-4 rounded-md shadow-md relative overflow-hidden group">
-      <div className="bg-white p-4 rounded-md shadow-md relative overflow-hidden group">
-        <Image
+    <div className="w-full max-w-sm bg-gray-200 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div>
+        <img
           src={'/' + imageSrc}
           alt={heading}
           width={40}
@@ -19,8 +19,10 @@ const SmallCard: React.FC<SmallCardProps> = ({ imageSrc, heading }) => {
           style={{ padding: '5px' }} // Added padding to the image
         />
       </div>
-      <div className="h3-card absolute bottom-0 left-0 right-0 bg-purple-50 p-4 rounded-t-md">
-        <h3 className="text-xl font-bold mb-2 text-black">{heading}</h3>
+      <div className="px-5 pb-5">
+        <h3 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          {heading}
+        </h3>
       </div>
     </div>
   )
@@ -32,7 +34,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ cards }) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-10 m-auto mx-20 pb-20 pt-5">
       {cards.map((card, index) => (
         <SmallCard key={index} {...card} />
       ))}
