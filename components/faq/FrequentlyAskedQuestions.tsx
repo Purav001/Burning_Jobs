@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Accordion from './accordion'
 import { Faq } from '@/lib/models/FaqModel'
+import Link from 'next/link'
 
 export default function FrequentlyAskedQuestions({
   AllFaq,
@@ -22,9 +23,9 @@ export default function FrequentlyAskedQuestions({
                 </h2>
                 <p className="mb-12 text-gray-400">
                   Didn't find your answer in the FAQ?{' '}
-                  <a href="#" style={{ color: '#3b71ca' }}>
+                  <Link href="/contact-us" style={{ color: '#3b71ca' }}>
                     Contact our sales team.{' '}
-                  </a>
+                  </Link>
                 </p>
 
                 {AllFaq.map((item: Faq, index: number) => {

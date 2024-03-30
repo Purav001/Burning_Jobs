@@ -54,12 +54,12 @@ const Header = () => {
             <a href="#" className="text-white font-bold mr-6">
               Products
             </a>
-            <a href="#" className="text-white font-bold mr-6">
+            <a href="/contact-us" className="text-white font-bold mr-6">
               Our Story
             </a>
-            <a href="#" className="text-white font-bold mr-6">
+            <Link href="/contact-us" className="text-white font-bold mr-6">
               Contact Us
-            </a>
+            </Link>
             <a href="#" className="text-white font-bold">
               Social Media
             </a>
