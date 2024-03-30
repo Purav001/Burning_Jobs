@@ -92,7 +92,7 @@ export default async function ProductDetails({
                       ...convertDocToObj(product),
                       qty: 0,
                       color: '',
-                      size: '',
+                      size: product.size,
                     }}
                   />
                 </div>

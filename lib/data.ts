@@ -17,7 +17,7 @@ const data = {
   ],
   products: [
     {
-      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method',
+      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | 500ML',
       slug: 'a2-cow-ghee-500ml',
       category: 'Ghee',
       image: '/images/cow-ghee/IMG_9813.JPG',
@@ -45,7 +45,7 @@ const data = {
       origin_country: 'India',
     },
     {
-      name: 'Organic Buffalo Ghee | Ayurvedic bilona method',
+      name: 'Organic Buffalo Ghee | Ayurvedic bilona method | 500ML',
       slug: 'organic-buffalo-ghee-500ml',
       category: 'Ghee',
       image: '/images/cow-ghee/IMG_9813.JPG',
@@ -73,7 +73,7 @@ const data = {
       origin_country: 'India',
     },
     {
-      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method',
+      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | 1L',
       slug: 'a2-cow-ghee-1liter',
       category: 'Ghee',
       image: '/images/cow-ghee/IMG_9813.JPG',
@@ -101,7 +101,7 @@ const data = {
       origin_country: 'India',
     },
     {
-      name: 'Organic Buffalo Ghee | Ayurvedic bilona method',
+      name: 'Organic Buffalo Ghee | Ayurvedic bilona method | 1L',
       slug: 'organic-buffalo-ghee-1liter',
       category: 'Ghee',
       image: '/images/cow-ghee/IMG_9813.JPG',
