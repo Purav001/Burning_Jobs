@@ -26,7 +26,7 @@ export default function RootLayout({
           <div className="drawer">
             <DrawerButton />
             <div className="drawer-content">
-              <div className="min-h-screen w-screen flex flex-col">
+              <div className="min-h-screen w-full flex flex-col">
                 <Header />
                 {children}
                 <footer className="footer footer-center p-4 bg-base-300 text-base-content">

@@ -42,11 +42,11 @@ export default async function ProductDetails({
   }
   return (
     <>
-      <div className="my-2">
+      {/* <div className="my-2">
         <Link href="/">back to products</Link>
-      </div>
-      <div className="grid md:grid-cols-3 md:gap-3">
-        <div className="md:col-span-2">
+      </div> */}
+      <div className="grid md:grid-cols-2 md:gap-3 mt-10">
+        <div className="md:col-span-1">
           <Gallery
             images={product.images.map((image: Image) => ({
               src: image.url,
@@ -54,10 +54,10 @@ export default async function ProductDetails({
             }))}
           ></Gallery>
         </div>
-        <div>
+        <div className="mr-40">
           <ul className="space-y-4">
             <li>
-              <h1 className="text-xl">{product.name}</h1>
+              <h1 className="text-xl font-bold">{product.name}</h1>
             </li>
             <li>
               <Rating rating={product.rating} />
@@ -70,14 +70,12 @@ export default async function ProductDetails({
               Description: <p>{product.description}</p>
             </li> */}
           </ul>
-          <div className="card p-2 bg-[#fbbf24] shadow-md rounded-md w-max">
-            <h3 className="text-lg font-semibold mb-2">Size: {product.size}</h3>
-          </div>
+
           <div className="card md:mt-0">
             <div className="card-body">
               <div className="mb-2 flex justify-between">
                 <div>Price</div>
-                <div>${product.price}</div>
+                <div>₹{product.price}</div>
               </div>
               <div className="mb-2 flex justify-between">
                 <div>Status</div>
@@ -100,44 +98,19 @@ export default async function ProductDetails({
             </div>
           </div>
           <ProductTabs product={product}></ProductTabs>
-          <ul>
+          <ul className="mt-5">
             <li>
               <p>{product.description}</p>
             </li>
           </ul>
         </div>
-        {/* <div>
-          <div className="card  bg-base-300 shadow-xl mt-3 md:mt-0">
-            <div className="card-body">
-              <div className="mb-2 flex justify-between">
-                <div>Price</div>
-                <div>${product.price}</div>
-              </div>
-              <div className="mb-2 flex justify-between">
-                <div>Status</div>
-                <div>
-                  {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
-                </div>
-              </div>
-              {product.countInStock !== 0 && (
-                <div className="card-actions justify-center">
-                  <AddToCart
-                    item={{
-                      ...convertDocToObj(product),
-                      qty: 0,
-                      color: '',
-                      size: '',
-                    }}
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-        </div> */}
       </div>
-      <div className="product-page-constraint">
-        <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-4xl font-semibold text-[#fbbf24] mb-6">
+      <div
+        className="product-page-constraint mt-10"
+        style={{ backgroundColor: '#f2ede4' }}
+      >
+        <div className="flex flex-col items-center text-center mb-16 pt-10">
+          <span className="text-4xl font-bold text-[#1b2528] mb-6">
             Related products
           </span>
           <p className="text-2xl-regular text-ui-fg-base max-w-lg">
@@ -145,7 +118,7 @@ export default async function ProductDetails({
           </p>
         </div>
 
-        <ul className="grid grid-cols-3 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
+        <ul className="grid md:grid-cols-1 lg:grid-cols-3 gap-4 justify-items-center m-auto pb-10">
           {relatedProducts.map((product) => (
             <li key={product.slug}>
               <ProductItem

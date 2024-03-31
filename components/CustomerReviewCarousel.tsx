@@ -17,7 +17,23 @@ interface CarouselProps {
 
 const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
   return (
-    <Swiper spaceBetween={50} slidesPerView={3} navigation>
+    <Swiper
+      spaceBetween={50}
+      // slidesPerView={3}
+      navigation
+      breakpoints={{
+        1200: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 320px (sm)
+        320: {
+          slidesPerView: 1,
+        },
+      }}
+    >
       {items.map((item, index) => (
         <SwiperSlide key={index}>
           <div className="bg-white shadow-lg rounded-lg p-4 card card-compact">

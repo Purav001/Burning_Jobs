@@ -30,11 +30,13 @@ export default function CartDetails() {
             <span className="text-4xl font-bold text-center m-auto">
               Hey, it feels so light!
             </span>
-            <p>there is nothing in your cart. Let's add some items</p>
+            <p className="flex justify-center">
+              there is nothing in your cart. Let's add some items
+            </p>
             <div className="mt-5 justify-center flex">
               <Link
                 href="#"
-                class="bg-primary py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
+                class="bg-primary py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none rounded-lg border border-gray-200 hover:bg-[#1b2528] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
               >
                 View Products
               </Link>
@@ -42,7 +44,7 @@ export default function CartDetails() {
           </div>
         </div>
       ) : (
-        <div>
+        <div className="mx-10">
           <h1 className="py-4 text-2xl font-extrabold">Shopping Cart</h1>
 
           <div className="grid md:grid-cols-4 md:gap-5 items-center">
