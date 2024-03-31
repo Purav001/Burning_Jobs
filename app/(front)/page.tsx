@@ -151,7 +151,10 @@ export default async function Home() {
           className="container m-auto"
           style={{ backgroundColor: '#fffbe8' }}
         >
-          <h1 className="text-3xl font-bold mb-4 text-center">
+          <h1
+            className="text-3xl font-bold mb-4 text-center"
+            id="customer-review-section"
+          >
             Customer Reviews
           </h1>
           <CustomerReviewCarousel items={items} />

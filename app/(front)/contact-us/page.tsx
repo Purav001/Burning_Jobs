@@ -1,9 +1,9 @@
 export default async function ContactUs() {
   return (
-    <div class="container my-24 mt-40 md:px-6">
-      <section className="mb-32">
-        <div class="container px-6 md:px-12">
-          <div class="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
+    <div class="my-24 mt-40 md:px-6">
+      <section className="mb-32 m-auto">
+        <div class="px-6 md:px-12">
+          <div class="block rounded-lg bg-[hsla(0,0%,100%,0.8)] px-3 py-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[100px] backdrop-blur-[30px]">
             <div class="flex flex-wrap">
               <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-5/12 lg:px-6">
                 <form class="max-w-md mx-auto">
