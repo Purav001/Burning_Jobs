@@ -64,7 +64,7 @@ const Menu = () => {
                   </label>
                   <ul
                     tabIndex={0}
-                    className="menu dropdown-content z-[1] p-2 shadow bg-base-300 rounded-box w-52 "
+                    className="menu dropdown-content z-[1] p-2 shadow bg-[#1b2528] rounded-box w-52 "
                   >
                     {session.user.isAdmin && (
                       <li onClick={handleClick}>

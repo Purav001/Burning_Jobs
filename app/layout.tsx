@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <div className="drawer">
+          <div className="drawer bg-white">
             <DrawerButton />
             <div className="drawer-content">
               <div className="min-h-screen w-full flex flex-col">

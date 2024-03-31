@@ -4,6 +4,13 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
 import Image from 'next/image'
 import Rating from './products/Rating'
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+// import required modules
+import { Pagination, Navigation } from 'swiper/modules'
 
 interface CarouselItem {
   title: string
@@ -18,9 +25,12 @@ interface CarouselProps {
 const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
   return (
     <Swiper
+      style={{
+        '--swiper-navigation-color': '#1b2528',
+        '--swiper-pagination-color': '#1b2528',
+      }}
       spaceBetween={50}
       // slidesPerView={3}
-      navigation
       breakpoints={{
         1200: {
           slidesPerView: 3,
@@ -33,27 +43,28 @@ const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
           slidesPerView: 1,
         },
       }}
+      loop={true}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Pagination, Navigation]}
     >
       {items.map((item, index) => (
         <SwiperSlide key={index}>
           <div className="bg-white shadow-lg rounded-lg p-4 card card-compact">
             <div className="card-body">
-              <p className="text-gray-600">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam
-                vitae, libero incidunt alias obcaecati, facere eum, quia at
-                voluptas qui ipsa quibusdam id voluptates repellat nemo
-                accusamus laborum et enim.
-              </p>
+              <p className="text-gray-600 font-semibold">{item.description}</p>
               <div className="grid grid-cols-2 mt-5">
                 <div className="flex justify-end mr-5">
                   <img
-                    src="https://tecdn.b-cdn.net/img/new/avatars/2.webp"
-                    class="w-20 rounded-full"
+                    src={item.image}
+                    className="w-20 h-20 rounded-full"
                     alt="Avatar"
                   />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mt-2">Hemant Sharma</h3>
+                  <h3 className="text-lg font-bold mt-2">{item.title}</h3>
                   <Rating rating={5} disabled />
                 </div>
               </div>

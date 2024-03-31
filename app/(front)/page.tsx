@@ -78,13 +78,49 @@ interface CarouselItem {
 }
 
 const items: CarouselItem[] = [
-  { title: 'Card 1', description: 'Description 1', image: '/images/logo.jpg' },
   {
-    title: 'Card 2',
-    description: 'Description 2',
-    image: '/images/logo-white.jpg',
+    title: 'Kiran Yadav',
+    description:
+      "Nani's Bilona Ghee has become a staple in my kitchen! The aroma and taste remind me of the ghee my grandmother used to make. Knowing it's crafted from Sahiwal cow's milk using the traditional bilona method gives me confidence in its purity and quality.",
+    image: '/images/customers/customer1.jpeg',
   },
-  { title: 'Card 3', description: 'Description 3', image: '/images/logo.jpg' },
+  {
+    title: 'Rahul Jakhar',
+    description:
+      "I've tried various brands claiming to offer authentic A2 cow ghee, but none match the richness and texture of Nani's Bilona Ghee. It's evident that they prioritize traditional methods and high-quality ingredients. My morning chai wouldn't be the same without it!",
+    image: '/images/customers/customer2.jpeg',
+  },
+  {
+    title: 'Ranju jha',
+    description:
+      "As a health-conscious consumer, finding pure A2 cow ghee was a priority for me. Nani's Bilona Ghee not only meets but exceeds my expectations. Its golden hue and smooth consistency speak volumes about its craftsmanship. I use it in cooking, and it elevates the flavor of every dish!",
+    image: '/images/customers/customer3.jpeg',
+  },
+  {
+    title: 'Vishwajeet bhori',
+    description:
+      "Nani's Bilona Ghee has a distinct taste that sets it apart from other brands. Its nutty flavor and creamy texture add depth to my meals. I appreciate the care they put into sourcing Sahiwal cow's milk and using traditional methods. It's a product I trust for its purity and authenticity.",
+    image: '/images/customers/customer4.jpeg',
+  },
+  {
+    title: 'Naveen sihag',
+    description:
+      "I've been incorporating more Ayurvedic practices into my lifestyle, and Nani's Bilona Ghee fits perfectly into that philosophy. It's not just ghee; it's a holistic experience. I feel nourished knowing I'm consuming a product crafted with mindfulness and reverence for tradition.",
+    image: '/images/customers/customer5.jpeg',
+  },
+  {
+    title: 'Neelam Raghav',
+    description:
+      "Nani's Bilona Ghee has become a kitchen essential for me. Whether I'm sautéing vegetables or drizzling it over warm rotis, its rich flavor enhances every dish. I appreciate their commitment to preserving the purity of A2 cow ghee through the traditional bilona method.",
+    image: '/images/customers/customer6.jpeg',
+  },
+  {
+    title: 'Sourav',
+    description:
+      "Nani's Bilona Ghee has earned a permanent spot in my pantry. Its purity and flavor are unmatched by any other brand I've tried. I love supporting a company that values tradition and quality, and it's evident in every spoonful of this delicious ghee.",
+    image: 'images/customers/customer7.jpg',
+  },
+
   // Add more items as needed
 ]
 
@@ -98,41 +134,6 @@ export default async function Home() {
   return (
     <>
       <VideoCarousel></VideoCarousel>
-      {/* <div className="w-full carousel rounded-box overflow-hidden">
-        {latestBanners.map((banner, index) => (
-          <div
-            key={banner._id}
-            id={`slide-${index}`}
-            className="carousel-item relative w-full"
-          >
-            <Link href={`/product/${banner.slug}`}>
-              <img src={banner.image} className="w-full" alt={banner.name} />
-            </Link>
-
-            <div
-              className="absolute flex justify-between transform 
-               -translate-y-1/2 left-5 right-5 top-1/2"
-            >
-              <a
-                href={`#slide-${
-                  index === 0 ? featuredProducts.length - 1 : index - 1
-                }`}
-                className="btn btn-circle"
-              >
-                ❮
-              </a>
-              <a
-                href={`#slide-${
-                  index === featuredProducts.length - 1 ? 0 : index + 1
-                }`}
-                className="btn btn-circle"
-              >
-                ❯
-              </a>
-            </div>
-          </div>
-        ))}
-      </div> */}
       <h2
         className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-#1b2528 md:text-4xl lg:text-5xl text-center py-6"
         id="product-section"
@@ -157,17 +158,8 @@ export default async function Home() {
         </div>
       </div>
 
-      {/* <h1 className="text-2xl py-2" id="social-media-section">
-        Join us on Social Media
-      </h1>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {latestSocialMedia.map((social) => (
-          <SocialItem key={social.slug} social={convertDocToObj(social)} />
-        ))}
-      </div> */}
-
-      <div className="my-8 m-auto pt-10" style={{ backgroundColor: '#1b2528' }}>
-        <h1 className="text-4xl font-bold mb-4 text-center text-primary">
+      <div className="my-8 m-auto pt-5" style={{ backgroundColor: '#ffffff' }}>
+        <h1 className="text-4xl font-bold mb-4 text-center text-[#1b2528]">
           Benefits of A2 Cow Ghee
         </h1>
         <Card cards={cards} />
@@ -175,28 +167,9 @@ export default async function Home() {
 
       <WhatsAppWidget></WhatsAppWidget>
 
-      {/* <InstagramEmbed></InstagramEmbed> */}
-      {/* <SocialMedia></SocialMedia> */}
-
       <Slider photos={photoGallery}></Slider>
 
       <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
-
-      {/* <UseSlider photos={photoGallery}></UseSlider> */}
-
-      {/* <GheeMaking></GheeMaking> */}
-
-      {/* <CustomerReviewVideo></CustomerReviewVideo> */}
-      {/* <div>
-        <iframe
-          class="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl"
-          src="https://www.youtube.com/embed/jlig6cBYidY"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div> */}
     </>
   )
 }

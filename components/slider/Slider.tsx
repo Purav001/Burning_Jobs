@@ -12,16 +12,16 @@ export default function Slider({ photos }: { photos: Photo[] }) {
   }, [])
 
   return (
-    <div>
+    <div className="bg-[#1b2528] py-10">
       <h1 className="text-4xl font-bold text-center text-primary">
         Nani's Bilona Ghee Gallery
       </h1>
       <div
         data-te-lightbox-init
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mx-10 mt-5"
       >
         {photos.map((image, key) => (
-          <div className="flex flex-col" key={key}>
+          <div className="flex flex-col p-2" key={key}>
             <img
               src={image.image}
               data-te-img={image.image}
