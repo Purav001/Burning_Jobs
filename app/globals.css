@@ -76,3 +76,7 @@ header {
     @apply bg-neutral-800;
   }
 }
+
+.active {
+  color: #fbbf24;
+}

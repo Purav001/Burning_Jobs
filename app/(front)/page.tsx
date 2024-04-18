@@ -140,7 +140,7 @@ export default async function Home() {
       >
         Latest Products
       </h2>
-      <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-4 justify-items-center m-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center m-auto">
         {latestProducts.map((product) => (
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}

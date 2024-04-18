@@ -60,9 +60,9 @@ const Header = () => {
             <Link href="/contact-us" className="text-white font-bold mr-6">
               Contact Us
             </Link>
-            <a href="#" className="text-white font-bold">
-              Social Media
-            </a>
+            <Link href="/ghee-making" className="text-white font-bold active">
+              Ghee Making Process
+            </Link>
           </div>
           <Menu />
         </div>
