@@ -20,7 +20,7 @@ const data = {
       name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | 500ML',
       slug: 'a2-cow-ghee-500ml',
       category: 'Ghee',
-      image: '/images/products/a2-cow-ghee-500ml/1.JPG',
+      image: '/images/products/a2-cow-ghee-500ml/1.png',
       size: '500 ml',
       price: 899,
       brand: "Nani's Bilona Ghee",
@@ -33,23 +33,23 @@ const data = {
       banner: '/images/banner2.jpg',
       images: [
         {
-          url: '/images/products/a2-cow-ghee-500ml/1.JPG',
+          url: '/images/products/a2-cow-ghee-500ml/1.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/2.JPG',
+          url: '/images/products/a2-cow-ghee-500ml/2.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/3.JPG',
+          url: '/images/products/a2-cow-ghee-500ml/3.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/4.JPG',
+          url: '/images/products/a2-cow-ghee-500ml/4.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/5.JPG',
+          url: '/images/products/a2-cow-ghee-500ml/5.png',
           altText: 'Alt text 1',
         },
       ],
@@ -61,7 +61,7 @@ const data = {
       name: 'Organic Buffalo Ghee | Ayurvedic bilona method | 500ML',
       slug: 'organic-buffalo-ghee-500ml',
       category: 'Ghee',
-      image: '/images/products/buffalo-ghee-500ml/1.JPG',
+      image: '/images/products/buffalo-ghee-500ml/1.png',
       size: '500 ml',
       price: 699,
       brand: "Nani's Bilona Ghee",
@@ -74,23 +74,23 @@ const data = {
       banner: '/images/banner2.jpg',
       images: [
         {
-          url: '/images/products/buffalo-ghee-500ml/1.JPG',
+          url: '/images/products/buffalo-ghee-500ml/1.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-500ml/2.JPG',
+          url: '/images/products/buffalo-ghee-500ml/2.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-500ml/3.JPG',
+          url: '/images/products/buffalo-ghee-500ml/3.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-500ml/4.JPG',
+          url: '/images/products/buffalo-ghee-500ml/4.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-500ml/5.JPG',
+          url: '/images/products/buffalo-ghee-500ml/5.png',
           altText: 'Alt text 1',
         },
       ],
@@ -102,7 +102,7 @@ const data = {
       name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | 1L',
       slug: 'a2-cow-ghee-1liter',
       category: 'Ghee',
-      image: '/images/products/a2-cow-ghee-1l/1.JPG',
+      image: '/images/products/a2-cow-ghee-1l/1.png',
       size: '1 liter',
       price: 1699,
       brand: "Nani's Bilona Ghee",
@@ -114,11 +114,11 @@ const data = {
       isFeatured: true,
       banner: '/images/banner2.jpg',
       images: [
-        { url: '/images/products/a2-cow-ghee-1l/1.JPG', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/2.JPG', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/3.JPG', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/4.JPG', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/5.JPG', altText: 'Alt text 1' },
+        { url: '/images/products/a2-cow-ghee-1l/1.png', altText: 'Alt text 1' },
+        { url: '/images/products/a2-cow-ghee-1l/2.png', altText: 'Alt text 1' },
+        { url: '/images/products/a2-cow-ghee-1l/3.png', altText: 'Alt text 1' },
+        { url: '/images/products/a2-cow-ghee-1l/4.png', altText: 'Alt text 1' },
+        { url: '/images/products/a2-cow-ghee-1l/5.png', altText: 'Alt text 1' },
       ],
       source: 'Shaiwal Cow',
       making: 'Ayurvedic Bilona Method',
@@ -128,7 +128,7 @@ const data = {
       name: 'Organic Buffalo Ghee | Ayurvedic bilona method | 1L',
       slug: 'organic-buffalo-ghee-1liter',
       category: 'Ghee',
-      image: '/images/products/buffalo-ghee-1l/1.JPG',
+      image: '/images/products/buffalo-ghee-1l/1.png',
       size: '1 liter',
       price: 1399,
       brand: "Nani's Bilona Ghee",
@@ -141,15 +141,15 @@ const data = {
       banner: '/images/banner2.jpg',
       images: [
         {
-          url: '/images/products/buffalo-ghee-1l/1.JPG',
+          url: '/images/products/buffalo-ghee-1l/1.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-1l/2.JPG',
+          url: '/images/products/buffalo-ghee-1l/2.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-1l/3.JPG',
+          url: '/images/products/buffalo-ghee-1l/3.png',
           altText: 'Alt text 1',
         },
       ],
@@ -161,7 +161,7 @@ const data = {
       name: 'Organic Buffalo Ghee | Ayurvedic bilona method | COMBO 1L + 500ML',
       slug: 'organic-buffalo-ghee-combo',
       category: 'Ghee',
-      image: '/images/products/buffalo-ghee-combo/1.JPG',
+      image: '/images/products/buffalo-ghee-combo/1.png',
       size: '1 liter',
       price: 1699,
       brand: "Nani's Bilona Ghee",
@@ -174,19 +174,19 @@ const data = {
       banner: '/images/banner2.jpg',
       images: [
         {
-          url: '/images/products/buffalo-ghee-combo/1.JPG',
+          url: '/images/products/buffalo-ghee-combo/1.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-combo/2.JPG',
+          url: '/images/products/buffalo-ghee-combo/2.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-combo/3.JPG',
+          url: '/images/products/buffalo-ghee-combo/3.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/buffalo-ghee-combo/4.JPG',
+          url: '/images/products/buffalo-ghee-combo/4.png',
           altText: 'Alt text 1',
         },
       ],
@@ -198,7 +198,7 @@ const data = {
       name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | COMBO 1L + 500ML',
       slug: 'a2-cow-ghee-combo',
       category: 'Ghee',
-      image: '/images/products/a2-cow-ghee-combo/1.JPG',
+      image: '/images/products/a2-cow-ghee-combo/1.png',
       size: '500 ml',
       price: 899,
       brand: "Nani's Bilona Ghee",
@@ -211,23 +211,23 @@ const data = {
       banner: '/images/banner2.jpg',
       images: [
         {
-          url: '/images/products/a2-cow-ghee-combo/1.JPG',
+          url: '/images/products/a2-cow-ghee-combo/1.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-combo/2.JPG',
+          url: '/images/products/a2-cow-ghee-combo/2.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-combo/3.JPG',
+          url: '/images/products/a2-cow-ghee-combo/3.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-combo/4.JPG',
+          url: '/images/products/a2-cow-ghee-combo/4.png',
           altText: 'Alt text 1',
         },
         {
-          url: '/images/products/a2-cow-ghee-combo/5.JPG',
+          url: '/images/products/a2-cow-ghee-combo/5.png',
           altText: 'Alt text 1',
         },
       ],

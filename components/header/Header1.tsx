@@ -51,10 +51,10 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
-            <a href="#" className="text-white font-bold mr-6">
+            <a href="/products" className="text-white font-bold mr-6">
               Products
             </a>
-            <a href="/contact-us" className="text-white font-bold mr-6">
+            <a href="/our-story" className="text-white font-bold mr-6">
               Our Story
             </a>
             <Link href="/contact-us" className="text-white font-bold mr-6">

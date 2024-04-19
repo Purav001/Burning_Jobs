@@ -74,26 +74,17 @@ export default function RootLayout({
                           </h2>
                           <ul class="text-white font-medium">
                             <li class="mb-4">
-                              <a
-                                href="https://flowbite.com/"
-                                class="hover:underline"
-                              >
+                              <a href="/products" class="hover:underline">
                                 Our Products
                               </a>
                             </li>
                             <li className="mb-4">
-                              <a
-                                href="https://tailwindcss.com/"
-                                class="hover:underline"
-                              >
+                              <a href="/our-story" class="hover:underline">
                                 Our Story
                               </a>
                             </li>
                             <li>
-                              <a
-                                href="https://tailwindcss.com/"
-                                class="hover:underline"
-                              >
+                              <a href="/contact-us" class="hover:underline">
                                 Contact Us
                               </a>
                             </li>
@@ -106,7 +97,7 @@ export default function RootLayout({
                           <ul class="text-white font-medium">
                             <li class="mb-4">
                               <a
-                                href="https://github.com/themesberg/flowbite"
+                                href="https://www.instagram.com/nani_bilona_ghee/"
                                 class="hover:underline "
                               >
                                 Instagram
@@ -114,7 +105,7 @@ export default function RootLayout({
                             </li>
                             <li>
                               <a
-                                href="https://discord.gg/4eeurUVvTy"
+                                href="https://www.facebook.com/NaniBilonaGhee/"
                                 class="hover:underline"
                               >
                                 Facebook
@@ -154,7 +145,7 @@ export default function RootLayout({
                             </li>
                             <li>
                               <a
-                                href="https://discord.gg/4eeurUVvTy"
+                                href="https://wa.me/917303290341"
                                 class="hover:underline"
                               >
                                 WhatsApp
@@ -168,29 +159,11 @@ export default function RootLayout({
                     <div class="sm:flex sm:items-center sm:justify-between">
                       <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                         © 2024{' '}
-                        <a href="https://flowbite.com/" class="hover:underline">
+                        <a href="" class="hover:underline">
                           Nani's Bilona Ghee
                         </a>
                         . All Rights Reserved.
                       </span>
-                      <div class="flex mt-4 sm:justify-center sm:mt-0">
-                        <a href="#" class="text-white hover:text-[#fbbf24]">
-                          <svg
-                            class="w-4 h-4"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            viewBox="0 0 8 19"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                              clip-rule="evenodd"
-                            />
-                          </svg>
-                          <span class="sr-only">Facebook page</span>
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </footer>

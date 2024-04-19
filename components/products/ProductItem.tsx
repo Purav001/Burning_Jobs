@@ -24,12 +24,12 @@ export default function ProductItem({ product }: { product: Product }) {
         <h2 className="card-title">{product.name}</h2>
         <p className="font-medium text-slate-500">{product.brand}</p>
         <Rating rating={product.rating} disabled />
-        <div className="card-actions justify-end">
-          <button className="btn">
-            ${product.price}
-            <ShoppingCartIcon className="h-6 w-6" />
-          </button>
-          <Link href={`/product/${product.slug}`} className="btn btn-info">
+        <div className="card-actions justify-end flex items-center">
+          <div className="font-bold bg-white">₹{product.price}</div>
+          <Link
+            href={`/product/${product.slug}`}
+            className="btn bg-[#1b2528] text-white hover:bg-[#fbbf24]"
+          >
             View Details
           </Link>
         </div>
