@@ -30,6 +30,21 @@ export default function OrderDetails({
         : toast.error(data.message)
     }
   )
+  const { trigger: payOrder, isMutating: paying } = useSWRMutation(
+    `/api/orders/${orderId}`,
+    async (url) => {
+      const res = await fetch(`/api/admin/orders/${orderId}/paid`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      const data = await res.json()
+      res.ok
+        ? toast.success('Order delivered successfully')
+        : toast.error(data.message)
+    }
+  )
 
   const { data: session } = useSession()
   console.log(session)
@@ -194,6 +209,16 @@ export default function OrderDetails({
                 )}
                 {session?.user.isAdmin && (
                   <li>
+                    <button
+                      className="btn w-full my-2"
+                      onClick={() => payOrder()}
+                      disabled={paying}
+                    >
+                      {paying && (
+                        <span className="loading loading-spinner"></span>
+                      )}
+                      Mark as Paid
+                    </button>
                     <button
                       className="btn w-full my-2"
                       onClick={() => deliverOrder()}
