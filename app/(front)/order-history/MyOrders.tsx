@@ -38,19 +38,21 @@ export default function MyOrders() {
             <tr key={order._id}>
               <td>{order._id.substring(20, 24)}</td>
               <td>{order.createdAt.substring(0, 10)}</td>
-              <td>${order.totalPrice}</td>
+              <td>₹{order.totalPrice}</td>
               <td>
-                {order.isPaid && order.paidAt
-                  ? `${order.paidAt.substring(0, 10)}`
-                  : 'not paid'}
+                {order.isPaid ? `Paid ${order.paymentMethod}` : 'not paid'}
               </td>
               <td>
-                {order.isDelivered && order.deliveredAt
-                  ? `${order.deliveredAt.substring(0, 10)}`
+                {order.isDelivered
+                  ? `${order.shippingAddress.address}`
                   : 'not delivered'}
               </td>
               <td>
-                <Link href={`/order/${order._id}`} passHref>
+                <Link
+                  href={`/order/${order._id}`}
+                  passHref
+                  className="bg-[#fbbf24] px-2 py-2 rounded"
+                >
                   Details
                 </Link>
               </td>

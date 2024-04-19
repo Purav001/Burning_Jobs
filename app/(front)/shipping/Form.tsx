@@ -59,7 +59,7 @@ const Form = () => {
           required: required && `${name} is required`,
           pattern,
         })}
-        className="input input-bordered w-full max-w-sm"
+        className="input input-bordered w-full"
       />
       {errors[id]?.message && (
         <div className="text-error">{errors[id]?.message}</div>
@@ -68,18 +68,27 @@ const Form = () => {
   )
 
   return (
-    <div>
-      <CheckoutSteps current={1} />
-      <div className="max-w-sm mx-auto card bg-base-300 my-4">
+    <div className="grid  justify-items-center m-auto w-full">
+      <div className="w-full">
+        <CheckoutSteps current={1} />
+      </div>
+      <div className="max-w mx-auto card bg-[#fffbe8] mt-4 mb-10">
         <div className="card-body">
-          <h1 className="card-title">Shipping Address</h1>
+          <h1 className="card-title m-auto">Shipping Address</h1>
           <form onSubmit={handleSubmit(formSubmit)}>
             <FormInput name="Full Name" id="fullName" required />
             <FormInput name="Address" id="address" required />
-            <FormInput name="City" id="city" required />
-            <FormInput name="Postal Code" id="postalCode" required />
+            <div className="lg:flex md:flex">
+              <div className="lg:w-1/2 md:w-1/2">
+                <FormInput name="City" id="city" required />
+              </div>
+              <div className="lg:w-1/2 md:w-1/2 lg:ml-5 md:ml-5">
+                <FormInput name="Postal Code" id="postalCode" required />
+              </div>
+            </div>
+
             <FormInput name="Country" id="country" required />
-            <div className="my-2">
+            <div className="mb-2 mt-10">
               <button
                 type="submit"
                 disabled={isSubmitting}
