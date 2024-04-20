@@ -42,15 +42,7 @@ export default function RootLayout({
                     <div class="md:flex md:justify-between">
                       <div>
                         <div class="mb-6 md:mb-0">
-                          <a
-                            href="https://flowbite.com/"
-                            class="flex items-center"
-                          >
-                            <img
-                              src="images/logo-white.png"
-                              class="h-20 w-20 me-3"
-                              alt="FlowBite Logo"
-                            />
+                          <a href="/" class="flex items-center">
                             <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">
                               Nani's Bilona Ghee
                             </span>

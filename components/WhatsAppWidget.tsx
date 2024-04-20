@@ -11,8 +11,8 @@ const WhatsAppWidget: React.FC = () => {
     <div className="fixed bottom-4 right-4 z-50">
       <img
         src="images/whatsapp.png"
-        width={100}
-        height={100}
+        width={60}
+        height={60}
         alt="WhatsApp Widget"
         className="cursor-pointer hover:shake-on-hover shake-on-hover"
         onClick={handleToggle}

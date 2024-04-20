@@ -173,10 +173,6 @@ export default async function Home() {
       <Slider photos={photoGallery}></Slider>
 
       <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
-
-      <button>
-        <Link href={`/checkout/?amount=${100}`}>checking</Link>
-      </button>
     </>
   )
 }
