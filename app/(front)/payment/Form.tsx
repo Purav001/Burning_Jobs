@@ -22,16 +22,24 @@ const Form = () => {
   }, [paymentMethod, router, shippingAddress.address])
 
   return (
-    <div>
-      <CheckoutSteps current={2} />
-      <div className="max-w-sm mx-auto card bg-base-300 my-4">
+    <div className="grid  justify-items-center m-auto w-full">
+      <div className="w-full">
+        <CheckoutSteps current={2} />
+      </div>
+      <div className="m-auto mx-auto card bg-[#fffbe8] mt-10 mb-10">
         <div className="card-body">
-          <h1 className="card-title">Payment Method</h1>
+          <h1 className="card-title m-auto">Payment Method</h1>
           <form onSubmit={handleSubmit}>
-            {['PayPal', 'Stripe', 'CashOnDelivery'].map((payment) => (
-              <div key={payment}>
+            {['Pay Online', 'Cash on Delivery'].map((payment) => (
+              <div key={payment} className="m-auto w-80">
                 <label className="label cursor-pointer">
-                  <span className="label-text">{payment}</span>
+                  <div>
+                    <span className="label-text font-bold">{payment}</span>
+                    {payment == 'Cash on Delivery' && (
+                      <p className="text-gray text-sm">₹150 Advance Payment</p>
+                    )}
+                  </div>
+
                   <input
                     type="radio"
                     name="paymentMethod"

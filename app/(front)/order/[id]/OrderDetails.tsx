@@ -7,18 +7,51 @@ import Link from 'next/link'
 import toast from 'react-hot-toast'
 import useSWR from 'swr'
 import useSWRMutation from 'swr/mutation'
+import { useRouter } from 'next/navigation'
+import React from 'react'
+import Script from 'next/script'
 
 export default function OrderDetails({
   orderId,
   paypalClientId,
+  data,
 }: {
   orderId: string
   paypalClientId: string
 }) {
-  const { trigger: deliverOrder, isMutating: isDelivering } = useSWRMutation(
+  const router = useRouter()
+  const [loading1, setLoading1] = React.useState(true)
+  const [loading, setLoading] = React.useState(false)
+  const idRef = React.useRef()
+
+  const {
+    paymentMethod,
+    shippingAddress,
+    items,
+    itemsPrice,
+    taxPrice,
+    shippingPrice,
+    totalPrice,
+    isDelivered,
+    deliveredAt,
+    isPaid,
+    paidAt,
+  } = data
+
+  const PayOnlineAmount = paymentMethod == 'Cash on Delivery' ? 150 : totalPrice
+
+  React.useEffect(() => {
+    console.log(totalPrice + 'checking')
+    if (!totalPrice) {
+      router.replace('/')
+    }
+    createOrderId()
+  }, [])
+
+  const { trigger: payOrder, isMutating: paying } = useSWRMutation(
     `/api/orders/${orderId}`,
     async (url) => {
-      const res = await fetch(`/api/admin/orders/${orderId}/deliver`, {
+      const res = await fetch(`/api/admin/orders/${orderId}/paid`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -30,10 +63,90 @@ export default function OrderDetails({
         : toast.error(data.message)
     }
   )
-  const { trigger: payOrder, isMutating: paying } = useSWRMutation(
+
+  const createOrderId = async () => {
+    try {
+      const response = await fetch('/api/orders/12345/create-razorpay-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          amount: PayOnlineAmount * 100,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+
+      const data = await response.json()
+      const id = data.orderId
+      idRef.current = id
+      setLoading1(false)
+      return
+    } catch (error) {
+      console.error('There was a problem with your fetch operation:', error)
+    }
+  }
+  const processPayment = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setLoading(true)
+    const orderId = idRef.current
+    console.log(orderId)
+    try {
+      const options = {
+        key: process.env.key_id,
+        amount: PayOnlineAmount * 100,
+        currency: 'INR',
+        name: 'Payment', //busniess name
+        description: 'Payment',
+        order_id: orderId,
+        handler: async function (response: any) {
+          const data = {
+            orderCreationId: orderId,
+            razorpayPaymentId: response.razorpay_payment_id,
+            razorpayOrderId: response.razorpay_order_id,
+            razorpaySignature: response.razorpay_signature,
+          }
+
+          const result = await fetch(
+            '/api/orders/12345/capture-razorpay-order',
+            {
+              method: 'POST',
+              body: JSON.stringify(data),
+              headers: { 'Content-Type': 'application/json' },
+            }
+          )
+          const res = await result.json()
+          //process further request, whatever should happen after request fails
+          if (res.isOk) {
+            alert(res.message)
+            payOrder()
+          } //process further request after
+          else {
+            alert(res.message)
+          }
+        },
+        theme: {
+          color: '#3399cc',
+        },
+      }
+      const paymentObject = new (window as any).Razorpay(options)
+      paymentObject.on('payment.failed', function (response: any) {
+        alert(response.error.description)
+      })
+      setLoading(false)
+      paymentObject.open()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  const { trigger: deliverOrder, isMutating: isDelivering } = useSWRMutation(
     `/api/orders/${orderId}`,
     async (url) => {
-      const res = await fetch(`/api/admin/orders/${orderId}/paid`, {
+      const res = await fetch(`/api/admin/orders/${orderId}/deliver`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -73,38 +186,35 @@ export default function OrderDetails({
       })
   }
 
-  const { data, error } = useSWR(`/api/orders/${orderId}`)
-
-  if (error) return error.message
-  if (!data) return 'Loading...'
-
-  const {
-    paymentMethod,
-    shippingAddress,
-    items,
-    itemsPrice,
-    taxPrice,
-    shippingPrice,
-    totalPrice,
-    isDelivered,
-    deliveredAt,
-    isPaid,
-    paidAt,
-  } = data
+  if (loading1)
+    return (
+      <div className="container h-screen flex justify-center items-center">
+        Loading
+      </div>
+    )
 
   return (
     <div>
-      <h1 className="text-2xl py-4">Order {orderId}</h1>
-      <div className="grid md:grid-cols-4 md:gap-5 my-4">
-        <div className="md:col-span-3">
-          <div className="card bg-base-300">
+      <Script
+        id="razorpay-checkout-js"
+        src="https://checkout.razorpay.com/v1/checkout.js"
+      />
+
+      <div className="grid md:grid-cols-4 md:gap-5 my-4 mx-10">
+        <div className="md:col-span-3 bg-[#1b2528]">
+          <div className="card">
             <div className="card-body">
-              <h2 className="card-title">Shipping Address</h2>
-              <p>{shippingAddress.fullName}</p>
-              <p>
+              <h2 className="card-title text-[#fbbf24]">Shipping Address</h2>
+              <p className="text-white">{shippingAddress.fullName}</p>
+              <p className="text-white">
                 {shippingAddress.address}, {shippingAddress.city},{' '}
                 {shippingAddress.postalCode}, {shippingAddress.country}{' '}
               </p>
+              {!isDelivered && isPaid && (
+                <p className="text-[#fbbf24]">
+                  Your order will be Delivered within 4 to 6 days
+                </p>
+              )}
               {isDelivered ? (
                 <div className="text-success">Delivered at {deliveredAt}</div>
               ) : (
@@ -113,27 +223,47 @@ export default function OrderDetails({
             </div>
           </div>
 
-          <div className="card bg-base-300 mt-4">
+          <div className="card mt-4">
             <div className="card-body">
-              <h2 className="card-title">Payment Method</h2>
-              <p>{paymentMethod}</p>
+              <h2 className="card-title text-[#fbbf24]">Payment Method</h2>
+              <p className="text-white">{paymentMethod}</p>
+              {!isPaid && paymentMethod == 'Cash on Delivery' && (
+                <div className="text-white text-sm text-grey-300">
+                  Pay ₹150 Advance
+                </div>
+              )}
+
+              {isPaid && paymentMethod == 'Cash on Delivery' && (
+                <div className="text-white text-sm text-grey-300">
+                  ₹150 Advanced Payment done
+                </div>
+              )}
+
               {isPaid ? (
                 <div className="text-success">Paid at {paidAt}</div>
               ) : (
-                <div className="text-error">Not Paid</div>
+                <>
+                  <div className="text-error">Not Paid</div>
+                  <button
+                    className="btn w-80 my-2 bg-[#fbbf24] hover:bg-[#fbbf24] hover:text-white"
+                    onClick={processPayment}
+                  >
+                    Pay Now
+                  </button>
+                </>
               )}
             </div>
           </div>
 
-          <div className="card bg-base-300 mt-4">
+          <div className="card mt-4">
             <div className="card-body">
-              <h2 className="card-title">Items</h2>
+              <h2 className="card-title text-[#fbbf24]">Items</h2>
               <table className="table">
                 <thead>
                   <tr>
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
+                    <th className="text-gray-300">Item</th>
+                    <th className="text-gray-300">Quantity</th>
+                    <th className="text-gray-300">Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -150,13 +280,13 @@ export default function OrderDetails({
                             width={50}
                             height={50}
                           ></Image>
-                          <span className="px-2">
+                          <span className="px-2 text-white">
                             {item.name} ({item.color} {item.size})
                           </span>
                         </Link>
                       </td>
-                      <td>{item.qty}</td>
-                      <td>₹{item.price}</td>
+                      <td className="text-white">{item.qty}</td>
+                      <td className="text-white">₹{item.price}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -166,7 +296,7 @@ export default function OrderDetails({
         </div>
 
         <div>
-          <div className="card bg-base-300">
+          <div className="card bg-white border">
             <div className="card-body">
               <h2 className="card-title">Order Summary</h2>
               <ul>
