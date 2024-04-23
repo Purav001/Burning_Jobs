@@ -14,6 +14,7 @@ import GheeMaking from '@/components/GheeMaking'
 import CustomerReviewVideo from '@/components/CustomerReviewVideo'
 import VideoCarousel from '@/components/videoCarousel/VideoCarousel'
 import CustomerReviewCarousel from '@/components/CustomerReviewCarousel'
+import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
 
@@ -133,6 +134,7 @@ export default async function Home() {
   const photoGallery = await productService.getPhotos()
   return (
     <>
+      {/* <CompleteProcessLoopVideo></CompleteProcessLoopVideo> */}
       <VideoCarousel></VideoCarousel>
       <h2
         className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-#1b2528 md:text-4xl lg:text-5xl text-center py-6"

@@ -4,7 +4,7 @@ import OrderModel from '@/lib/models/OrderModel'
 
 export const PUT = auth(async (...args: any) => {
   const [req, { params }] = args
-  if (!req.auth || !req.auth.user?.isAdmin) {
+  if (!req.auth) {
     return Response.json(
       { message: 'unauthorized' },
       {

@@ -68,7 +68,7 @@ export default function VideoCarousel({}: {}) {
               </p>
               <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
                 <a
-                  href="#product-section"
+                  href="/products"
                   class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:text-[#fbbf24] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                 >
                   Shop Now
@@ -125,7 +125,7 @@ export default function VideoCarousel({}: {}) {
               </p>
               <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
                 <a
-                  href="#product-section"
+                  href="/products"
                   class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:text-[#fbbf24]   focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                 >
                   Shop Now
