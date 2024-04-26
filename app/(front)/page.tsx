@@ -14,7 +14,8 @@ import GheeMaking from '@/components/GheeMaking'
 import CustomerReviewVideo from '@/components/CustomerReviewVideo'
 import VideoCarousel from '@/components/videoCarousel/VideoCarousel'
 import CustomerReviewCarousel from '@/components/CustomerReviewCarousel'
-import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
+import MainCarousel from '@/components/MainCarousel'
+// import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
 
@@ -135,18 +136,21 @@ export default async function Home() {
   return (
     <>
       {/* <CompleteProcessLoopVideo></CompleteProcessLoopVideo> */}
-      <VideoCarousel></VideoCarousel>
+      <MainCarousel></MainCarousel>
+
       <h2
         className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-#1b2528 md:text-4xl lg:text-5xl text-center py-6"
         id="product-section"
       >
         Latest Products
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center m-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center m-auto mb-10">
         {latestProducts.map((product) => (
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}
       </div>
+
+      <VideoCarousel></VideoCarousel>
 
       <div style={{ backgroundColor: '#fffbe8' }} className="pt-10 pb-10 mt-10">
         <div
