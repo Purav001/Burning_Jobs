@@ -15,6 +15,7 @@ import CustomerReviewVideo from '@/components/CustomerReviewVideo'
 import VideoCarousel from '@/components/videoCarousel/VideoCarousel'
 import CustomerReviewCarousel from '@/components/CustomerReviewCarousel'
 import MainCarousel from '@/components/MainCarousel'
+import MainCarousel1 from '@/components/MainCarousel1'
 // import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
@@ -136,10 +137,11 @@ export default async function Home() {
   return (
     <>
       {/* <CompleteProcessLoopVideo></CompleteProcessLoopVideo> */}
-      <MainCarousel></MainCarousel>
+      {/* <MainCarousel></MainCarousel> */}
+      <MainCarousel1></MainCarousel1>
 
       <h2
-        className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-#1b2528 md:text-4xl lg:text-5xl text-center py-6"
+        className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-[#1b2528] md:text-4xl lg:text-5xl text-center py-6"
         id="product-section"
       >
         Latest Products

@@ -43,7 +43,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ cards }) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-10 m-auto mx-20 pb-20 pt-5 pl-20 pr-20">
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-10 m-auto lg:mx-20 pb-20 pt-5">
       {cards.map((card, index) => (
         <SmallCard key={index} {...card} />
       ))}

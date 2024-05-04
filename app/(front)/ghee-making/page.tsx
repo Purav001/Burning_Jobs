@@ -1,186 +1,271 @@
 export default async function GheeMakingPage() {
   return (
-    <div class="container my-24 mx-auto md:px-6">
-      <section class="mb-32">
-        <h2 class="mb-16 text-center text-2xl font-bold">
+    <div class="container my-10 mx-auto md:px-6">
+      <section class="mb-16">
+        <h2 class="mb-16 text-center text-4xl font-bold text-[#854e23]">
           Complete Ghee Making Process using Ayurvedic Bilona Method
         </h2>
-
-        <div class="mb-16 flex flex-wrap">
+        <div class="mb-16 flex flex-wrap items-center">
           <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
             <div
               class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
-              <img
-                src="/images/cow-ghee/IMG_9813.JPG"
-                class="w-full"
-                alt="Louvre"
-              />
-              <a href="#!">
-                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-              </a>
+              <video
+                class="w-full lg:w-full h-auto max-w-full"
+                autoplay
+                loop
+                muted
+                controls
+              >
+                <source src="/videos/sahiwal.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
           <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
-            <h3 class="mb-4 text-2xl font-bold">That's the news!</h3>
-            <div class="mb-4 flex items-center text-sm font-medium text-danger dark:text-danger-500">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="mr-2 h-5 w-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
-                />
-              </svg>
-              Travels
-            </div>
-            <p class="mb-6 text-sm text-neutral-500 dark:text-neutral-400">
-              Published <u>14.01.2022</u> by
-              <a href="#!">Lisa McCartney</a>
+            <h3 class="mb-4 text-2xl font-bold text-[#1b2528]">Sahiwal Cow</h3>
+            <p class="mb-6 text-[#854e23] font-bold">
+              The Sahiwal Cow comes from Punjab and is known for being strong
+              and giving lots of milk.
             </p>
-            <p class="mb-6 text-neutral-500 dark:text-neutral-300">
-              Ut pretium ultricies dignissim. Sed sit amet mi eget urna placerat
-              vulputate. Ut vulputate est non quam dignissim elementum. Donec a
-              ullamcorper diam.
+            <p class="mb-6 text-[#854e23] font-bold">
+              Farmers all over the world like this cow because it's tough and
+              makes a lot of milk.
             </p>
-            <p class="text-neutral-500 dark:text-neutral-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quae
-              nulla saepe rerum aspernatur odio amet perferendis tempora
-              mollitia? Ratione unde magni omnis quaerat blanditiis cumque
-              dolore placeat rem dignissimos?
+            <p class="mb-6 text-[#854e23] font-bold">
+              At Nani's Bilona Ghee, we make sure our Sahiwal cows stay healthy
+              by feeding them good food from our farms.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              This makes their milk really good, which is why our ghee tastes so
+              nice.
             </p>
           </div>
         </div>
 
-        <div class="mb-16 flex flex-wrap lg:flex-row-reverse">
+        <div class="mb-16 flex flex-wrap lg:flex-row-reverse items-center">
           <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pl-6">
             <div
               class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
-              <img
-                src="/images/cow-ghee/IMG_9813.JPG"
-                class="w-full"
-                alt="Louvre"
-              />
-              <a href="#!">
-                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-              </a>
+              <video
+                class="w-full lg:w-full h-auto max-w-full"
+                autoplay
+                loop
+                muted
+                controls
+              >
+                <source src="/videos/milk.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
-          <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pr-6">
-            <h3 class="mb-4 text-2xl font-bold">Exhibition in Paris</h3>
-            <div class="mb-4 flex items-center text-sm font-medium text-primary dark:text-primary-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="mr-2 h-4 w-4"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"
-                />
-              </svg>
-              Art
-            </div>
-            <p class="mb-6 text-sm text-neutral-500 dark:text-neutral-400">
-              Published <u>12.01.2022</u> by
-              <a href="#!">Anna Doe</a>
+          <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
+            <h3 class="mb-4 text-2xl font-bold text-[#1b2528]">
+              A2 Harmone Free Milk
+            </h3>
+            <p class="mb-6 text-[#854e23] font-bold">
+              At Nani's Bilona Ghee, we exclusively use A2 hormone-free milk
+              sourced from Sahiwal cows in crafting our premium ghee.
             </p>
-            <p class="text-neutral-500 dark:text-neutral-300">
-              Duis sagittis, turpis in ullamcorper venenatis, ligula nibh porta
-              dui, sit amet rutrum enim massa in ante. Curabitur in justo at
-              lorem laoreet ultricies. Nunc ligula felis, sagittis eget nisi
-              vitae, sodales vestibulum purus. Vestibulum nibh ipsum, rhoncus
-              vel sagittis nec, placerat vel justo. Duis faucibus sapien eget
-              tortor finibus, a eleifend lectus dictum. Cras tempor convallis
-              magna id rhoncus. Suspendisse potenti. Nam mattis faucibus
-              imperdiet. Proin tempor lorem at neque tempus aliquet. Phasellus
-              at ex volutpat, varius arcu id, aliquam lectus. Vestibulum mattis
-              felis quis ex pharetra luctus. Etiam luctus sagittis massa, sed
-              iaculis est vehicula ut.
+            <p class="mb-6 text-[#854e23] font-bold">
+              Our dedication to quality ensures that only the purest milk goes
+              into making our ghee, maintaining its richness and authenticity.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              By selecting A2 milk from Sahiwal cows, we prioritize natural and
+              wholesome ingredients, guaranteeing a healthier and more
+              nutritious ghee.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              Experience the difference with Nani's Bilona Ghee, where tradition
+              meets purity, thanks to our commitment to using A2 hormone-free
+              milk from Sahiwal cows.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-wrap">
+        <div class="mb-16 flex flex-wrap items-center">
           <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
             <div
               class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
-              <img
-                src="/images/cow-ghee/IMG_9813.JPG"
-                class="w-full"
-                alt="Louvre"
-              />
-              <a href="#!">
-                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-              </a>
+              <video
+                class="w-full lg:w-full h-auto max-w-full"
+                autoplay
+                loop
+                muted
+                controls
+              >
+                <source src="/videos/curd.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 
           <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
-            <h3 class="mb-4 text-2xl font-bold">Stock market boom</h3>
-            <div class="mb-4 flex items-center text-sm font-medium text-yellow-600">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="mr-2 h-5 w-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
-                />
-              </svg>
-              Business
-            </div>
-            <p class="mb-6 text-sm text-neutral-500 dark:text-neutral-400">
-              Published <u>10.01.2022</u> by
-              <a href="#!">Joe Svan</a>
+            <h3 class="mb-4 text-2xl font-bold text-[#1b2528]">Curd</h3>
+            <p class="mb-6 text-[#854e23] font-bold">
+              Begin by adding a small amount of previously prepared yogurt
+              (dahi) or cultured buttermilk (lassi) to warm milk in a clean
+              container.
             </p>
-            <p class="text-neutral-500 dark:text-neutral-300">
-              Sed sollicitudin purus sed nulla dignissim ullamcorper. Aenean
-              tincidunt vulputate libero, nec imperdiet sapien pulvinar id.
-              Nullam scelerisque odio vel lacus faucibus, tincidunt feugiat
-              augue ornare. Proin ac dui vel lectus eleifend vestibulum et
-              lobortis risus. Nullam in commodo sapien. Curabitur ut erat congue
-              sem finibus eleifend egestas eu metus. Sed ut dolor id magna
-              rutrum ultrices ut eget libero. Duis vel porttitor odio. Ut
-              pulvinar sed turpis ornare tincidunt. Donec luctus, mi euismod
-              dignissim malesuada, lacus lorem commodo leo, tristique blandit
-              ante mi id metus. Integer et vehicula leo, vitae interdum lectus.
-              Praesent nulla purus, commodo at euismod nec, blandit ultrices
-              erat. Aliquam eros ipsum, interdum et mattis vitae, faucibus vitae
-              justo. Nulla condimentum hendrerit leo, in feugiat ipsum
-              condimentum ac. Maecenas sed blandit dolor.
+            <p class="mb-6 text-[#854e23] font-bold">
+              Stir the mixture gently, ensuring the culture is evenly
+              distributed throughout the milk.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              Cover the container securely and place it in a warm, draft-free
+              area overnight, allowing the beneficial bacteria to ferment the
+              milk and turn it into dahi.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              Utilize the freshly prepared dahi to churn butter using the
+              traditional bilona method, resulting in rich and creamy homemade
+              makhan (butter) of exceptional quality and flavor.
+            </p>
+          </div>
+        </div>
+        <div class="mb-16 flex flex-wrap lg:flex-row-reverse items-center">
+          <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pl-6">
+            <div
+              class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <video
+                class="w-full lg:w-full h-auto max-w-full"
+                autoplay
+                loop
+                muted
+                controls
+              >
+                <source src="/videos/bilona.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
+            <h3 class="mb-4 text-2xl font-bold text-[#1b2528]">
+              Aryuvedic Bilona Method
+            </h3>
+            <p class="mb-6 text-[#854e23] font-bold">
+              The Aryurvedic Bilona Method, practiced at Nani's Bilona Ghee,
+              involves churning curd made from A2 cow milk in a traditional
+              wooden churner called "bilona".
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              This ancient technique preserves the natural qualities of the
+              milk, including its A2 protein content, by avoiding high-speed
+              mechanical processes.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              The slow churning process allows for the separation of butter
+              (makhan) from the buttermilk (lassi), ensuring the retention of
+              essential nutrients and flavors.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              The butter obtained through the Bilona Method is then gently
+              heated and clarified to produce pure, golden A2 cow ghee of
+              superior quality and nutritional value.
+            </p>
+          </div>
+        </div>
+        <div class="mb-16 flex flex-wrap items-center">
+          <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pr-6">
+            <div
+              class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <video
+                class="w-full lg:w-full h-auto max-w-full"
+                autoplay
+                loop
+                muted
+                controls
+              >
+                <source src="/videos/makhan.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
+            <h3 class="mb-4 text-2xl font-bold text-[#1b2528]">
+              Makhan (Butter)
+            </h3>
+            <p class="mb-6 text-[#854e23] font-bold">
+              Once churned using the Bilona Method, the curd transforms into
+              creamy butter, known as "makhan.".
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              This freshly churned butter is rich in flavor and nutrients,
+              reflecting the purity of A2 cow milk.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              The makhan is carefully collected and prepared for the final step
+              in crafting Nani's Bilona Ghee.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              Through meticulous heating and clarification, the makhan is
+              transformed into pure, golden A2 cow ghee, ready to be savored and
+              enjoyed.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap lg:flex-row-reverse items-center">
+          <div class="mb-6 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-6/12 lg:pl-6">
+            <div
+              class="ripple relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+            >
+              <video
+                class="w-full lg:w-full h-auto max-w-full"
+                autoplay
+                loop
+                muted
+                controls
+              >
+                <source src="/videos/ghee.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 lg:pl-6">
+            <h3 class="mb-4 text-2xl font-bold text-[#1b2528]">A2 Cow Ghee</h3>
+            <p class="mb-6 text-[#854e23] font-bold">
+              The collected makhan undergoes a gentle boiling process to extract
+              its pure essence and eliminate any remaining moisture.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              Through careful heating, the makhan gradually transforms into
+              rich, aromatic A2 cow ghee, preserving its natural flavors and
+              nutritional benefits.
+            </p>
+            <p class="mb-6 text-[#854e23] font-bold">
+              This traditional boiling method ensures the production of
+              premium-quality ghee, ready to enhance the taste of your favorite
+              dishes and promote overall well-being.
             </p>
           </div>
         </div>
       </section>
       <div>
         <iframe
-          class="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl"
+          class="mx-auto w-full lg:max-w-4xl lg:max-h-4xl h-100 rounded-lg sm:h-96 shadow-xl"
           src="https://www.youtube.com/embed/KaLxCiilHns"
           title="YouTube video player"
           frameborder="0"
