@@ -14,10 +14,9 @@ export default async function GheeMakingPage() {
             >
               <video
                 class="w-full lg:w-full h-auto max-w-full"
-                autoplay
+                autoPlay
                 loop
                 muted
-                controls
               >
                 <source src="/videos/sahiwal.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -55,10 +54,9 @@ export default async function GheeMakingPage() {
             >
               <video
                 class="w-full lg:w-full h-auto max-w-full"
-                autoplay
+                autoPlay
                 loop
                 muted
-                controls
               >
                 <source src="/videos/milk.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -100,10 +98,10 @@ export default async function GheeMakingPage() {
             >
               <video
                 class="w-full lg:w-full h-auto max-w-full"
-                autoplay
+                autoPlay
                 loop
                 muted
-                controls
+                // controls
               >
                 <source src="/videos/curd.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -143,10 +141,10 @@ export default async function GheeMakingPage() {
             >
               <video
                 class="w-full lg:w-full h-auto max-w-full"
-                autoplay
+                autoPlay
                 loop
                 muted
-                controls
+                // controls
               >
                 <source src="/videos/bilona.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -189,10 +187,10 @@ export default async function GheeMakingPage() {
             >
               <video
                 class="w-full lg:w-full h-auto max-w-full"
-                autoplay
+                autoPlay
                 loop
                 muted
-                controls
+                // controls
               >
                 <source src="/videos/makhan.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -233,10 +231,10 @@ export default async function GheeMakingPage() {
             >
               <video
                 class="w-full lg:w-full h-auto max-w-full"
-                autoplay
+                autoPlay
                 loop
                 muted
-                controls
+                // controls
               >
                 <source src="/videos/ghee.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

@@ -64,7 +64,9 @@ const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
                   />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mt-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold mt-2 text-[#1b2528]">
+                    {item.title}
+                  </h3>
                   <Rating rating={5} disabled />
                 </div>
               </div>

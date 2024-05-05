@@ -57,12 +57,14 @@ export default async function ProductDetails({
         <div className="mr-40">
           <ul className="space-y-4">
             <li>
-              <h1 className="text-xl font-bold">{product.name}</h1>
+              <h1 className="text-xl font-bold text-[#1b2528]">
+                {product.name}
+              </h1>
             </li>
             <li>
               <Rating rating={product.rating} />
             </li>
-            <li> {product.brand}</li>
+            <li className="text-[#4F4A45] font-bold"> {product.brand}</li>
             <li>
               <div className="divider"></div>
             </li>
@@ -74,12 +76,14 @@ export default async function ProductDetails({
           <div className="card md:mt-0">
             <div className="card-body">
               <div className="mb-2 flex justify-between">
-                <div>Price</div>
-                <div>₹{product.price}</div>
+                <div className="text-gray-600 font-semibold">Price</div>
+                <div className="text-gray-600 font-semibold">
+                  ₹{product.price}
+                </div>
               </div>
               <div className="mb-2 flex justify-between">
-                <div>Status</div>
-                <div>
+                <div className="text-gray-600 font-semibold">Status</div>
+                <div className="text-gray-600 font-semibold">
                   {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
                 </div>
               </div>
@@ -100,7 +104,7 @@ export default async function ProductDetails({
           <ProductTabs product={product}></ProductTabs>
           <ul className="mt-5">
             <li>
-              <p>{product.description}</p>
+              <p className="text-gray-600 font-medium">{product.description}</p>
             </li>
           </ul>
         </div>
@@ -113,7 +117,7 @@ export default async function ProductDetails({
           <span className="text-4xl font-bold text-[#1b2528] mb-6">
             Related products
           </span>
-          <p className="text-2xl-regular text-ui-fg-base max-w-lg">
+          <p className="text-2xl-regular text-ui-fg-base max-w-lg text-[#4F4A45] font-semibold">
             You might also want to check out these products.
           </p>
         </div>

@@ -57,7 +57,9 @@ const Item: React.FC<AccordionItemProps> = ({
         <div className="flex flex-col">
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center gap-4">
-              <Text className="text-ui-fg-subtle text-sm">{title}</Text>
+              <Text className="text-ui-fg-subtle text-sm text-[#4F4A45] font-semibold">
+                {title}
+              </Text>
             </div>
             <AccordionPrimitive.Trigger>
               {customTrigger || <MorphingTrigger />}
@@ -102,10 +104,14 @@ const MorphingTrigger: React.FC = () => {
       <div className="h-5 w-5 flex items-center justify-center">
         {open ? (
           // Show "-" symbol when the content is expanded
-          <span className="transition-transform duration-300">-</span>
+          <span className="transition-transform duration-300 text-[#4F4A45] font-bold">
+            -
+          </span>
         ) : (
           // Show "+" symbol when the content is collapsed
-          <span className="transition-transform duration-300">+</span>
+          <span className="transition-transform duration-300 text-[#4F4A45] font-bold">
+            +
+          </span>
         )}
       </div>
     </div>

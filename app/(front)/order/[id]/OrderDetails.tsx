@@ -10,6 +10,8 @@ import useSWRMutation from 'swr/mutation'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 import Script from 'next/script'
+import animationData from '@/components/loading.json'
+import Lottie from 'react-lottie'
 
 export default function OrderDetails({
   orderId,
@@ -37,6 +39,15 @@ export default function OrderDetails({
     isPaid,
     paidAt,
   } = data
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
 
   const PayOnlineAmount = paymentMethod == 'Cash on Delivery' ? 150 : totalPrice
 
@@ -164,8 +175,8 @@ export default function OrderDetails({
 
   if (loading1)
     return (
-      <div className="container h-screen flex justify-center items-center">
-        Loading
+      <div className="h-full flex justify-center items-center w-full">
+        <Lottie options={defaultOptions} height={200} width={200} />
       </div>
     )
 
@@ -177,51 +188,57 @@ export default function OrderDetails({
       />
 
       <div className="grid md:grid-cols-4 md:gap-5 my-4 mx-10">
-        <div className="md:col-span-3 bg-[#1b2528]">
+        <div className="md:col-span-3 bg-[#F6F1EE]">
           <div className="card">
             <div className="card-body">
-              <h2 className="card-title text-[#fbbf24]">Shipping Address</h2>
-              <p className="text-white">{shippingAddress.fullName}</p>
-              <p className="text-white">
+              <h2 className="card-title font-bold text-[#4F4A45]">
+                Shipping Address
+              </h2>
+              <p className="font-semibold text-[#4F4A45]">
+                {shippingAddress.fullName}
+              </p>
+              <p className="font-semibold text-[#4F4A45]">
                 {shippingAddress.address}, {shippingAddress.city},{' '}
                 {shippingAddress.postalCode}, {shippingAddress.country}{' '}
               </p>
               {!isDelivered && isPaid && (
-                <p className="text-[#fbbf24]">
+                <p className=" text-[#4F4A45]">
                   Your order will be Delivered within 4 to 6 days
                 </p>
               )}
               {isDelivered ? (
-                <div className="text-success">Delivered at {deliveredAt}</div>
+                <div className="text-success font-bold">
+                  Delivered at {deliveredAt}
+                </div>
               ) : (
-                <div className="text-error">Not Delivered</div>
+                <div className="text-error font-bold">Not Delivered</div>
               )}
             </div>
           </div>
 
           <div className="card mt-4">
             <div className="card-body">
-              <h2 className="card-title text-[#fbbf24]">Payment Method</h2>
-              <p className="text-white">{paymentMethod}</p>
+              <h2 className="card-title font-bold text-[#4F4A45]">
+                Payment Method
+              </h2>
+              <p className="font-semibold text-[#4F4A45]">{paymentMethod}</p>
               {!isPaid && paymentMethod == 'Cash on Delivery' && (
-                <div className="text-white text-sm text-grey-300">
-                  Pay ₹150 Advance
-                </div>
+                <div className="text-sm text-[#4F4A45]">Pay ₹150 Advance</div>
               )}
 
               {isPaid && paymentMethod == 'Cash on Delivery' && (
-                <div className="text-white text-sm text-grey-300">
+                <div className="text-sm  text-[#4F4A45]">
                   ₹150 Advanced Payment done
                 </div>
               )}
 
               {isPaid ? (
-                <div className="text-success">Paid at {paidAt}</div>
+                <div className="text-success font-bold">Paid at {paidAt}</div>
               ) : (
                 <>
-                  <div className="text-error">Not Paid</div>
+                  <div className="text-error font-bold">Not Paid</div>
                   <button
-                    className="btn w-80 my-2 bg-[#fbbf24] hover:bg-[#fbbf24] hover:text-white"
+                    className="btn w-80 my-2 bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
                     onClick={processPayment}
                   >
                     Pay Now
@@ -233,13 +250,13 @@ export default function OrderDetails({
 
           <div className="card mt-4">
             <div className="card-body">
-              <h2 className="card-title text-[#fbbf24]">Items</h2>
+              <h2 className="card-title font-bold text-[#4F4A45]">Items</h2>
               <table className="table">
                 <thead>
                   <tr>
-                    <th className="text-gray-300">Item</th>
-                    <th className="text-gray-300">Quantity</th>
-                    <th className="text-gray-300">Price</th>
+                    <th className="text-gray-600">Item</th>
+                    <th className="text-gray-600">Quantity</th>
+                    <th className="text-gray-600">Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -256,13 +273,17 @@ export default function OrderDetails({
                             width={50}
                             height={50}
                           ></Image>
-                          <span className="px-2 text-white">
+                          <span className="px-2 font-semibold text-[#4F4A45]">
                             {item.name} ({item.color} {item.size})
                           </span>
                         </Link>
                       </td>
-                      <td className="text-white">{item.qty}</td>
-                      <td className="text-white">₹{item.price}</td>
+                      <td className="font-semibold text-[#4F4A45]">
+                        {item.qty}
+                      </td>
+                      <td className="font-semibold text-[#4F4A45]">
+                        ₹{item.price}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -274,30 +295,43 @@ export default function OrderDetails({
         <div>
           <div className="card bg-white border">
             <div className="card-body">
-              <h2 className="card-title">Order Summary</h2>
+              <h2 className="card-title font-bold text-[#4F4A45]">
+                Order Summary
+              </h2>
               <ul>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div>Items</div>
-                    <div>₹{itemsPrice}</div>
+                    <div className="font-semibold text-[#4F4A45]">Items</div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      ₹{itemsPrice}
+                    </div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div>Tax</div>
-                    <div>₹{taxPrice}</div>
+                    <div className="font-semibold text-[#4F4A45]">Tax</div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      ₹{taxPrice}
+                    </div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div>Shipping</div>
-                    <div>₹{shippingPrice}</div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      {' '}
+                      Shipping
+                    </div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      ₹{shippingPrice}
+                    </div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div>Total</div>
-                    <div>₹{totalPrice}</div>
+                    <div className="font-semibold text-[#4F4A45]">Total</div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      ₹{totalPrice}
+                    </div>
                   </div>
                 </li>
 
@@ -314,7 +348,7 @@ export default function OrderDetails({
                       Mark as Paid
                     </button>
                     <button
-                      className="btn w-full my-2"
+                      className="btn w-full my-2 "
                       onClick={() => deliverOrder()}
                       disabled={isDelivering}
                     >

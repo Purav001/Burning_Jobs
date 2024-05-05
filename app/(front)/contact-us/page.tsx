@@ -91,7 +91,7 @@ export default async function ContactUs() {
                   </div>
                   <button
                     type="submit"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    class="text-black bg-[#fbbf24] hover:bg-[#1b2528] hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Submit
                   </button>
@@ -120,15 +120,11 @@ export default async function ContactUs() {
                         </div>
                       </div>
                       <div class="ml-6 grow">
-                        <p class="mb-2 font-bold dark:text-white">
+                        <p class="mb-2 font-bold text-[#4F4A45]">
                           Business related queries
                         </p>
-                        <p class="text-neutral-500 dark:text-neutral-200">
-                          business@nanibilonaghee.com
-                        </p>
-                        <p class="text-neutral-500 dark:text-neutral-200">
-                          +91 9306273009
-                        </p>
+                        <p class="text-gray-600">business@nanibilonaghee.com</p>
+                        <p class="text-gray-600">+91 9306273009</p>
                       </div>
                     </div>
                   </div>
@@ -153,15 +149,11 @@ export default async function ContactUs() {
                         </div>
                       </div>
                       <div class="ml-6 grow">
-                        <p class="mb-2 font-bold dark:text-white">
+                        <p class="mb-2 font-bold text-[#4F4A45]">
                           Customer queries
                         </p>
-                        <p class="text-neutral-500 dark:text-neutral-200">
-                          customer@nanibilonaghee.com
-                        </p>
-                        <p class="text-neutral-500 dark:text-neutral-200">
-                          +91 8198985878
-                        </p>
+                        <p class="text-gray-600">customer@nanibilonaghee.com</p>
+                        <p class="text-gray-600">+91 8198985878</p>
                       </div>
                     </div>
                   </div>
@@ -186,12 +178,10 @@ export default async function ContactUs() {
                       </div>
                     </div>
                     <div class="ml-6 grow">
-                      <p class="mb-2 font-bold dark:text-white">
+                      <p class="mb-2 font-bold text-[#4F4A45]">
                         Text us on whatsapp for faster response:
                       </p>
-                      <p class="text-neutral-500 dark:text-neutral-200">
-                        +91 8198985878
-                      </p>
+                      <p class="text-gray-600">+91 8198985878</p>
                     </div>
                   </div>
                 </div>

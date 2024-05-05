@@ -160,7 +160,7 @@ export default async function Home() {
           style={{ backgroundColor: '#fffbe8' }}
         >
           <h1
-            className="text-3xl font-bold mb-4 text-center"
+            className="text-3xl font-bold mb-4 text-center text-[#1b2528]"
             id="customer-review-section"
           >
             Customer Reviews

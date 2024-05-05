@@ -18,10 +18,10 @@ export default function FrequentlyAskedQuestions({
           <div class="flex grid items-center lg:grid-cols-1">
             <div class="mb-12 lg:mb-0">
               <div class="block rounded-lg">
-                <h2 class="mb-4 text-3xl font-bold">
+                <h2 class="mb-4 text-3xl font-bold text-[#1b2528]">
                   Frequently asked questions
                 </h2>
-                <p className="mb-12 text-gray-400">
+                <p className="mb-12 font-bold text-[#4F4A45]">
                   Didn't find your answer in the FAQ?{' '}
                   <Link href="/contact-us" style={{ color: '#3b71ca' }}>
                     Contact our sales team.{' '}

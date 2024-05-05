@@ -59,7 +59,7 @@ const Form = () => {
           required: required && `${name} is required`,
           pattern,
         })}
-        className="input input-bordered w-full"
+        className="input input-bordered w-full bg-white text-gray-600 text-semibold"
       />
       {errors[id]?.message && (
         <div className="text-error">{errors[id]?.message}</div>
@@ -72,10 +72,15 @@ const Form = () => {
       <div className="w-full">
         <CheckoutSteps current={1} />
       </div>
-      <div className="max-w mx-auto card bg-[#fffbe8] mt-4 mb-10">
+      <div className="max-w mx-auto card bg-[#F6F1EE] mt-4 mb-10">
         <div className="card-body">
-          <h1 className="card-title m-auto">Shipping Address</h1>
-          <form onSubmit={handleSubmit(formSubmit)}>
+          <h1 className="card-title m-auto text-[#4F4A45] text-bold">
+            Shipping Address
+          </h1>
+          <form
+            className="text-[#4F4A45] font-semibold"
+            onSubmit={handleSubmit(formSubmit)}
+          >
             <FormInput name="Full Name" id="fullName" required />
             <FormInput name="Address" id="address" required />
             <div className="lg:flex md:flex">
@@ -92,7 +97,7 @@ const Form = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="btn btn-primary w-full"
+                className="btn  w-full bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
               >
                 {isSubmitting && (
                   <span className="loading loading-spinner"></span>

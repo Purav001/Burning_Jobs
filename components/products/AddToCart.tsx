@@ -45,7 +45,7 @@ export default function AddToCart({ item }: { item: OrderItem }) {
     </div>
   ) : (
     <button
-      className="btn btn-primary w-full"
+      className="btn btn-primary w-full  text-black bg-[#fbbf24] hover:bg-[#1b2528] hover:text-white"
       type="button"
       onClick={addToCartHandler}
     >

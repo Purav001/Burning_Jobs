@@ -7,7 +7,7 @@ const CheckoutSteps = ({ current = 0 }) => {
             key={step}
             className={`step
            ${index <= current ? 'step-primary' : ''}
-           `}
+            text-[#1b2528] font-semibold`}
           >
             {step}
           </li>

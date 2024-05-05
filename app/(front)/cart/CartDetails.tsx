@@ -27,10 +27,10 @@ export default function CartDetails() {
         <div>
           <CartEmpty></CartEmpty>
           <div className="flex justify-center grid grid-cols-1 items-center">
-            <span className="text-4xl font-bold text-center m-auto">
+            <span className="text-4xl font-bold text-center m-auto text-[#4F4A45] font-bold">
               Hey, it feels so light!
             </span>
-            <p className="flex justify-center">
+            <p className="flex justify-center text-[#4F4A45] font-semibold">
               there is nothing in your cart. Let's add some items
             </p>
             <div className="mt-5 justify-center flex">
@@ -45,16 +45,18 @@ export default function CartDetails() {
         </div>
       ) : (
         <div className="mx-10">
-          <h1 className="py-4 text-2xl font-extrabold">Shopping Cart</h1>
+          <h1 className="py-4 text-2xl font-extrabold text-[#1b2528] font-bold">
+            Shopping Cart
+          </h1>
 
           <div className="grid md:grid-cols-4 md:gap-5 items-center">
             <div className="overflow-x-auto md:col-span-3">
               <table className="table">
                 <thead>
                   <tr>
-                    <th>Item</th>
-                    <th>Units</th>
-                    <th>Price</th>
+                    <th className="text-gray-600">Item</th>
+                    <th className="text-gray-600">Units</th>
+                    <th className="text-gray-600">Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -81,22 +83,26 @@ export default function CartDetails() {
                       </td>
                       <td>
                         <button
-                          className="btn bg-primary"
+                          className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528] "
                           type="button"
                           onClick={() => decrease(item)}
                         >
                           -
                         </button>
-                        <span className="px-2 font-bold">{item.qty}</span>
+                        <span className="px-2 font-bold text-black">
+                          {item.qty}
+                        </span>
                         <button
-                          className="btn bg-primary"
+                          className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528]"
                           type="button"
                           onClick={() => increase(item)}
                         >
                           +
                         </button>
                       </td>
-                      <td className="font-bold">₹{item.price}</td>
+                      <td className="font-bold text-[#1b2528]">
+                        ₹{item.price}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

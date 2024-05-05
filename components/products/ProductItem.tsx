@@ -16,19 +16,15 @@ export default function ProductItem({ product }: { product: Product }) {
           height={140}
         />
       </figure>
-      <div className="card-body">
-        <div className="text-sm text-slate-500">
-          {' '}
-          {/* {type.replaceAll(`_nbsp_`, ` `).replaceAll(`_amp_`, `&`)} */}
-        </div>
-        <h2 className="card-title">{product.name}</h2>
-        <p className="font-medium text-slate-500">{product.brand}</p>
+      <div className="card-body bg-white">
+        <h2 className="card-title text-[#1b2528]">{product.name}</h2>
+        <p className="font-bold text-[#1c4854]">{product.brand}</p>
         <Rating rating={product.rating} disabled />
         <div className="card-actions justify-end flex items-center">
-          <div className="font-bold bg-white">₹{product.price}</div>
+          <div className="font-bold text-[#1c4854]">₹{product.price}</div>
           <Link
             href={`/product/${product.slug}`}
-            className="btn bg-[#1b2528] text-white hover:bg-[#fbbf24]"
+            className="btn bg-[#1b2528] text-white hover:bg-[#fbbf24] hover:text-black"
           >
             View Details
           </Link>
