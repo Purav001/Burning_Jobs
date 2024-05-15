@@ -9,19 +9,21 @@ import { SubmitHandler, ValidationRule, useForm } from 'react-hook-form'
 const Form = () => {
   const router = useRouter()
   const { saveShippingAddrress, shippingAddress } = useCartService()
+
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors, isSubmitting },
   } = useForm<ShippingAddress>({
-    defaultValues: {
-      fullName: '',
-      address: '',
-      city: '',
-      postalCode: '',
-      country: '',
-    },
+    // defaultValues: {
+    //   fullName: '',
+    //   address: '',
+    //   city: '',
+    //   postalCode: '',
+    //   contactNumber: 0,
+    //   country: '',
+    // },
   })
 
   useEffect(() => {
@@ -30,6 +32,7 @@ const Form = () => {
     setValue('city', shippingAddress.city)
     setValue('postalCode', shippingAddress.postalCode)
     setValue('country', shippingAddress.country)
+    setValue('contactNumber', shippingAddress.contactNumber)
   }, [setValue, shippingAddress])
 
   const formSubmit: SubmitHandler<ShippingAddress> = async (form) => {
@@ -92,7 +95,15 @@ const Form = () => {
               </div>
             </div>
 
-            <FormInput name="Country" id="country" required />
+            <div className="lg:flex md:flex">
+              <div className="lg:w-1/2 md:w-1/2">
+                <FormInput name="State" id="country" required />
+              </div>
+              <div className="lg:w-1/2 md:w-1/2 lg:ml-5 md:ml-5">
+                <FormInput name="Contact Number" id="contactNumber" required />
+              </div>
+            </div>
+
             <div className="mb-2 mt-10">
               <button
                 type="submit"

@@ -45,7 +45,7 @@ const Form = () => {
         toast.success('Pay to place your order')
         return router.push(`/order/${data.order._id}`)
       } else {
-        toast.error(data.message)
+        toast.error(data.message + 'checking')
       }
     }
   )
@@ -82,7 +82,8 @@ const Form = () => {
               </p>
               <p className="font-semibold text-[#4F4A45]">
                 {shippingAddress.address}, {shippingAddress.city},{' '}
-                {shippingAddress.postalCode}, {shippingAddress.country}{' '}
+                {shippingAddress.postalCode}, {shippingAddress.country} ,
+                {shippingAddress.contactNumber}
               </p>
               <div>
                 <Link

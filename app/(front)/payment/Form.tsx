@@ -18,7 +18,7 @@ const Form = () => {
     if (!shippingAddress.address) {
       return router.push('/shipping')
     }
-    setSelectedPaymentMethod(paymentMethod || 'PayPal')
+    setSelectedPaymentMethod(paymentMethod || 'Pay Online')
   }, [paymentMethod, router, shippingAddress.address])
 
   return (

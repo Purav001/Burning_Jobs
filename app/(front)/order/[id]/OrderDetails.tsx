@@ -13,14 +13,7 @@ import Script from 'next/script'
 import animationData from '@/components/loading.json'
 import Lottie from 'react-lottie'
 
-export default function OrderDetails({
-  orderId,
-  paypalClientId,
-  data,
-}: {
-  orderId: string
-  paypalClientId: string
-}) {
+export default function OrderDetails({ orderId, data }: { orderId: string }) {
   const router = useRouter()
   const [loading1, setLoading1] = React.useState(true)
   const [loading, setLoading] = React.useState(false)
@@ -199,7 +192,8 @@ export default function OrderDetails({
               </p>
               <p className="font-semibold text-[#4F4A45]">
                 {shippingAddress.address}, {shippingAddress.city},{' '}
-                {shippingAddress.postalCode}, {shippingAddress.country}{' '}
+                {shippingAddress.postalCode}, {shippingAddress.country} ,{' '}
+                {shippingAddress.contactNumber}
               </p>
               {!isDelivered && isPaid && (
                 <p className=" text-[#4F4A45]">

@@ -33,11 +33,5 @@ export default function OrderDetailsPage({
 
   console.log(paymentMethod + shippingAddress + items + totalPrice + 'checking')
 
-  return (
-    <OrderDetails
-      paypalClientId={process.env.PAYPAL_CLIENT_ID || 'sb'}
-      orderId={params.id}
-      data={data}
-    />
-  )
+  return <OrderDetails orderId={params.id} data={data} />
 }
