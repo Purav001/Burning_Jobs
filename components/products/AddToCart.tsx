@@ -27,7 +27,7 @@ export default function AddToCart({ item }: { item: OrderItem }) {
         >
           -
         </button>
-        <span className="px-2 font-bold">{existItem.qty}</span>
+        <span className="px-2 font-bold text-[#1b2528]">{existItem.qty}</span>
         <button
           className="py-1 px-4 text-base font-medium text-center text-black  hover:bg-[#fbbf24] focus:ring-4 focus:ring-blue-300 m-0"
           type="button"

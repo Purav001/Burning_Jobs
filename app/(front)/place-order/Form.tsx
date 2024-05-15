@@ -101,7 +101,10 @@ const Form = () => {
                 Payment Method
               </h2>
               <p className="font-semibold text-[#4F4A45]">{paymentMethod}</p>
-              <p className="text-sm text-gray-600">Pay ₹150 advance</p>
+              {/* <p className="text-sm text-gray-600">Pay ₹150 advance</p> */}
+              {paymentMethod == 'Cash on Delivery' && (
+                <div className="text-sm text-[#4F4A45]">Pay ₹150 Advance</div>
+              )}
               <div>
                 <Link
                   className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"

@@ -115,9 +115,22 @@ export default function RootLayout({
                                 Privacy Policy
                               </a>
                             </li>
+                            <li class="mb-4">
+                              <a
+                                href="/shipping-policy"
+                                class="hover:underline"
+                              >
+                                Shipping Policy
+                              </a>
+                            </li>
                             <li>
                               <a href="#" class="hover:underline">
                                 Terms &amp; Conditions
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/refund-policy" class="hover:underline">
+                                Refund Policy
                               </a>
                             </li>
                           </ul>
