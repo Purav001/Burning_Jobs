@@ -264,7 +264,7 @@ export default async function GheeMakingPage() {
       <div>
         <iframe
           class="mx-auto w-full lg:max-w-4xl lg:max-h-4xl h-100 rounded-lg sm:h-96 shadow-xl"
-          src="https://www.youtube.com/embed/KaLxCiilHns"
+          src="https://www.youtube.com/embed/B8L9GFHb-vw"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

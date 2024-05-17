@@ -25,7 +25,7 @@ export default function Slider({ photos }: { photos: Photo[] }) {
             <img
               src={image.image}
               data-te-img={image.image}
-              alt="Table Full of Spices"
+              alt="Nani's Love in Golden Jar"
               className="mb-1 w-full cursor-zoom-in data-[te-lightbox-disabled]:cursor-auto"
             />
           </div>
