@@ -110,11 +110,11 @@ export default function RootLayout({
                             Legal
                           </h2>
                           <ul class="text-white  font-medium">
-                            <li class="mb-4">
+                            {/* <li class="mb-4">
                               <a href="#" class="hover:underline">
                                 Privacy Policy
                               </a>
-                            </li>
+                            </li> */}
                             <li class="mb-4">
                               <a
                                 href="/shipping-policy"
@@ -123,11 +123,11 @@ export default function RootLayout({
                                 Shipping Policy
                               </a>
                             </li>
-                            <li>
+                            {/* <li>
                               <a href="#" class="hover:underline">
                                 Terms &amp; Conditions
                               </a>
-                            </li>
+                            </li> */}
                             <li>
                               <a href="/refund-policy" class="hover:underline">
                                 Refund Policy

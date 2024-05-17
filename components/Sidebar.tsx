@@ -17,16 +17,16 @@ const Sidebar = () => {
         <h2 className="text-xl">Nani&apos;s Bilona Ghee</h2>
       </li>
       <li>
-        <h3>Products</h3>
+        <a href="/products">Products</a>
       </li>
       <li>
-        <h3>Our Story</h3>
+        <a href="/our-story">Our Story</a>
       </li>
       <li>
-        <h3>Contact Us</h3>
+        <a href="/contact-us">Contact Us</a>
       </li>
       <li>
-        <h3>Blogs</h3>
+        <a href="/ghee-making">Ghee Making Process</a>
       </li>
     </ul>
   )
