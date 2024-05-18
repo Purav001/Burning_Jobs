@@ -12,7 +12,7 @@ import 'swiper/css/navigation'
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules'
 
-const MainCarousel1: React.FC<> = () => {
+const MainCarousel1: React.FC = () => {
   return (
     <a href="/products">
       <Swiper

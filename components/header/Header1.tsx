@@ -50,7 +50,7 @@ const Header = () => {
                 className="text-lg font-extrabold tracking-tight"
                 style={{ color: '#daa407' }}
               >
-                Nani's Bilona Ghee
+                Nani&apos;s Bilona Ghee
               </span>
             </Link>
           </div>

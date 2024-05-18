@@ -113,8 +113,8 @@ export default function Checkout() {
           <div>
             <div className="my-4">Continue</div>
             <div>
-              By clicking on pay you'll purchase your plan subscription of Rs{' '}
-              {amount}/month
+              By clicking on pay you&aposll purchase your plan subscription of
+              Rs {amount}/month
             </div>
           </div>
           <div>

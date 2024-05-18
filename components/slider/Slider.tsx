@@ -14,7 +14,7 @@ export default function Slider({ photos }: { photos: Photo[] }) {
   return (
     <div className="bg-[#1b2528] py-10">
       <h1 className="text-4xl font-bold text-center text-primary">
-        Nani's Bilona Ghee Gallery
+        Nani&apos;s Bilona Ghee Gallery
       </h1>
       <div
         data-te-lightbox-init

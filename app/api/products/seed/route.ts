@@ -1,4 +1,3 @@
-import PhotoGallery from '@/components/photoGallery/PhotoGallery'
 import data from '@/lib/data'
 import dbConnect from '@/lib/dbConnect'
 import BannerModel from '@/lib/models/BannerModel'

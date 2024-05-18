@@ -64,7 +64,7 @@ const Contact: FC = () => {
               {...register('name', { required: true })}
             />
           </div>
-          <div class="grid md:grid-cols-2 md:gap-6">
+          <div className="grid md:grid-cols-2 md:gap-6">
             <div className="mb-5">
               <label
                 htmlFor="email"
@@ -105,7 +105,7 @@ const Contact: FC = () => {
               id="underline_select"
               placeholder="fsdf"
               {...register('time_slot', { required: false })}
-              class="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
+              className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
             >
               <option selected>Choose Your Slot</option>
               <option value="8-12">8:00AM - 11:59AM </option>

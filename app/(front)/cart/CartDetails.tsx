@@ -31,12 +31,12 @@ export default function CartDetails() {
               Hey, it feels so light!
             </span>
             <p className="flex justify-center text-[#4F4A45] font-semibold">
-              there is nothing in your cart. Let's add some items
+              there is nothing in your cart. Let&apos;s add some items
             </p>
             <div className="mt-5 justify-center flex">
               <Link
                 href="/products"
-                class="bg-primary py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none rounded-lg border border-gray-200 hover:bg-[#1b2528] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
+                className="bg-primary py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none rounded-lg border border-gray-200 hover:bg-[#1b2528] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
               >
                 View Products
               </Link>

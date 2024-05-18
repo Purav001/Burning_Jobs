@@ -13,7 +13,13 @@ import Script from 'next/script'
 import animationData from '@/components/loading.json'
 import Lottie from 'react-lottie'
 
-export default function OrderDetails({ orderId, data1 }: { orderId: string }) {
+export default function OrderDetails({
+  orderId,
+  data1,
+}: {
+  orderId: string
+  data1: any
+}) {
   const router = useRouter()
   const [loading1, setLoading1] = React.useState(true)
   const [loading, setLoading] = React.useState(false)
