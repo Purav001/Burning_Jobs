@@ -63,13 +63,28 @@ const Header = () => {
             >
               Products
             </a>
-            <a href="/our-story" className="text-white font-bold mr-6">
+            <a
+              href="/our-story"
+              className={`${
+                pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6`}
+            >
               Our Story
             </a>
-            <Link href="/contact-us" className="text-white font-bold mr-6">
+            <Link
+              href="/contact-us"
+              className={`${
+                pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6`}
+            >
               Contact Us
             </Link>
-            <Link href="/ghee-making" className="text-white font-bold">
+            <Link
+              href="/ghee-making"
+              className={`${
+                pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6`}
+            >
               Ghee Making Process
             </Link>
           </div>

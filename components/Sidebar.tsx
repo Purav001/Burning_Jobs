@@ -3,10 +3,13 @@
 import useLayoutService from '@/lib/hooks/useLayout'
 import Link from 'next/link'
 import useSWR from 'swr'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
+import { usePathname } from 'next/navigation'
 
 const Sidebar = () => {
   const { toggleDrawer, closeDrower } = useLayoutService()
   const { data: categories, error } = useSWR('/api/products/categories')
+  const pathname = usePathname()
 
   if (error) return error.message
   if (!categories) return 'Loading...'
@@ -17,16 +20,48 @@ const Sidebar = () => {
         <h2 className="text-xl">Nani&apos;s Bilona Ghee</h2>
       </li>
       <li>
-        <a href="/products">Products</a>
+        <a
+          onClick={closeDrower}
+          href="/products"
+          className={`${
+            pathname == '/products' ? 'text-[#fbbf24]' : 'text-white'
+          } font-bold mr-6`}
+        >
+          Products
+        </a>
       </li>
       <li>
-        <a href="/our-story">Our Story</a>
+        <a
+          onClick={closeDrower}
+          href="/our-story"
+          className={`${
+            pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-white'
+          } font-bold mr-6`}
+        >
+          Our Story
+        </a>
       </li>
       <li>
-        <a href="/contact-us">Contact Us</a>
+        <a
+          onClick={closeDrower}
+          href="/contact-us"
+          className={`${
+            pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-white'
+          } font-bold mr-6`}
+        >
+          Contact Us
+        </a>
       </li>
       <li>
-        <a href="/ghee-making">Ghee Making Process</a>
+        <a
+          onClick={closeDrower}
+          href="/ghee-making"
+          className={`${
+            pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-white'
+          } font-bold mr-6`}
+        >
+          Ghee Making Process
+        </a>
       </li>
     </ul>
   )

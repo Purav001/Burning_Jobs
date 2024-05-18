@@ -103,7 +103,6 @@ const Contact: FC = () => {
             </label>
             <select
               id="underline_select"
-              placeholder="fsdf"
               {...register('time_slot', { required: false })}
               className="w-full rounded-md border border-gray-300 bg-white py-3 px-6 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
             >
