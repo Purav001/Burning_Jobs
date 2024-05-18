@@ -21,6 +21,7 @@ const SmallCard: React.FC<SmallCardProps> = ({ imageSrc, heading }) => {
       <Image
         src={'/' + imageSrc}
         data-loaded="false"
+        alt="brefit of A2 cow ghee"
         onLoad={(event) => {
           event.currentTarget.setAttribute('data-loaded', 'true')
         }}

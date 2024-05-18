@@ -106,7 +106,9 @@ export default function OrderDetails({
       console.error('There was a problem with your fetch operation:', error)
     }
   }
-  const processPayment = async (e: React.FormEvent<HTMLFormElement>) => {
+  const processPayment = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault()
     setLoading(true)
     const orderId = idRef.current

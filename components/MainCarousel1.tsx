@@ -16,10 +16,10 @@ const MainCarousel1: React.FC = () => {
   return (
     <a href="/products">
       <Swiper
-        style={{
-          '--swiper-navigation-color': '#1b2528',
-          '--swiper-pagination-color': '#1b2528',
-        }}
+        // style={{
+        //   '--swiper-navigation-color': '#1b2528',
+        //   '--swiper-pagination-color': '#1b2528',
+        // }}
         spaceBetween={50}
         // slidesPerView={3}
         slidesPerView={1}
