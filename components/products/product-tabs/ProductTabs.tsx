@@ -81,7 +81,7 @@ const ShippingInfoTab = () => {
           <div>
             <span className="text-[#4F4A45] font-semibold">Fast delivery</span>
             <p className="max-w-sm font-medium text-gray-600">
-              Your package will arrive in 3-5 business days at your pick up
+              Your package will arrive in 2-5 business days at your pick up
               location or in the comfort of your home.
             </p>
           </div>
@@ -93,8 +93,10 @@ const ShippingInfoTab = () => {
               Simple exchanges
             </span>
             <p className="max-w-sm font-medium text-gray-600">
-              Is the fit not quite right? No worries - we&apos;ll exchange your
-              product for a new one.
+              please look into{' '}
+              <a href="/refund-policy" className="text-[#1b2528] font-bold">
+                refund policy{' '}
+              </a>
             </p>
           </div>
         </div>
@@ -103,9 +105,10 @@ const ShippingInfoTab = () => {
           <div>
             <span className="text-[#4F4A45] font-semibold">Easy returns</span>
             <p className="max-w-sm font-medium text-gray-600">
-              Just return your product and we&apos;ll refund your money. No
-              questions asked – we&apos;ll do our best to make sure your return
-              is hassle-free.
+              please look into{' '}
+              <a href="/refund-policy" className="text-[#1b2528] font-bold">
+                refund policy{' '}
+              </a>
             </p>
           </div>
         </div>
