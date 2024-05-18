@@ -60,7 +60,7 @@ const Header = () => {
             <Link href="/contact-us" className="text-white font-bold mr-6">
               Contact Us
             </Link>
-            <Link href="/ghee-making" className="text-white font-bold active">
+            <Link href="/ghee-making" className="text-white font-bold">
               Ghee Making Process
             </Link>
           </div>

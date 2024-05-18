@@ -19,6 +19,7 @@ import MainCarousel1 from '@/components/MainCarousel1'
 // import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
+import Contact from '@/components/ContactUs/Contact'
 
 const Slider = dynamic(() => import('@/components/slider/Slider'), {
   ssr: false,
