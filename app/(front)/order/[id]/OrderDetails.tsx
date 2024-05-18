@@ -303,7 +303,9 @@ export default function OrderDetails({ orderId, data }: { orderId: string }) {
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">Tax</div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      Tax(18% GST)
+                    </div>
                     <div className="font-semibold text-[#4F4A45]">
                       ₹{taxPrice}
                     </div>
@@ -313,7 +315,10 @@ export default function OrderDetails({ orderId, data }: { orderId: string }) {
                   <div className="mb-2 flex justify-between">
                     <div className="font-semibold text-[#4F4A45]">
                       {' '}
-                      Shipping
+                      Shipping{' '}
+                      <span className="italic text-gray-500 text-sm">
+                        Free for 2 Week (till 01 June)
+                      </span>
                     </div>
                     <div className="font-semibold text-[#4F4A45]">
                       ₹{shippingPrice}

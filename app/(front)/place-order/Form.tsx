@@ -188,7 +188,9 @@ const Form = () => {
                 </li>
                 <li>
                   <div className=" flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">Tax</div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      Tax(18% GST)
+                    </div>
                     <div className="font-semibold text-[#4F4A45]">
                       ₹{taxPrice}
                     </div>
@@ -196,7 +198,13 @@ const Form = () => {
                 </li>
                 <li>
                   <div className=" flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">Shipping</div>
+                    <div className="font-semibold text-[#4F4A45]">
+                      Shipping
+                      <span className="ml-1 italic text-gray-500 text-sm">
+                        Free for 2 Week (till 01 June)
+                      </span>
+                    </div>
+
                     <div className="font-semibold text-[#4F4A45]">
                       ₹{shippingPrice}
                     </div>

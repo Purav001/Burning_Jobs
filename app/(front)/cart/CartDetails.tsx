@@ -74,7 +74,7 @@ export default function CartDetails() {
                             height={100}
                           ></Image>
                           <span
-                            className="px-2 font-bold"
+                            className="px-2 font-bold sm:text-lg"
                             style={{ color: '#1b2528' }}
                           >
                             {item.name}
