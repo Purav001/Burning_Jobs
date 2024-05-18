@@ -13,11 +13,14 @@ import Script from 'next/script'
 import animationData from '@/components/loading.json'
 import Lottie from 'react-lottie'
 
-export default function OrderDetails({ orderId, data }: { orderId: string }) {
+export default function OrderDetails({ orderId, data1 }: { orderId: string }) {
   const router = useRouter()
   const [loading1, setLoading1] = React.useState(true)
   const [loading, setLoading] = React.useState(false)
   const idRef = React.useRef()
+  const { data: session } = useSession()
+
+  console.log(session)
 
   const {
     paymentMethod,
@@ -31,7 +34,7 @@ export default function OrderDetails({ orderId, data }: { orderId: string }) {
     deliveredAt,
     isPaid,
     paidAt,
-  } = data
+  } = data1
 
   const defaultOptions = {
     loop: true,
@@ -70,13 +73,17 @@ export default function OrderDetails({ orderId, data }: { orderId: string }) {
 
   const createOrderId = async () => {
     try {
-      const response = await fetch('/api/orders/12345/create-razorpay-order', {
+      console.log(session?.user._id)
+      const response = await fetch(`/api/orders/12345/create-razorpay-order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           amount: PayOnlineAmount * 100,
+          user: session?.user.name,
+          email: session?.user.email,
+          id: session?.user._id,
         }),
       })
 
@@ -115,7 +122,7 @@ export default function OrderDetails({ orderId, data }: { orderId: string }) {
           }
 
           const result = await fetch(
-            '/api/orders/12345/capture-razorpay-order',
+            `/api/orders/12345/capture-razorpay-order`,
             {
               method: 'POST',
               body: JSON.stringify(data),
@@ -162,9 +169,6 @@ export default function OrderDetails({ orderId, data }: { orderId: string }) {
         : toast.error(data.message)
     }
   )
-
-  const { data: session } = useSession()
-  console.log(session)
 
   if (loading1)
     return (

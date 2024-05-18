@@ -33,5 +33,5 @@ export default function OrderDetailsPage({
 
   console.log(paymentMethod + shippingAddress + items + totalPrice + 'checking')
 
-  return <OrderDetails orderId={params.id} data={data} />
+  return <OrderDetails orderId={params.id} data1={data} />
 }

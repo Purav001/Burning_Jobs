@@ -1,5 +1,5 @@
 import Razorpay from 'razorpay'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse, userAgent } from 'next/server'
 
 const razorpay = new Razorpay({
   key_id: process.env.key_id!,
@@ -7,15 +7,23 @@ const razorpay = new Razorpay({
 })
 
 export async function POST(request: NextRequest) {
-  const { amount, currency } = (await request.json()) as {
+  const { amount, currency, user, email, id } = (await request.json()) as {
     amount: string
     currency: string
+    user: string
+    email: string
+    id: string
   }
 
   var options = {
     amount: amount,
     currency: currency,
     receipt: 'rcp1',
+    notes: {
+      user: user,
+      email: email,
+      id: id,
+    },
   }
   const order = await razorpay.orders.create(options)
   console.log(order)

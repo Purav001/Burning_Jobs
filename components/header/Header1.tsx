@@ -3,8 +3,12 @@ import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
+  const pathname = usePathname()
+
+  console.log(pathname)
   const scrollToTop = () => {
     scroll.scrollToTop()
   }
@@ -51,7 +55,12 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
-            <a href="/products" className="text-white font-bold mr-6">
+            <a
+              href="/products"
+              className={`${
+                pathname == '/products' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6`}
+            >
               Products
             </a>
             <a href="/our-story" className="text-white font-bold mr-6">
