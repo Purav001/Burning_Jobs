@@ -25,12 +25,14 @@ export default function CartDetails() {
     <>
       {items.length === 0 ? (
         <div>
-          <CartEmpty></CartEmpty>
+          <div className="flex justify-center items-center">
+            <CartEmpty></CartEmpty>
+          </div>
           <div className="flex justify-center grid grid-cols-1 items-center">
-            <span className="text-4xl font-bold text-center m-auto text-[#4F4A45] font-bold">
+            <span className="text-base md:text-4xl font-bold text-center m-auto text-[#4F4A45] font-bold">
               Hey, it feels so light!
             </span>
-            <p className="flex justify-center text-[#4F4A45] font-semibold">
+            <p className="flex justify-center text-[#4F4A45] font-semibold text-sm md:text-xl">
               there is nothing in your cart. Let&apos;s add some items
             </p>
             <div className="mt-5 justify-center flex">

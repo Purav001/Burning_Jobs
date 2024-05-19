@@ -32,13 +32,13 @@ export function Gallery({
     'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center'
 
   return (
-    <div className="mr-8 h-full">
-      <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
+    <div className=" h-full">
+      <div className="relative aspect-square h-100 w-100 md:h-full md:max-h-[550px] md:w-full overflow-hidden">
         {images[imageIndex] && (
           <Image
-            className="h-full w-full object-contain"
+            className="h-10 w-10 md:h-full md:w-full object-contain"
             fill
-            sizes="(min-width: 1024px) 66vw, 100vw"
+            // sizes="(min-width: 1024px) 66vw, 100vw"
             alt={images[imageIndex]?.altText as string}
             src={images[imageIndex]?.src as string}
             priority={true}
@@ -81,7 +81,7 @@ export function Gallery({
             imageSearchParams.set('image', index.toString())
 
             return (
-              <li key={image.src} className="h-20 w-20">
+              <li key={image.src} className="h-10 w-10 md:h-20 md:w-20">
                 <Link
                   aria-label="Enlarge product image"
                   href={createUrl(pathname, imageSearchParams)}

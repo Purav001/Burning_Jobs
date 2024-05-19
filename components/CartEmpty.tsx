@@ -13,8 +13,8 @@ const CartEmpty = () => {
   }
 
   return (
-    <div>
-      <Lottie options={defaultOptions} height={400} width={400} />
+    <div className="w-20 h-20 md:w-96 md:h-96">
+      <Lottie options={defaultOptions} height="100%" width="100%" />
     </div>
   )
 }

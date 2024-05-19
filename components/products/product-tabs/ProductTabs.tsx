@@ -31,6 +31,7 @@ export default function ProductTabs({ product }: ProductTabsProps) {
             key={i}
             title={tab.label}
             headingSize="medium"
+            className="text-xs md:text-base"
             value={tab.label}
           >
             {tab.component}

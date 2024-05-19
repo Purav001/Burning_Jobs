@@ -54,17 +54,20 @@ export default async function ProductDetails({
             }))}
           ></Gallery>
         </div>
-        <div className="mr-40">
+        <div className="md:mr-40 px-5 md:px-0">
           <ul className="space-y-4">
             <li>
-              <h1 className="text-xl font-bold text-[#1b2528]">
+              <h1 className="text-base md:text-xl font-bold text-[#1b2528]">
                 {product.name}
               </h1>
             </li>
             <li>
               <Rating rating={product.rating} />
             </li>
-            <li className="text-[#4F4A45] font-bold"> {product.brand}</li>
+            <li className="text-[#4F4A45] font-bold text-sm md:text-base">
+              {' '}
+              {product.brand}
+            </li>
             <li>
               <div className="divider"></div>
             </li>
@@ -76,14 +79,18 @@ export default async function ProductDetails({
           <div className="card md:mt-0">
             <div className="card-body">
               <div className="mb-2 flex justify-between">
-                <div className="text-gray-600 font-semibold">Price</div>
-                <div className="text-gray-600 font-semibold">
+                <div className="text-gray-600 font-semibold text-sm md:text-base">
+                  Price
+                </div>
+                <div className="text-gray-600 font-semibold text-sm md:text-base">
                   ₹{product.price}
                 </div>
               </div>
               <div className="mb-2 flex justify-between">
-                <div className="text-gray-600 font-semibold">Status</div>
-                <div className="text-gray-600 font-semibold">
+                <div className="text-gray-600 font-semibold text-sm md:text-base">
+                  Status
+                </div>
+                <div className="text-gray-600 font-semibold text-sm md:text-base">
                   {product.countInStock > 0 ? 'In stock' : 'Unavailable'}
                 </div>
               </div>
@@ -104,7 +111,9 @@ export default async function ProductDetails({
           <ProductTabs product={product}></ProductTabs>
           <ul className="mt-5">
             <li>
-              <p className="text-gray-600 font-medium">{product.description}</p>
+              <p className="text-gray-600 font-medium text-xs  md:text-base">
+                {product.description}
+              </p>
             </li>
           </ul>
         </div>
@@ -113,16 +122,16 @@ export default async function ProductDetails({
         className="product-page-constraint mt-10"
         style={{ backgroundColor: '#f2ede4' }}
       >
-        <div className="flex flex-col items-center text-center mb-16 pt-10">
-          <span className="text-4xl font-bold text-[#1b2528] mb-6">
+        <div className="flex flex-col items-center text-center mb-5 md:mb-16 pt-10">
+          <span className="text-2xl md:text-4xl font-bold text-[#1b2528] mb:2 md:mb-6">
             Related products
           </span>
-          <p className="text-2xl-regular text-ui-fg-base max-w-lg text-[#4F4A45] font-semibold">
+          <p className="text-base md:text-2xl-regular text-ui-fg-base max-w-lg text-[#4F4A45] font-semibold">
             You might also want to check out these products.
           </p>
         </div>
 
-        <ul className="grid md:grid-cols-1 lg:grid-cols-3 gap-4 justify-items-center m-auto pb-10">
+        <ul className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center m-auto pb-10">
           {relatedProducts.map((product) => (
             <li key={product.slug}>
               <ProductItem
