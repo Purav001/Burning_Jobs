@@ -47,12 +47,12 @@ export default function CartDetails() {
         </div>
       ) : (
         <div className="mx-10">
-          <h1 className="py-4 text-2xl font-extrabold text-[#1b2528] font-bold">
+          <h1 className="py-4 text-2xl font-extrabold text-[#1b2528] font-bold text-center">
             Shopping Cart
           </h1>
 
-          <div className="grid md:grid-cols-4 md:gap-5 items-center">
-            <div className="overflow-x-auto md:col-span-3">
+          <div className="grid md:grid-cols-4 md:gap-5 items-center justify-center">
+            <div className="overflow-x-auto md:col-span-3 hidden md:block">
               <table className="table">
                 <thead>
                   <tr>
@@ -110,19 +110,78 @@ export default function CartDetails() {
                 </tbody>
               </table>
             </div>
+            <div className="grid grid-cols-1 md:hidden">
+              {items.map((item, index) => (
+                <div key={item.slug} className="mb-5 border p-2">
+                  <div className="grid grid-cols-2 items-center justify-center flex mb-3">
+                    <div className="grid grid-cols-2">
+                      <div className="flex items-center justify-center">
+                        <Link href={`/product/${item.slug}`}>
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            width={50}
+                            height={50}
+                          />
+                        </Link>
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <Link href={`/product/${item.slug}`}>
+                          <span
+                            className="px-2 font-semibold text-xs"
+                            style={{ color: '#1b2528' }}
+                          >
+                            ₹{item.price}
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <button
+                        className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528] px-2 py-1 text-xs"
+                        type="button"
+                        onClick={() => decrease(item)}
+                      >
+                        -
+                      </button>
+
+                      <span className="px-2 font-bold text-black">
+                        {item.qty}
+                      </span>
+                      <button
+                        className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528] px-2 py-1 text-xs"
+                        type="button"
+                        onClick={() => increase(item)}
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  <p
+                    className="px-2 font-semibold text-xs"
+                    style={{ color: '#1b2528' }}
+                  >
+                    {item.name}
+                  </p>
+                </div>
+              ))}
+            </div>
             <div>
-              <div className="card px-5" style={{ backgroundColor: '#1b2528' }}>
-                <div className="card-body">
+              <div
+                className="card p-5 md:px-5 my-5 justify-center"
+                style={{ backgroundColor: '#1b2528' }}
+              >
+                <div>
                   <ul>
                     <li>
-                      <div className="pb-3 text-xl text-white">
+                      <div className="pb-3 text-sm md:text-xl text-white text-center  ">
                         Subtotal : ₹{itemsPrice}
                       </div>
                     </li>
                     <li>
                       <button
                         onClick={() => router.push('/shipping')}
-                        className="btn btn-primary w-full bg-white hover:text-white"
+                        className="btn btn-primary w-full bg-white hover:text-white text-sm md:text-base"
                       >
                         Proceed to Checkout
                       </button>

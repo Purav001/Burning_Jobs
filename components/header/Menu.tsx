@@ -33,12 +33,12 @@ const Menu = () => {
         <ul className="flex items-stretch">
           <li>
             <Link
-              className="btn btn-ghost rounded-btn text-sm lg:text-base"
+              className="btn btn-ghost rounded-btn text-xs md:text-base"
               href="/cart"
             >
               Cart
               {mounted && items.length != 0 && (
-                <div className="bg-[#fbbf24] py-1 px-3 rounded-btn text-black text-sm md:text-base lg:text-base">
+                <div className="bg-[#fbbf24] py-1 px-1 rounded-sm text-black text-xs md:text-base lg:text-base">
                   {items.reduce((a, c) => a + c.qty, 0)}{' '}
                 </div>
               )}
@@ -50,7 +50,7 @@ const Menu = () => {
                 <div className="dropdown dropdown-bottom dropdown-end">
                   <label
                     tabIndex={0}
-                    className="btn btn-ghost rounded-btn text-sm md:text-base lg:text-base"
+                    className="btn btn-ghost rounded-btn text-xs md:text-base lg:text-base"
                   >
                     {session.user.name}
                     <svg
@@ -59,7 +59,7 @@ const Menu = () => {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-3 h-3 md:w-6 lg:h-6"
+                      className="w-2 h-2 md:w-6 lg:h-6"
                     >
                       <path
                         strokeLinecap="round"
@@ -115,7 +115,7 @@ const Menu = () => {
           ) : (
             <li>
               <button
-                className="btn btn-ghost rounded-btn text-sm md:text-base lg:text-base"
+                className="btn btn-ghost rounded-btn text-xs md:text-base lg:text-base"
                 type="button"
                 onClick={() => signIn()}
               >

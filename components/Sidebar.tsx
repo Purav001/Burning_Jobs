@@ -15,16 +15,18 @@ const Sidebar = () => {
   if (!categories) return 'Loading...'
 
   return (
-    <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+    <ul className="menu p-4 w-80 bg-white min-h-full bg-base-200 text-base-content pt-16">
       <li>
-        <h2 className="text-xl">Nani&apos;s Bilona Ghee</h2>
+        {/* <h2 className="text-xl text-[#1b2528] font-bold underline">
+          Nani&apos;s Bilona Ghee
+        </h2> */}
       </li>
       <li>
         <a
           onClick={closeDrower}
           href="/products"
           className={`${
-            pathname == '/products' ? 'text-[#fbbf24]' : 'text-white'
+            pathname == '/products' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
           } font-bold mr-6`}
         >
           Products
@@ -35,7 +37,7 @@ const Sidebar = () => {
           onClick={closeDrower}
           href="/our-story"
           className={`${
-            pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-white'
+            pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
           } font-bold mr-6`}
         >
           Our Story
@@ -46,7 +48,7 @@ const Sidebar = () => {
           onClick={closeDrower}
           href="/contact-us"
           className={`${
-            pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-white'
+            pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
           } font-bold mr-6`}
         >
           Contact Us
@@ -57,7 +59,7 @@ const Sidebar = () => {
           onClick={closeDrower}
           href="/ghee-making"
           className={`${
-            pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-white'
+            pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
           } font-bold mr-6`}
         >
           Ghee Making Process

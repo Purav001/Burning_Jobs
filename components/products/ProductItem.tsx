@@ -7,14 +7,9 @@ import Rating from './Rating'
 
 export default function ProductItem({ product }: { product: Product }) {
   return (
-    <div className="card card-compact w-40 md:w-96 bg-base-100 shadow-xl">
+    <div className="card card-compact w-40 md:w-96 bg-base-100 shadow-xl bg-white">
       <figure>
-        <Image
-          src={product.image}
-          alt={product.name}
-          width={384}
-          height={140}
-        />
+        <Image src={product.image} alt={product.name} width={350} height={80} />
       </figure>
       <div className="card-body bg-white">
         <h2 className="card-title text-[#1b2528] text-xs md:text-base">

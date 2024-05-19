@@ -30,7 +30,7 @@ const Header = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block w-5 h-5 stroke-current"
+                className="inline-block w-4 h-4                                                                                                                    stroke-current"
               >
                 <path
                   strokeLinecap="round"
@@ -47,7 +47,7 @@ const Header = () => {
                 className="h-10 w-auto font-bold mr-4"
               /> */}
               <span
-                className="text-sm lg:text-lg md:text-lg font-extrabold tracking-tight"
+                className="text-xs lg:text-lg md:text-lg font-extrabold tracking-tight"
                 style={{ color: '#daa407' }}
               >
                 Nani&apos;s Bilona Ghee
