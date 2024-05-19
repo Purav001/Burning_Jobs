@@ -18,7 +18,7 @@ const Header = () => {
       <nav style={{ backgroundColor: '#1b2528' }}>
         {' '}
         {/* 1. Set background color of navbar */}
-        <div className="navbar justify-between items-center px-6 text-white">
+        <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white">
           {' '}
           {/* 2. Set text color to white */}
           <div className="flex items-center">
@@ -47,7 +47,7 @@ const Header = () => {
                 className="h-10 w-auto font-bold mr-4"
               /> */}
               <span
-                className="text-lg font-extrabold tracking-tight"
+                className="text-sm lg:text-lg md:text-lg font-extrabold tracking-tight"
                 style={{ color: '#daa407' }}
               >
                 Nani&apos;s Bilona Ghee

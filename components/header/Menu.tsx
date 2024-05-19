@@ -32,10 +32,13 @@ const Menu = () => {
       <div>
         <ul className="flex items-stretch">
           <li>
-            <Link className="btn btn-ghost rounded-btn" href="/cart">
+            <Link
+              className="btn btn-ghost rounded-btn text-sm lg:text-base"
+              href="/cart"
+            >
               Cart
               {mounted && items.length != 0 && (
-                <div className="bg-[#fbbf24] py-1 px-3 rounded-btn text-black">
+                <div className="bg-[#fbbf24] py-1 px-3 rounded-btn text-black text-sm md:text-base lg:text-base">
                   {items.reduce((a, c) => a + c.qty, 0)}{' '}
                 </div>
               )}
@@ -45,7 +48,10 @@ const Menu = () => {
             <>
               <li>
                 <div className="dropdown dropdown-bottom dropdown-end">
-                  <label tabIndex={0} className="btn btn-ghost rounded-btn">
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost rounded-btn text-sm md:text-base lg:text-base"
+                  >
                     {session.user.name}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +59,7 @@ const Menu = () => {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="w-6 h-6"
+                      className="w-3 h-3 md:w-6 lg:h-6"
                     >
                       <path
                         strokeLinecap="round"
@@ -68,18 +74,37 @@ const Menu = () => {
                   >
                     {session.user.isAdmin && (
                       <li onClick={handleClick}>
-                        <Link href="/admin/dashboard">Admin Dashboard</Link>
+                        <Link
+                          href="/admin/dashboard"
+                          className="text-sm md:text-base lg:text-base"
+                        >
+                          Admin Dashboard
+                        </Link>
                       </li>
                     )}
 
                     <li onClick={handleClick}>
-                      <Link href="/order-history">Order history </Link>
+                      <Link
+                        href="/order-history"
+                        className="text-sm md:text-base lg:text-base"
+                      >
+                        Order history{' '}
+                      </Link>
                     </li>
                     <li onClick={handleClick}>
-                      <Link href="/profile">Profile</Link>
+                      <Link
+                        href="/profile"
+                        className="text-sm md:text-base lg:text-base"
+                      >
+                        Profile
+                      </Link>
                     </li>
                     <li onClick={handleClick}>
-                      <button type="button" onClick={signoutHandler}>
+                      <button
+                        type="button"
+                        className="text-sm md:text-base lg:text-base"
+                        onClick={signoutHandler}
+                      >
                         Sign out
                       </button>
                     </li>
@@ -90,7 +115,7 @@ const Menu = () => {
           ) : (
             <li>
               <button
-                className="btn btn-ghost rounded-btn"
+                className="btn btn-ghost rounded-btn text-sm md:text-base lg:text-base"
                 type="button"
                 onClick={() => signIn()}
               >
