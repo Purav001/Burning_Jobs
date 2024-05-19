@@ -52,7 +52,7 @@ const Form = () => {
     pattern?: ValidationRule<RegExp>
   }) => (
     <div className="mb-2">
-      <label className="label" htmlFor={id}>
+      <label className="label text-xs md:text-base" htmlFor={id}>
         {name}
       </label>
       <input
@@ -62,7 +62,7 @@ const Form = () => {
           required: required && `${name} is required`,
           pattern,
         })}
-        className="input input-bordered w-full bg-white text-gray-600 text-semibold"
+        className="input input-bordered w-full bg-white text-gray-600 text-semibold text-xs md:text-base"
       />
       {errors[id]?.message && (
         <div className="text-error">{errors[id]?.message}</div>
@@ -77,7 +77,7 @@ const Form = () => {
       </div>
       <div className="max-w mx-auto card bg-[#F6F1EE] mt-4 mb-10">
         <div className="card-body">
-          <h1 className="card-title m-auto text-[#4F4A45] text-bold">
+          <h1 className="card-title m-auto text-[#4F4A45] text-bold text-base md:text-base">
             Shipping Address
           </h1>
           <form
@@ -108,7 +108,7 @@ const Form = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="btn  w-full bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
+                className="btn  w-full bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-sm md:text-base"
               >
                 {isSubmitting && (
                   <span className="loading loading-spinner"></span>

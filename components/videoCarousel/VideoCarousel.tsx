@@ -89,7 +89,7 @@ export default function VideoCarousel({}: {}) {
                 </a>
                 <Link
                   href="/ghee-making"
-                  className="py-3 px-5 sm:ms-4 text-xs md:text-base infline-flex mx-5 justify-center items-center text-center text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#fbbf24] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
+                  className="py-3 px-5 sm:ms-4 text-xs md:text-base infline-flex mx-5 justify-center items-center text-center font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#fbbf24] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
                 >
                   Learn more about process
                 </Link>

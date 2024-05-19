@@ -43,20 +43,22 @@ export default function RootLayout({
                       <div>
                         <div className="mb-6 md:mb-0">
                           <a href="/" className="flex items-center">
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+                            <span className="self-center text-base md:text-2xl font-semibold whitespace-nowrap text-white">
                               Nani&apos;s Bilona Ghee
                             </span>
                           </a>
                         </div>
                         <div className="mb-5 md:mb-0">
-                          <h1 className="text-white font-semibold">
+                          <h1 className="text-white font-semibold text-sm md:text-base">
                             Manufacturing address:{' '}
                           </h1>
-                          <h2 className="text-gray-300">
+                          <h2 className="text-gray-300 text-xs md:text-base">
                             Nani&apos;s Bilona Ghee, JE Colony, Sirsa, Haryana -
                             125055
                           </h2>
-                          <h2 className="text-gray-300">Tel: +91 8198985878</h2>
+                          <h2 className="text-gray-300 text-xs md:text-base">
+                            Tel: +91 8198985878
+                          </h2>
                         </div>
                       </div>
                       <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-4">

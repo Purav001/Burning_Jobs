@@ -21,7 +21,7 @@ export default function AddToCart({ item }: { item: OrderItem }) {
     <div>
       <div className="border inline-block whitespace-nowrap min-w-min">
         <button
-          className="py-1 px-4 text-sm md:text-base font-medium text-center text-black  hover:bg-[#fbbf24] focus:ring-4 focus:ring-blue-300 m-0"
+          className="py-1 px-2 md:px-4 text-sm md:text-base font-medium text-center text-black  hover:bg-[#fbbf24] focus:ring-4 focus:ring-blue-300 m-0"
           type="button"
           onClick={() => decrease(existItem)}
         >
@@ -31,7 +31,7 @@ export default function AddToCart({ item }: { item: OrderItem }) {
           {existItem.qty}
         </span>
         <button
-          className="py-1 px-4 text-sm md:text-base font-medium text-center text-black  hover:bg-[#fbbf24] focus:ring-4 focus:ring-blue-300 m-0"
+          className="py-1 px-2 md:px-4 text-sm md:text-base font-medium text-center text-black  hover:bg-[#fbbf24] focus:ring-4 focus:ring-blue-300 m-0"
           type="button"
           onClick={() => increase(existItem)}
         >
@@ -39,7 +39,7 @@ export default function AddToCart({ item }: { item: OrderItem }) {
         </button>
       </div>
       <Link
-        className="ml-5 py-2 px-5 text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:bg-[#fbbf24] hover:text-black focus:ring-4 focus:ring-blue-300 text-sm md:text-base"
+        className="ml-5 text-xs md:text-sm py-2 px-3 md:py-2 md:px-5 text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:bg-[#fbbf24] hover:text-black focus:ring-4 focus:ring-blue-300 text-sm md:text-base"
         href="/cart"
       >
         Go to Cart

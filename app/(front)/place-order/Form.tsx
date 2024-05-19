@@ -70,24 +70,24 @@ const Form = () => {
     <div>
       <CheckoutSteps current={4} />
 
-      <div className="grid md:grid-cols-4 md:gap-5 my-4 mx-10">
+      <div className="grid md:grid-cols-4 md:gap-5 my-4 md:mx-10">
         <div className="overflow-x-auto md:col-span-3 bg-[#F6F1EE] rounded">
-          <div className="card pt-2 pl-5 pr-5">
+          <div className="card pt-2 md:pl-5 md:pr-5">
             <div className="card-body">
-              <h2 className="card-title font-bold text-[#4F4A45]">
+              <h2 className="card-title font-bold text-[#4F4A45] text-sm md:text-base">
                 Shipping Address
               </h2>
-              <p className=" font-semibold text-[#4F4A45]">
+              <p className=" font-semibold text-[#4F4A45] text-xs md:text-base">
                 {shippingAddress.fullName}
               </p>
-              <p className="font-semibold text-[#4F4A45]">
+              <p className="font-semibold text-[#4F4A45] text-xs md:text-base">
                 {shippingAddress.address}, {shippingAddress.city},{' '}
                 {shippingAddress.postalCode}, {shippingAddress.country} ,
                 {shippingAddress.contactNumber}
               </p>
               <div>
                 <Link
-                  className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
+                  className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-xs md:text-base"
                   href="/shipping"
                 >
                   Edit
@@ -96,19 +96,23 @@ const Form = () => {
             </div>
           </div>
 
-          <div className="card  pt-2 pl-5 pr-5">
+          <div className="card  md:pt-2 md:pl-5 md:pr-5">
             <div className="card-body">
-              <h2 className="card-title font-bold text-[#4F4A45]">
+              <h2 className="card-title font-bold text-[#4F4A45] text-xs md:text-base">
                 Payment Method
               </h2>
-              <p className="font-semibold text-[#4F4A45]">{paymentMethod}</p>
+              <p className="font-semibold text-[#4F4A45] text-xs md:text-base">
+                {paymentMethod}
+              </p>
               {/* <p className="text-sm text-gray-600">Pay ₹150 advance</p> */}
               {paymentMethod == 'Cash on Delivery' && (
-                <div className="text-sm text-[#4F4A45]">Pay ₹150 Advance</div>
+                <div className="text-sm text-[#4F4A45] text-xs md:text-base">
+                  Pay ₹150 Advance
+                </div>
               )}
               <div>
                 <Link
-                  className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
+                  className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-xs md:text-base"
                   href="/payment"
                 >
                   Edit
@@ -117,10 +121,12 @@ const Form = () => {
             </div>
           </div>
 
-          <div className="card pt-2 pl-5 pr-5">
+          <div className="card md:pt-2 md:pl-5 md:pr-5">
             <div className="card-body">
-              <h2 className="card-title font-bold text-[#4F4A45]">Items</h2>
-              <table className="table">
+              <h2 className="card-title font-bold text-[#4F4A45] text-xs md:text-base">
+                Items
+              </h2>
+              <table className="table hidden md:block">
                 <thead>
                   <tr>
                     <th className="text-gray-600">Item</th>
@@ -159,9 +165,51 @@ const Form = () => {
                   ))}
                 </tbody>
               </table>
+              <div className="grid grid-cols-1 md:hidden">
+                {items.map((item, index) => (
+                  <div key={item.slug} className="mb-5 border p-2">
+                    <div className="grid grid-cols-2 items-center justify-center flex mb-3">
+                      <div className="grid grid-cols-2">
+                        <div className="flex items-center justify-center">
+                          <Link href={`/product/${item.slug}`}>
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              width={50}
+                              height={50}
+                            />
+                          </Link>
+                        </div>
+                        <div className="flex items-center justify-center">
+                          <Link href={`/product/${item.slug}`}>
+                            <span
+                              className="px-2 font-semibold text-xs"
+                              style={{ color: '#1b2528' }}
+                            >
+                              ₹{item.price}
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <span className="px-2 font-bold text-black">
+                          {item.qty}
+                        </span>
+                      </div>
+                    </div>
+                    <p
+                      className="px-2 font-semibold text-xs"
+                      style={{ color: '#1b2528' }}
+                    >
+                      {item.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
               <div>
                 <Link
-                  className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
+                  className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-xs md:text-base"
                   href="/cart"
                 >
                   Edit
@@ -172,48 +220,52 @@ const Form = () => {
         </div>
 
         <div>
-          <div className="card bg-white border">
+          <div className="card bg-white border mt-4 md:mt-0">
             <div className="card-body">
-              <h2 className="card-title text-[#4F4A45] font-bold">
+              <h2 className="card-title text-[#4F4A45] font-bold text-sm md:text-base">
                 Order Summary
               </h2>
               <ul className="space-y-3">
                 <li>
                   <div className=" flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">Items</div>
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
+                      Items
+                    </div>
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{itemsPrice}
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className=" flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       Tax(18% GST)
                     </div>
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{taxPrice}
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className=" flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       Shipping
-                      <span className="ml-1 italic text-gray-500 text-sm">
+                      <span className="ml-1 italic text-gray-500 text-xs md:text-base">
                         Free for 2 Week (till 01 June)
                       </span>
                     </div>
 
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{shippingPrice}
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className=" flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">Total</div>
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
+                      Total
+                    </div>
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{totalPrice}
                     </div>
                   </div>
@@ -223,12 +275,12 @@ const Form = () => {
                   <button
                     onClick={() => placeOrder()}
                     disabled={isPlacing}
-                    className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] w-full"
+                    className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] w-full text-xs md:text-base"
                   >
                     {isPlacing && (
                       <span className="loading loading-spinner"></span>
                     )}
-                    Place Order
+                    Proceed to Payment
                   </button>
                 </li>
               </ul>

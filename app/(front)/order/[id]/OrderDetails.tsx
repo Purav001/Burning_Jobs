@@ -192,59 +192,69 @@ export default function OrderDetails({
         src="https://checkout.razorpay.com/v1/checkout.js"
       />
 
-      <div className="grid md:grid-cols-4 md:gap-5 my-4 mx-10">
+      <div className="grid md:grid-cols-4 md:gap-5 my-4 md:mx-10">
         <div className="md:col-span-3 bg-[#F6F1EE]">
           <div className="card">
             <div className="card-body">
-              <h2 className="card-title font-bold text-[#4F4A45]">
+              <h2 className="card-title font-bold text-[#4F4A45] text-sm md:text-base">
                 Shipping Address
               </h2>
-              <p className="font-semibold text-[#4F4A45]">
+              <p className="font-semibold text-[#4F4A45] text-xs md:text-base">
                 {shippingAddress.fullName}
               </p>
-              <p className="font-semibold text-[#4F4A45]">
+              <p className="font-semibold text-[#4F4A45] text-xs md:text-base">
                 {shippingAddress.address}, {shippingAddress.city},{' '}
                 {shippingAddress.postalCode}, {shippingAddress.country} ,{' '}
                 {shippingAddress.contactNumber}
               </p>
               {!isDelivered && isPaid && (
-                <p className=" text-[#4F4A45]">
+                <p className=" text-[#4F4A45] text-xs md:text-base">
                   Your order will be Delivered within 4 to 6 days
                 </p>
               )}
               {isDelivered ? (
-                <div className="text-success font-bold">
+                <div className="text-success font-bold text-xs md:text-base">
                   Delivered at {deliveredAt}
                 </div>
               ) : (
-                <div className="text-error font-bold">Not Delivered</div>
+                <div className="text-error font-bold text-xs md:text-base">
+                  Not Delivered
+                </div>
               )}
             </div>
           </div>
 
-          <div className="card mt-4">
+          <div className="card md:mt-4">
             <div className="card-body">
-              <h2 className="card-title font-bold text-[#4F4A45]">
+              <h2 className="card-title font-bold text-[#4F4A45] text-sm md:text-base">
                 Payment Method
               </h2>
-              <p className="font-semibold text-[#4F4A45]">{paymentMethod}</p>
+              <p className="font-semibold text-[#4F4A45] text-xs md:text-base">
+                {paymentMethod}
+              </p>
               {!isPaid && paymentMethod == 'Cash on Delivery' && (
-                <div className="text-sm text-[#4F4A45]">Pay ₹150 Advance</div>
+                <div className="text-[#4F4A45] text-xs md:text-base">
+                  Pay ₹150 Advance
+                </div>
               )}
 
               {isPaid && paymentMethod == 'Cash on Delivery' && (
-                <div className="text-sm  text-[#4F4A45]">
+                <div className="text-xs md:text-base text-[#4F4A45]">
                   ₹150 Advanced Payment done
                 </div>
               )}
 
               {isPaid ? (
-                <div className="text-success font-bold">Paid at {paidAt}</div>
+                <div className="text-success font-bold text-xs md:text-base">
+                  Paid at {paidAt}
+                </div>
               ) : (
                 <>
-                  <div className="text-error font-bold">Not Paid</div>
+                  <div className="text-error font-bold text-xs md:text-base">
+                    Not Paid
+                  </div>
                   <button
-                    className="btn w-80 my-2 bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
+                    className="btn w-80 my-2 bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-sm md:text-base"
                     onClick={processPayment}
                   >
                     Pay Now
@@ -254,10 +264,12 @@ export default function OrderDetails({
             </div>
           </div>
 
-          <div className="card mt-4">
+          <div className="card md:mt-4">
             <div className="card-body">
-              <h2 className="card-title font-bold text-[#4F4A45]">Items</h2>
-              <table className="table">
+              <h2 className="card-title font-bold text-[#4F4A45] text-sm md:text-base">
+                Items
+              </h2>
+              <table className="table hidden md:block">
                 <thead>
                   <tr>
                     <th className="text-gray-600">Item</th>
@@ -294,53 +306,98 @@ export default function OrderDetails({
                   ))}
                 </tbody>
               </table>
+              <div className="grid grid-cols-1 md:hidden">
+                {items.map((item: OrderItem) => (
+                  <div key={item.slug} className="mb-5 border p-2">
+                    <div className="grid grid-cols-2 items-center justify-center flex mb-3">
+                      <div className="grid grid-cols-2">
+                        <div className="flex items-center justify-center">
+                          <Link href={`/product/${item.slug}`}>
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              width={50}
+                              height={50}
+                            />
+                          </Link>
+                        </div>
+                        <div className="flex items-center justify-center">
+                          <Link href={`/product/${item.slug}`}>
+                            <span
+                              className="px-2 font-semibold text-xs"
+                              style={{ color: '#1b2528' }}
+                            >
+                              ₹{item.price}
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <span className="px-2 font-bold text-black">
+                          {item.qty}
+                        </span>
+                      </div>
+                    </div>
+                    <p
+                      className="px-2 font-semibold text-xs"
+                      style={{ color: '#1b2528' }}
+                    >
+                      {item.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
         <div>
-          <div className="card bg-white border">
+          <div className="card bg-white border mt-4 md:mt-0">
             <div className="card-body">
-              <h2 className="card-title font-bold text-[#4F4A45]">
+              <h2 className="card-title font-bold text-[#4F4A45] text-sm md:text-base">
                 Order Summary
               </h2>
               <ul>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">Items</div>
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
+                      Items
+                    </div>
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{itemsPrice}
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       Tax(18% GST)
                     </div>
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{taxPrice}
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       {' '}
                       Shipping{' '}
-                      <span className="italic text-gray-500 text-sm">
+                      <span className="italic text-gray-500 text-xs md:text-base">
                         Free for 2 Week (till 01 June)
                       </span>
                     </div>
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{shippingPrice}
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
-                    <div className="font-semibold text-[#4F4A45]">Total</div>
-                    <div className="font-semibold text-[#4F4A45]">
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
+                      Total
+                    </div>
+                    <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{totalPrice}
                     </div>
                   </div>
