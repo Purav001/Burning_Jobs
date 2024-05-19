@@ -8,11 +8,7 @@ import { usePathname } from 'next/navigation'
 
 const Sidebar = () => {
   const { toggleDrawer, closeDrower } = useLayoutService()
-  const { data: categories, error } = useSWR('/api/products/categories')
   const pathname = usePathname()
-
-  if (error) return error.message
-  if (!categories) return 'Loading...'
 
   return (
     <ul className="menu p-4 w-80 bg-white min-h-full bg-base-200 text-base-content pt-16">

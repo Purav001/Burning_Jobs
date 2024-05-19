@@ -6,7 +6,7 @@ export default async function Products() {
   const latestProducts = await productService.getLatest()
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center m-auto mb-10 mt-10">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center m-auto mb-10 mt-10">
         {latestProducts.map((product) => (
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}
