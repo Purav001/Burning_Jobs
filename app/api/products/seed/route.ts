@@ -11,22 +11,22 @@ import { NextRequest, NextResponse } from 'next/server'
 export const GET = async (request: NextRequest) => {
   const { users, products, socials, banners, faqs, photos } = data
   await dbConnect()
-  await UserModel.deleteMany()
+  // await UserModel.deleteMany()
   await UserModel.insertMany(users)
 
-  await ProductModel.deleteMany()
+  // await ProductModel.deleteMany()
   await ProductModel.insertMany(products)
 
-  await SocialModel.deleteMany()
+  // await SocialModel.deleteMany()
   await SocialModel.insertMany(socials)
 
-  await BannerModel.deleteMany()
+  // await BannerModel.deleteMany()
   await BannerModel.insertMany(banners)
 
-  await FaqModel.deleteMany()
+  // await FaqModel.deleteMany()
   await FaqModel.insertMany(faqs)
 
-  await PhotoModel.deleteMany()
+  // await PhotoModel.deleteMany()
   await PhotoModel.insertMany(photos)
 
   return NextResponse.json({
