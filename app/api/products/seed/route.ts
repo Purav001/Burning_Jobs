@@ -9,31 +9,26 @@ import UserModel from '@/lib/models/UserModel'
 import { NextRequest, NextResponse } from 'next/server'
 
 export const GET = async (request: NextRequest) => {
-  const { products, socials, banners, faqs, photos } = data
-  await dbConnect()
+  // const { products, socials, banners, faqs, photos } = data
+  // await dbConnect()
   // await UserModel.deleteMany()
   // await UserModel.insertMany(users)
-
   // await ProductModel.deleteMany()
-  await ProductModel.insertMany(products)
-
+  // await ProductModel.insertMany(products)
   // await SocialModel.deleteMany()
-  await SocialModel.insertMany(socials)
-
+  // await SocialModel.insertMany(socials)
   // await BannerModel.deleteMany()
-  await BannerModel.insertMany(banners)
-
+  // await BannerModel.insertMany(banners)
   // await FaqModel.deleteMany()
-  await FaqModel.insertMany(faqs)
-
+  // await FaqModel.insertMany(faqs)
+  //
   // await PhotoModel.deleteMany()
-  await PhotoModel.insertMany(photos)
-
-  return NextResponse.json({
-    message: 'seeded successfully',
-    products,
-    socials,
-    faqs,
-    photos,
-  })
+  // await PhotoModel.insertMany(photos)
+  // return NextResponse.json({
+  //   message: 'seeded successfully',
+  //   products,
+  //   socials,
+  //   faqs,
+  //   photos,
+  // })
 }
