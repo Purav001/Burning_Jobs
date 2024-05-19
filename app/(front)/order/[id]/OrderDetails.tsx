@@ -72,7 +72,7 @@ export default function OrderDetails({
       })
       const data = await res.json()
       res.ok
-        ? toast.success('Order delivered successfully')
+        ? toast.success('Order Will be dispacted within 24 hours')
         : toast.error(data.message)
     }
   )
@@ -193,7 +193,7 @@ export default function OrderDetails({
       />
 
       <div className="grid md:grid-cols-4 md:gap-5 my-4 md:mx-10">
-        <div className="md:col-span-3 bg-[#F6F1EE]">
+        <div className="overflow-x-auto md:col-span-3 bg-[#F6F1EE] rounded">
           <div className="card">
             <div className="card-body">
               <h2 className="card-title font-bold text-[#4F4A45] text-sm md:text-base">
@@ -219,6 +219,13 @@ export default function OrderDetails({
               ) : (
                 <div className="text-error font-bold text-xs md:text-base">
                   Not Delivered
+                </div>
+              )}
+
+              {!isPaid && (
+                <div className="text-xs md:text-base text-[#4F4A45]">
+                  Your order will be dispatched within 24 hours once the payment
+                  is completed from you side
                 </div>
               )}
             </div>
@@ -253,8 +260,11 @@ export default function OrderDetails({
                   <div className="text-error font-bold text-xs md:text-base">
                     Not Paid
                   </div>
+                  <div className="text-xs md:text-base text-[#4F4A45]">
+                    Pay Now to place your order....{' '}
+                  </div>
                   <button
-                    className="btn w-80 my-2 bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-sm md:text-base"
+                    className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-xs md:text-base"
                     onClick={processPayment}
                   >
                     Pay Now

@@ -28,19 +28,19 @@ const Form = () => {
       </div>
       <div className="m-auto mx-auto card bg-[#F6F1EE] mt-10 mb-10">
         <div className="card-body">
-          <h1 className="card-title m-auto text-[#4F4A45] font-bold text-base md:text-base">
+          <h1 className="card-title m-auto text-[#4F4A45] font-bold text-sm md:text-base">
             Payment Method
           </h1>
           <form onSubmit={handleSubmit}>
             {['Pay Online', 'Cash on Delivery'].map((payment) => (
-              <div key={payment} className="m-auto w-80">
+              <div key={payment} className="m-auto w-full">
                 <label className="label cursor-pointer">
                   <div>
                     <span className="label-text font-bold text-[#4F4A45] text-xs md:text-base">
                       {payment}
                     </span>
                     {payment == 'Cash on Delivery' && (
-                      <p className="text-[#4F4A45] text-xs">
+                      <p className="text-[#4F4A45] text-sm">
                         ₹150 Advance Payment
                       </p>
                     )}
@@ -60,7 +60,7 @@ const Form = () => {
             <div className="my-2">
               <button
                 type="submit"
-                className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] w-full text-sm md:text-base"
+                className="btn bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] w-full"
               >
                 Next
               </button>
@@ -68,7 +68,7 @@ const Form = () => {
             <div className="my-2">
               <button
                 type="button"
-                className="btn w-full my-2 bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-sm md:text-base"
+                className="btn w-full my-2 bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45]"
                 onClick={() => router.back()}
               >
                 Back
