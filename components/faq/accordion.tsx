@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import Image from 'next/image'
+
 interface AccordionProps {
   question: string
   answer: string
@@ -18,41 +19,31 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer, index }) => {
   const contentRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="flex flex-col items-center justify-center w-full px-2 text-lg pt-4 lg:text-base">
+    <div className="w-full px-2 pt-4 text-lg lg:text-base">
       <button
         onClick={() => handleToggle(index)}
-        className={`bg-transparent px-5 shadow cursor-pointer w-full h-full ${
-          active == index
-        }`}
+        className={`w-full h-full px-5 py-3 text-left bg-transparent shadow cursor-pointer ${active == index ? 'active' : ''
+          }`}
       >
-        <div className="py-3">
-          <div className="flex items-center justify-between h-14 text-left">
-            <span className="mb-4 font-bold text-center text-gray-600 text-xs md:text-base">
-              {question}
-            </span>
-            <div>
-              {active == index ? (
-                <Image src={'minus.svg'} alt="" width={20} height={20} />
-              ) : (
-                <Image src={'plus.svg'} alt="" width={20} height={20} />
-              )}
-            </div>
+        <div className="flex items-center justify-between h-14">
+          <span className="font-bold text-gray-600 text-xs md:text-base">
+            {question}
+          </span>
+          <div className="flex-shrink-0">
+            {active == index ? (
+              <Image src={'/minus.svg'} alt="Collapse" width={20} height={20} />
+            ) : (
+              <Image src={'/plus.svg'} alt="Expand" width={20} height={20} />
+            )}
           </div>
-          <div
-            ref={contentRef}
-            className="mx-4 overflow-hidden text-left transition-all duration-500 h-full"
-          >
-            <div
-              className={
-                active == index
-                  ? 'text-DarkGrayishBlue text-[1rem] w-full md:w-full p-0 m-0 cursor-pointer'
-                  : 'invisible max-h-0'
-              }
-            >
-              <span className="mb-4 text-gray-500 font-semibold w-full text-xs md:text-base">
-                {answer}
-              </span>
-            </div>
+        </div>
+        <div
+          ref={contentRef}
+          className={`overflow-hidden transition-all duration-500 ${active == index ? 'max-h-96' : 'max-h-0'
+            }`}
+        >
+          <div className="p-4 text-gray-500 font-semibold text-xs md:text-base">
+            {answer}
           </div>
         </div>
       </button>
