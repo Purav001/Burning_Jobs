@@ -54,20 +54,22 @@ const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
         <SwiperSlide key={index}>
           <div className="bg-white shadow-lg rounded-lg p-4 card card-compact">
             <div className="card-body">
-              <p className="text-gray-600 font-semibold">{item.description}</p>
+              <p className="text-gray-600 font-semibold text-xs md:text-base">
+                {item.description}
+              </p>
               <div className="grid grid-cols-2 mt-5">
                 <div className="flex justify-end mr-5">
                   <img
                     src={item.image}
-                    className="w-20 h-20 rounded-full"
+                    className="w-10 h-10 md:w-20 md:h-20 rounded-full"
                     alt="Avatar"
                   />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mt-2 text-[#1b2528]">
+                  <h3 className="text-xs md:text-lg font-bold mt-2 text-[#1b2528]">
                     {item.title}
                   </h3>
-                  <Rating rating={5} disabled />
+                  {/* <Rating rating={5} disabled /> */}
                 </div>
               </div>
             </div>

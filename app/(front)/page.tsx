@@ -141,7 +141,7 @@ export default async function Home() {
       <MainCarousel1></MainCarousel1>
 
       <h2
-        className="mb-4 text-3xl font-extrabold leading-none tracking-tight text-[#1b2528] md:text-4xl lg:text-5xl text-center py-6"
+        className="mb-4 text-2xl md:text-3xl font-extrabold leading-none tracking-tight text-[#1b2528] md:text-4xl lg:text-5xl text-center py-6"
         id="product-section"
       >
         Latest Products
@@ -160,7 +160,7 @@ export default async function Home() {
           style={{ backgroundColor: '#fffbe8' }}
         >
           <h1
-            className="text-3xl font-bold mb-4 text-center text-[#1b2528]"
+            className="text-2xl md:text-3xl font-bold mb-4 text-center text-[#1b2528]"
             id="customer-review-section"
           >
             Customer Reviews
@@ -170,7 +170,7 @@ export default async function Home() {
       </div>
 
       <div className="my-8 m-auto pt-5" style={{ backgroundColor: '#ffffff' }}>
-        <h1 className="text-4xl font-bold mb-4 text-center text-[#1b2528]">
+        <h1 className="text-2xl md:text-4xl font-bold mb-4 text-center text-[#1b2528]">
           Benefits of A2 Cow Ghee
         </h1>
         <Card cards={cards} />
