@@ -24,9 +24,9 @@ const MainCarousel1: React.FC = () => {
         // slidesPerView={3}
         slidesPerView={1}
         loop={true}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         navigation={true}
         modules={[Pagination, Navigation]}
       >

@@ -57,18 +57,18 @@ export default function VideoCarousel({}: {}) {
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
             <div className="flex flex-col justify-center">
-              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-4xl dark:text-white">
+              <h1 className="mb-4 text-sm font-extrabold tracking-tight text-center leading-none text-white md:text-3xl lg:text-4xl">
                 Ghee making using Ayurvedic bilona method
               </h1>
-              <p className="mb-8 text-lg font-semibold text-[#1b2528] lg:text-xl">
+              <p className="mb-8 text-xs font-semibold text-[#1b2528] md:text-xl text-center">
                 Discover the magic of Nani&apos;s Bilona Method—crafting pure
                 Ghee with love, tradition, and authenticity. A timeless
                 celebration in every spoonful.
               </p>
-              <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+              <div className="grid grid-cols-2">
                 <a
                   href="/products"
-                  className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:text-[#fbbf24] focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                  className="inline-flex justify-center items-center py-3 px-5 mx-5 text-xs md:text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:text-[#fbbf24] focus:ring-4 focus:ring-blue-300"
                 >
                   Shop Now
                   <svg
@@ -89,13 +89,13 @@ export default function VideoCarousel({}: {}) {
                 </a>
                 <Link
                   href="/ghee-making"
-                  className="py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#fbbf24] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  className="py-3 px-5 sm:ms-4 text-xs md:text-base infline-flex mx-5 justify-center items-center text-center text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#fbbf24] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
                 >
                   Learn more about process
                 </Link>
               </div>
             </div>
-            <div>
+            <div className="mb-5">
               <iframe
                 className="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl"
                 src="https://www.youtube.com/embed/B8L9GFHb-vw"
@@ -114,18 +114,18 @@ export default function VideoCarousel({}: {}) {
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 grid lg:grid-cols-2 gap-8 lg:gap-16">
             <div className="flex flex-col justify-center">
-              <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-3xl lg:text-4xl dark:text-white">
+              <h1 className="mb-4 text-sm font-extrabold tracking-tight text-center leading-none text-white md:text-3xl lg:text-4xl">
                 A lovely Message from our Customer
               </h1>
-              <p className="mb-8 text-lg font-semibold text-[#1b2528] lg:text-xl dark:text-gray-400">
+              <p className="mb-8 text-xs font-semibold text-[#1b2528] md:text-xl text-center">
                 Thank you so much, Mam, for such a beautiful video message. We
                 are very happy that we have customers like you who support us in
                 our business
               </p>
-              <div className="flex flex-col space-y-4 sm:flex-row sm:space-y-0">
+              <div className="grid grid-cols-2">
                 <a
                   href="/products"
-                  className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:text-[#fbbf24]   focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                  className="inline-flex justify-center items-center py-3 px-5 mx-5 text-xs md:text-base font-medium text-center text-white rounded-lg bg-[#1b2528] hover:text-[#fbbf24] focus:ring-4 focus:ring-blue-300"
                 >
                   Shop Now
                   <svg
@@ -146,13 +146,13 @@ export default function VideoCarousel({}: {}) {
                 </a>
                 <Link
                   href="#customer-review-section"
-                  className="py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#fbbf24] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
+                  className="py-3 px-5 sm:ms-4 text-xs md:text-base infline-flex mx-5 justify-center items-center text-center text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-[#fbbf24] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
                 >
                   View more customer reviews
                 </Link>
               </div>
             </div>
-            <div>
+            <div className="mb-5">
               <iframe
                 className="mx-auto w-full lg:max-w-xl h-64 rounded-lg sm:h-96 shadow-xl"
                 src="https://www.youtube.com/embed/jlig6cBYidY"
