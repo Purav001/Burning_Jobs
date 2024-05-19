@@ -17,7 +17,7 @@ const SmallCard: React.FC<SmallCardProps> = ({ imageSrc, heading }) => {
   }
 
   return (
-    <div className="w-40 md:w-full max-w-sm bg-[#efe2d0] border border-gray-200 rounded-lg shadow flex justify-center grid grid-cols-2 md:grid-cols-1 items-center text-center">
+    <div className="w-40 md:w-full max-w-sm bg-[#efe2d0] border border-gray-200 rounded-lg shadow flex justify-center grid grid-cols-2 md:grid-cols-1 items-center text-center m-auto">
       <Image
         src={'/' + imageSrc}
         data-loaded="false"

@@ -18,12 +18,16 @@ export default function FrequentlyAskedQuestions({
           <div className="flex grid items-center lg:grid-cols-1">
             <div className="mb-12 lg:mb-0">
               <div className="block rounded-lg">
-                <h2 className="mb-4 text-3xl font-bold text-[#1b2528]">
+                <h2 className="mb-4 text-2xl md:text-3xl font-bold text-[#1b2528]">
                   Frequently asked questions
                 </h2>
-                <p className="mb-12 font-bold text-[#4F4A45]">
+                <p className="mb-12 font-bold text-[#4F4A45] text-sm md:text-base">
                   Didn&apos;t find your answer in the FAQ?{' '}
-                  <Link href="/contact-us" style={{ color: '#3b71ca' }}>
+                  <Link
+                    href="/contact-us"
+                    style={{ color: '#3b71ca' }}
+                    className="text-sm md:text-base"
+                  >
                     Contact our sales team.{' '}
                   </Link>
                 </p>

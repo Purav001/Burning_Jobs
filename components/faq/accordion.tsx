@@ -27,7 +27,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer, index }) => {
       >
         <div className="py-3">
           <div className="flex items-center justify-between h-14 text-left">
-            <span className="mb-4 font-bold text-center text-gray-600">
+            <span className="mb-4 font-bold text-center text-gray-600 text-xs md:text-base">
               {question}
             </span>
             <div>
@@ -49,7 +49,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer, index }) => {
                   : 'invisible max-h-0'
               }
             >
-              <span className="mb-4 text-gray-500 font-semibold w-full">
+              <span className="mb-4 text-gray-500 font-semibold w-full text-xs md:text-base">
                 {answer}
               </span>
             </div>
