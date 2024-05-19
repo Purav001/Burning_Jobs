@@ -48,7 +48,7 @@ export default function RootLayout({
                             </span>
                           </a>
                         </div>
-                        <div>
+                        <div className="mb-5 md:mb-0">
                           <h1 className="text-white font-semibold">
                             Manufacturing address:{' '}
                           </h1>
@@ -61,36 +61,45 @@ export default function RootLayout({
                       </div>
                       <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-4">
                         <div>
-                          <h2 className="mb-6 text-sm font-semibold text-[#fbbf24] uppercase">
+                          <h2 className="mb-2 md:mb-6 text-xs md:text-sm font-semibold text-[#fbbf24] uppercase">
                             Services
                           </h2>
                           <ul className="text-white font-medium">
-                            <li className="mb-4">
-                              <a href="/products" className="hover:underline">
+                            <li className="mb-1  md:mb-4">
+                              <a
+                                href="/products"
+                                className="hover:underline text-xs md:text-sm"
+                              >
                                 Our Products
                               </a>
                             </li>
-                            <li className="mb-4">
-                              <a href="/our-story" className="hover:underline">
+                            <li className="mb-1 md:mb-4">
+                              <a
+                                href="/our-story"
+                                className="hover:underline text-xs md:text-sm"
+                              >
                                 Our Story
                               </a>
                             </li>
                             <li>
-                              <a href="/contact-us" className="hover:underline">
+                              <a
+                                href="/contact-us"
+                                className="hover:underline text-xs md:text-sm"
+                              >
                                 Contact Us
                               </a>
                             </li>
                           </ul>
                         </div>
                         <div>
-                          <h2 className="mb-6 text-sm font-semibold text-[#fbbf24] uppercase">
+                          <h2 className="mb-2 text-xs  md:text-sm font-semibold text-[#fbbf24] uppercase">
                             Follow us
                           </h2>
                           <ul className="text-white font-medium">
-                            <li className="mb-4">
+                            <li className="mb-1 md:mb-4">
                               <a
                                 href="https://www.instagram.com/nani_bilona_ghee/"
-                                className="hover:underline "
+                                className="hover:underline text-xs md:text-sm"
                               >
                                 Instagram
                               </a>
@@ -98,7 +107,7 @@ export default function RootLayout({
                             <li>
                               <a
                                 href="https://www.facebook.com/NaniBilonaGhee/"
-                                className="hover:underline"
+                                className="hover:underline text-xs md:text-sm"
                               >
                                 Facebook
                               </a>
@@ -106,7 +115,7 @@ export default function RootLayout({
                           </ul>
                         </div>
                         <div>
-                          <h2 className="mb-6 text-sm font-semibold text-[#fbbf24] uppercase">
+                          <h2 className="mb-2 md:mb-6 text-xs md:text-sm font-semibold text-[#fbbf24] uppercase">
                             Legal
                           </h2>
                           <ul className="text-white  font-medium">
@@ -115,10 +124,10 @@ export default function RootLayout({
                                 Privacy Policy
                               </a>
                             </li> */}
-                            <li className="mb-4">
+                            <li className="mb-1 md:mb-4">
                               <a
                                 href="/shipping-policy"
-                                className="hover:underline"
+                                className="hover:underline text-xs md:text-sm"
                               >
                                 Shipping Policy
                               </a>
@@ -131,7 +140,7 @@ export default function RootLayout({
                             <li>
                               <a
                                 href="/refund-policy"
-                                className="hover:underline"
+                                className="hover:underline text-xs md:text-sm"
                               >
                                 Refund Policy
                               </a>
@@ -139,14 +148,14 @@ export default function RootLayout({
                           </ul>
                         </div>
                         <div>
-                          <h2 className="mb-6 text-sm font-semibold text-[#fbbf24] uppercase">
+                          <h2 className="mb-2 md:mb-6 text-sm font-semibold text-[#fbbf24] uppercase">
                             Need Help ?
                           </h2>
                           <ul className="text-white font-medium">
-                            <li className="mb-4">
+                            <li className="md-2 md:mb-4">
                               <Link
                                 href="/contact-us"
-                                className=" py-2 px-3 sm:ms-0 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-[#fbbf24] focus:z-10 focus:ring-4 focus:ring-gray-100 "
+                                className=" py-1 px-1 md:py-2 md:px-3 sm:ms-0 text-xs md:text-sm font-small text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-[#fbbf24] focus:z-10 focus:ring-4 focus:ring-gray-100 "
                               >
                                 Contact Us
                               </Link>
@@ -154,7 +163,7 @@ export default function RootLayout({
                             <li>
                               <a
                                 href="https://wa.me/917303290341"
-                                className="hover:underline"
+                                className="hover:underline text-xs md:text-sm"
                               >
                                 WhatsApp
                               </a>
