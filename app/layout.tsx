@@ -94,7 +94,7 @@ export default function RootLayout({
                           </ul>
                         </div>
                         <div>
-                          <h2 className="mb-2 text-xs  md:text-sm font-semibold text-[#fbbf24] uppercase">
+                          <h2 className="mb-2 md:mb-6 text-xs  md:text-sm font-semibold text-[#fbbf24] uppercase">
                             Follow us
                           </h2>
                           <ul className="text-white font-medium">
@@ -121,11 +121,22 @@ export default function RootLayout({
                             Legal
                           </h2>
                           <ul className="text-white  font-medium">
-                            {/* <li className="mb-4">
-                              <a href="#" className="hover:underline">
+                            <li className="mb-1 md:mb-4">
+                              <a
+                                href="/privacy-policy"
+                                className="hover:underline text-xs md:text-sm"
+                              >
                                 Privacy Policy
                               </a>
-                            </li> */}
+                            </li>
+                            <li className="mb-1 md:mb-4">
+                              <a
+                                href="/terms-of-service"
+                                className="hover:underline text-xs md:text-sm"
+                              >
+                                Terms of Service
+                              </a>
+                            </li>
                             <li className="mb-1 md:mb-4">
                               <a
                                 href="/shipping-policy"
