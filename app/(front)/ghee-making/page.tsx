@@ -7,15 +7,16 @@ export default function GheeMakingPage() {
   return (
     <div className="container my-10 mx-auto md:px-6">
       <section className="mb-16">
-        <h2 className="mb-16 text-center text-4xl font-bold text-[#854e23]">
+        <h2 className="mb-16 text-center md:text-4xl font-bold text-[#854e23] text-sm">
           Complete Ghee Making Process using Ayurvedic Bilona Method
         </h2>
 
         {methodsData.map((method, index) => (
           <div
             key={index}
-            className={`mb-16 flex flex-wrap items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}
+            className={`mb-16 flex flex-wrap items-center ${
+              index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+            }`}
           >
             <div className="border-4 border-[#DAA407] rounded-lg p-6 shadow-lg w-full flex flex-col lg:flex-row">
               <div className="mb-6 w-full mt-4 lg:w-6/12 lg:mb-0">
@@ -33,14 +34,14 @@ export default function GheeMakingPage() {
               </div>
 
               <div className="w-full mt-3 lg:w-6/12 lg:pl-6">
-                <h3 className="mb-4 text-2xl font-bold text-[#1b2528]">
+                <h3 className="mb-4 text-sm md:text-2xl font-bold text-[#1b2528]">
                   {method.methodHeading}
                 </h3>
                 <ul className="list-disc ml-5">
                   {method.methodContent.map((content, contentIndex) => (
                     <li
                       key={contentIndex}
-                      className="mb-4 text-[#854e23] font-[500]"
+                      className="mb-4 text-[#854e23] font-[500] text-xs md:text-base"
                     >
                       {content}
                     </li>

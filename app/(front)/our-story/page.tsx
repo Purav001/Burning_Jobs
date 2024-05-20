@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export default async function OurStory() {
   return (
     <>
@@ -7,15 +8,17 @@ export default async function OurStory() {
             <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
               <div className="flex flex-wrap items-center">
                 <div className="hidden shrink-0 grow-0 basis-auto lg:pl-5 lg:flex lg:w-6/12 xl:w-4/12">
-                  <img
-                    src="images/team/nani.jpg"
+                  <Image
+                    src="/images/team/nani.jpg"
                     alt="Trendy Pants and Shoes"
+                    width={100}
+                    height={100}
                     className="w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
                   />
                 </div>
                 <div className="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
                   <div className="px-6 py-12 md:px-12">
-                    <h2 className="text-2xl font-semibold text-center mb-6 text-[#854e23]">
+                    <h2 className="text-sm md:text-2xl font-semibold text-center mb-6 text-[#854e23]">
                       Welcome to Nani&apos;s Bilona Ghee
                     </h2>
                     <img
@@ -24,16 +27,16 @@ export default async function OurStory() {
                       className="w-full rounded-t-lg lg:hidden mb-5"
                     />
 
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 mb-4 text-xs md:text-base">
                       Hi there! I&apos;m AmanDeep Sigar, the founder of
                       nani&apos;s Bilona Ghee, and I&apos;m thrilled to share
                       the heartfelt journey behind our brand.
                     </p>
                     <div className="mb-4">
-                      <h2 className="text-lg font-semibold mb-2 text-[#854e23]">
+                      <h2 className="text-sm md:text-lg font-semibold mb-2 text-[#854e23]">
                         Childhood Memories
                       </h2>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-xs md:text-base">
                         Growing up in the serene village of Pilimandhopri in
                         Fathabad district, Haryana, my fondest memories revolve
                         around my nani&apos;s kitchen. Those visits were not
@@ -44,10 +47,10 @@ export default async function OurStory() {
                       </p>
                     </div>
                     <div className="mb-4">
-                      <h2 className="text-lg font-semibold mb-2 text-[#854e23]">
+                      <h2 className="text-sm md:text-lg font-semibold mb-2 text-[#854e23]">
                         Discovering the Essence
                       </h2>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-xs md:text-base">
                         As the years passed, I began to understand the
                         significance of ghee in our culture and its numerous
                         health benefits. It became apparent to me that this
@@ -57,10 +60,10 @@ export default async function OurStory() {
                       </p>
                     </div>
                     <div className="mb-4">
-                      <h2 className="text-lg font-semibold mb-2 text-[#854e23]">
+                      <h2 className="text-sm md:text-lg font-semibold mb-2 text-[#854e23]">
                         The Birth of nani&apos;s Bilona Ghee
                       </h2>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-xs md:text-base">
                         Driven by nostalgia and a desire to share the goodness
                         of nani&apos;s kitchen with the world, I embarked on a
                         journey to create nani&apos;s Bilona Ghee. It&apos;s not
@@ -70,10 +73,10 @@ export default async function OurStory() {
                       </p>
                     </div>
                     <div className="mb-4">
-                      <h2 className="text-lg font-semibold mb-2 text-[#854e23]">
+                      <h2 className="text-sm md:text-lg font-semibold mb-2 text-[#854e23]">
                         Our Promise
                       </h2>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-xs md:text-base">
                         At nani&apos;s Bilona Ghee, we&apos;re committed to
                         preserving tradition, promoting wellness, and delivering
                         quality. Each dollop of our ghee embodies the essence of
@@ -82,9 +85,9 @@ export default async function OurStory() {
                         health, and the joy of good food.
                       </p>
                     </div>
-                    <div className="text-gray-600 text-right italic">
+                    <div className="text-gray-600 text-right italic text-xs md:text-base">
                       <p>Thank you for being a part of our story.</p>
-                      <p>
+                      <p className="text-xs font-bold md:text-base">
                         AmanDeep Sigar
                         <br />
                         Founder, nani&apos;s Bilona Ghee.
@@ -99,7 +102,7 @@ export default async function OurStory() {
 
         <div className="container my-24 mx-auto md:px-6">
           <section className="mb-32 text-center">
-            <h2 className="mb-32 text-3xl font-bold text-[#1b2528]">
+            <h2 className="mb-32 text-base md:text-3xl font-bold text-[#1b2528]">
               Meet the{' '}
               <u className="text-primary dark:text-primary-400">team</u>
             </h2>
@@ -109,19 +112,23 @@ export default async function OurStory() {
                 <div className="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                   <div className="flex justify-center">
                     <div className="flex justify-center -mt-[75px]">
-                      <img
-                        src="images/team/co-founder1.png"
+                      <Image
+                        src="/images/team/co-founder1.png"
+                        width={100}
+                        height={100}
                         className="mx-auto rounded-full shadow-lg dark:shadow-black/20 w-[150px]"
                         alt="Avatar"
                       />
                     </div>
                   </div>
                   <div className="p-6">
-                    <h5 className="mb-4 text-lg font-bold text-[#1b2528]">
+                    <h5 className="mb-4 text-sm md:text-lg font-bold text-[#1b2528]">
                       Amandeep Sigar
                     </h5>
 
-                    <p className="mb-6 text-[#854e23] font-bold">Founder</p>
+                    <p className="mb-6 text-[#854e23] font-bold text-sm md:text-base">
+                      Founder
+                    </p>
                     <ul className="mx-auto flex list-inside justify-center items-center">
                       <a
                         href="https://www.instagram.com/amandeepsigar"
@@ -130,7 +137,7 @@ export default async function OurStory() {
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
-                          className="h-4 w-4 text-primary dark:text-primary-400"
+                          className="h-3 w-3 md:h-4 md:w-4 text-primary dark:text-primary-400"
                         >
                           <path
                             fill="currentColor"
@@ -146,7 +153,7 @@ export default async function OurStory() {
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          className="h-6 w-6"
+                          className="h-3 w-3 md:h-4 md:w-4 "
                         >
                           <path
                             stroke-linecap="round"
@@ -155,7 +162,9 @@ export default async function OurStory() {
                           />
                         </svg>
                       </div>
-                      <div className="text-[#fbbf24]">+91 8198985878</div>
+                      <div className="text-[#fbbf24] text-sm md:text-base">
+                        +91 8198985878
+                      </div>
                     </ul>
                   </div>
                 </div>
@@ -165,7 +174,9 @@ export default async function OurStory() {
                 <div className="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                   <div className="flex justify-center">
                     <div className="flex justify-center -mt-[75px]">
-                      <img
+                      <Image
+                        height={100}
+                        width={100}
                         src="/images/team/co-founder2.png"
                         className="mx-auto rounded-full shadow-lg dark:shadow-black/20 w-[150px]"
                         alt="Avatar"
@@ -173,10 +184,10 @@ export default async function OurStory() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h5 className="mb-4 text-lg font-bold text-[#1b2528]">
+                    <h5 className="mb-4 text-sm md:text-lg font-bold text-[#1b2528]">
                       Subhash Godara
                     </h5>
-                    <p className="mb-6 text-[#854e23] font-bold">
+                    <p className="mb-6 text-[#854e23] font-bold text-sm md:text-base">
                       Manufacturing head
                     </p>
                     <ul className="mx-auto flex list-inside justify-center items-center">
@@ -187,7 +198,7 @@ export default async function OurStory() {
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
-                          className="h-4 w-4 text-primary dark:text-primary-400"
+                          className="h-3 w-3 md:h-4 md:w-4  text-primary dark:text-primary-400"
                         >
                           <path
                             fill="currentColor"
@@ -203,7 +214,7 @@ export default async function OurStory() {
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          className="h-6 w-6"
+                          className="h-3 w-3 md:h-4 md:w-4 "
                         >
                           <path
                             stroke-linecap="round"
@@ -212,7 +223,9 @@ export default async function OurStory() {
                           />
                         </svg>
                       </div>
-                      <div className="text-[#fbbf24]">+91 7056800805</div>
+                      <div className="text-[#fbbf24] text-sm md:text-base">
+                        +91 7056800805
+                      </div>
                     </ul>
                   </div>
                 </div>
@@ -222,18 +235,22 @@ export default async function OurStory() {
                 <div className="block h-full rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                   <div className="flex justify-center">
                     <div className="flex justify-center -mt-[75px]">
-                      <img
-                        src="images/team/Social Media Head.png"
+                      <Image
+                        height={100}
+                        width={100}
+                        src="/images/team/Social Media Head.png"
                         className="mx-auto rounded-full shadow-lg dark:shadow-black/20 w-[150px]"
                         alt="Avatar"
                       />
                     </div>
                   </div>
                   <div className="p-6">
-                    <h5 className="mb-4 text-lg font-bold text-[#1b2528]">
+                    <h5 className="mb-4 text-sm md:text-lg font-bold text-[#1b2528]">
                       Rohit Sigar
                     </h5>
-                    <p className="mb-6 text-[#854e23] font-bold">CTO</p>
+                    <p className="mb-6 text-[#854e23] font-bold text-sm md:text-base">
+                      CTO
+                    </p>
                     <ul className="mx-auto flex list-inside justify-center items-center">
                       <a
                         href="https://www.linkedin.com/in/rohit-sigar"
@@ -242,7 +259,7 @@ export default async function OurStory() {
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
-                          className="h-3.5 w-3.5 text-primary dark:text-primary-400"
+                          className="h-3 w-3 md:h-4 md:w-4  text-primary dark:text-primary-400"
                         >
                           <path
                             fill="currentColor"
@@ -258,7 +275,7 @@ export default async function OurStory() {
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
-                          className="h-4 w-4 text-primary dark:text-primary-400"
+                          className="h-3 w-3 md:h-4 md:w-4  text-primary dark:text-primary-400"
                         >
                           <path
                             fill="currentColor"
@@ -274,7 +291,7 @@ export default async function OurStory() {
                           viewBox="0 0 24 24"
                           stroke-width="2"
                           stroke="currentColor"
-                          className="h-6 w-6"
+                          className="h-3 w-3 md:h-4 md:w-4 "
                         >
                           <path
                             stroke-linecap="round"
@@ -283,7 +300,9 @@ export default async function OurStory() {
                           />
                         </svg>
                       </div>
-                      <div className="text-[#fbbf24]">+91 9306273009</div>
+                      <div className="text-[#fbbf24] text-sm md:text-base">
+                        +91 9306273009
+                      </div>
                     </ul>
                   </div>
                 </div>
