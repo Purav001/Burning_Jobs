@@ -14,7 +14,7 @@ const calcPrices = (orderItems: OrderItem[]) => {
   // Calculate the tax price
   const taxPrice = round2(Number((0.18 * itemsPrice).toFixed(2)))
   // Calculate the total price
-  const totalPrice = round2(itemsPrice + shippingPrice + taxPrice)
+  const totalPrice = round2(itemsPrice + shippingPrice)
   return { itemsPrice, shippingPrice, taxPrice, totalPrice }
 }
 

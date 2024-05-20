@@ -230,13 +230,16 @@ const Form = () => {
                   <div className=" flex justify-between">
                     <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       Items
+                      <span className="italic text-gray-500 text-xs md:text-base ml-1">
+                        including of all taxes
+                      </span>
                     </div>
                     <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       ₹{itemsPrice}
                     </div>
                   </div>
                 </li>
-                <li>
+                {/* <li>
                   <div className=" flex justify-between">
                     <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       Tax(18% GST)
@@ -245,7 +248,7 @@ const Form = () => {
                       ₹{taxPrice}
                     </div>
                   </div>
-                </li>
+                </li> */}
                 <li>
                   <div className=" flex justify-between">
                     <div className="font-semibold text-[#4F4A45] text-xs md:text-base">

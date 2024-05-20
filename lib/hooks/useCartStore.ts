@@ -115,6 +115,6 @@ const calcPrice = (items: OrderItem[]) => {
     ),
     shippingPrice = round2(itemsPrice > 100 ? 0 : 100),
     taxPrice = round2(Number(0.18 * itemsPrice)),
-    totalPrice = round2(itemsPrice + shippingPrice + taxPrice)
+    totalPrice = round2(itemsPrice + shippingPrice)
   return { itemsPrice, shippingPrice, taxPrice, totalPrice }
 }

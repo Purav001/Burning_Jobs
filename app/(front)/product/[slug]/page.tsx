@@ -81,7 +81,11 @@ export default async function ProductDetails({
               <div className="mb-2 flex justify-between">
                 <div className="text-gray-600 font-semibold text-sm md:text-base">
                   Price
+                  <span className="italic text-gray-500 text-xs md:text-base ml-1">
+                    including of all taxes
+                  </span>
                 </div>
+
                 <div className="text-gray-600 font-semibold text-sm md:text-base">
                   ₹{product.price}
                 </div>
