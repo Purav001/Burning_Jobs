@@ -10,7 +10,7 @@ import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Nani Bilona Ghee',
+  title: `Nani's Bilona Ghee`,
 
   description: 'Nani Bilona Ghee Website',
 }
@@ -30,12 +30,6 @@ export default function RootLayout({
               <div className="min-h-screen w-full flex flex-col">
                 <Header />
                 <main className="flex-grow p-2 pt-4">{children}</main>
-                {/* <footer className="footer footer-center p-4 bg-base-300 text-base-content">
-                  <p>
-                    Copyright © 2024 - All right reserved by Nani&apos;s Bilona
-                    Ghee
-                  </p>
-                </footer> */}
 
                 <footer className="bg-[#1b2528]">
                   <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -139,17 +133,12 @@ export default function RootLayout({
                             </li>
                             <li className="mb-1 md:mb-4">
                               <a
-                                href="/shipping-policy"
+                                href="/ship-policy"
                                 className="hover:underline text-xs md:text-sm"
                               >
                                 Shipping Policy
                               </a>
                             </li>
-                            {/* <li>
-                              <a href="#" className="hover:underline">
-                                Terms &amp; Conditions
-                              </a>
-                            </li> */}
                             <li>
                               <a
                                 href="/refund-policy"
