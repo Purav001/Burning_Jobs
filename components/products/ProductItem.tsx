@@ -18,7 +18,7 @@ export default function ProductItem({ product }: { product: Product }) {
         <p className="font-bold text-[#1c4854] text-xs md:text-base">
           {product.brand}
         </p>
-        <Rating rating={product.rating} disabled />
+        {/* <Rating rating={product.rating} disabled /> */}
         <div className="card-actions justify-end flex items-center">
           <div className="font-bold text-[#1c4854] text-xs md:text-base">
             ₹{product.price}

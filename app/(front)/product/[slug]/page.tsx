@@ -61,9 +61,9 @@ export default async function ProductDetails({
                 {product.name}
               </h1>
             </li>
-            <li>
+            {/* <li>
               <Rating rating={product.rating} />
-            </li>
+            </li> */}
             <li className="text-[#4F4A45] font-bold text-sm md:text-base">
               {' '}
               {product.brand}
