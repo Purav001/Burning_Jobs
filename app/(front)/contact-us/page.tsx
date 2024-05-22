@@ -1,5 +1,10 @@
 import Contact from '@/components/ContactUs/Contact'
 
+export const metadata = {
+  title: `Contact Us - Nani's Bilona Ghee`,
+  description: `Have questions about A2 cow ghee or Indian buffalo ghee? Contact Nani's Bilona, your trusted ghee supplier! We offer nationwide delivery.`,
+}
+
 export default async function ContactUs() {
   return (
     <div className="my-24 mt-40 md:px-6">
@@ -102,7 +107,7 @@ export default async function ContactUs() {
                         Text us on whatsapp for faster response:
                       </p>
                       <p className="text-gray-600 text-xs md:text-base">
-                        +91 8198985878
+                        +91 7303290341
                       </p>
                     </div>
                   </div>

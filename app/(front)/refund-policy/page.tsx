@@ -1,3 +1,10 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: `Refund Policy - Nani's Bilona Ghee`,
+  description: `Nani's Bilona Ghee Refund Policy: Transparency & Satisfaction Guaranteed`,
+}
+
 export default async function RefundPolicy() {
   return (
     <div className="container my-10 mx-auto md:px-6">

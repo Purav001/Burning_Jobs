@@ -1,4 +1,8 @@
 import Image from 'next/image'
+export const metadata = {
+  title: `Our Story - Nani's Bilona Ghee`,
+  description: `Unveiling Nani's Bilona Ghee: A Legacy of Love, Tradition & Pure Ghee`,
+}
 export default async function OurStory() {
   return (
     <>
@@ -21,9 +25,11 @@ export default async function OurStory() {
                     <h2 className="text-sm md:text-2xl font-semibold text-center mb-6 text-[#854e23]">
                       Welcome to Nani&apos;s Bilona Ghee
                     </h2>
-                    <img
-                      src="images/team/nani.jpg"
+                    <Image
+                      src="/images/team/nani.jpg"
                       alt="Trendy Pants and Shoes"
+                      width={100}
+                      height={100}
                       className="w-full rounded-t-lg lg:hidden mb-5"
                     />
 

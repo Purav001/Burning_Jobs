@@ -3,6 +3,11 @@
 import { methodsData } from './methodsData'
 import React from 'react'
 
+export const metadata = {
+  title: `Ghee Making - Nani's Bilona Ghee`,
+  description: `Unlock the #GutHealth & #CleanEating benefits of pure ghee! Discover Nani's Bilona's time-tested #BilonaMethod for making A2 cow & buffalo ghee. #ShopNow for authentic taste & quality!`,
+}
+
 export default function GheeMakingPage() {
   return (
     <div className="container my-10 mx-auto md:px-6">

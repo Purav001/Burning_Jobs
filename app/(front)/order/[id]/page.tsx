@@ -8,6 +8,11 @@ import OrderDetails from './OrderDetails'
 //   }
 // }
 
+// export const metadata = {
+//   title: `Order Details - Nani's Bilona Ghee`,
+//   description: `Your Nani's Bilona Cart: Almost There!`,
+// }
+
 export default function OrderDetailsPage({
   params,
 }: {

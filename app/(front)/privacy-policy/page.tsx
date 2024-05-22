@@ -1,3 +1,10 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: `Privacy Policy - Nani's Bilona Ghee`,
+  description: `Nani's Bilona Ghee Privacy Policy: Protecting Your Information.`,
+}
+
 export default async function PrivacyPolicy() {
   return (
     <div className="container my-10 mx-auto md:px-6">

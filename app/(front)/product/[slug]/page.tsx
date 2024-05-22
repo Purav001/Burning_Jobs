@@ -18,7 +18,7 @@ export async function generateMetadata({
     return { title: 'Product not found' }
   }
   return {
-    title: product.name,
+    title: product.name + `Nani's Bilona Ghee`,
     description: product.description,
   }
 }

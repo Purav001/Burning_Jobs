@@ -2,7 +2,8 @@ import { Metadata } from 'next'
 import MyOrders from './MyOrders'
 
 export const metadata: Metadata = {
-  title: 'Order History',
+  title: `Order History - Nani's Bilona Ghee`,
+  description: `Nani's Bilona Order History: Track, Reorder & Manage Your Ghee Purchases.`,
 }
 export default function OrderHistory() {
   return (

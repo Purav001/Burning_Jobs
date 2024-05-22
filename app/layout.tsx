@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: `Nani's Bilona Ghee`,
 
-  description: 'Nani Bilona Ghee Website',
+  description: `Unleash the Power of Pure Ghee: Nani's Bilona Offers A2 Cow & Buffalo Ghee Nationwide`,
 }
 
 export default function RootLayout({

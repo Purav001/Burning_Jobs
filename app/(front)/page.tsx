@@ -25,10 +25,8 @@ const Slider = dynamic(() => import('@/components/slider/Slider'), {
 })
 
 export const metadata: Metadata = {
-  title: process.env.NEXT_PUBLIC_APP_NAME || 'Nani Bilona Ghee',
-  description:
-    process.env.NEXT_PUBLIC_APP_DESC ||
-    'Nextjs, Server components, Next auth, daisyui, zustand',
+  title: `Nani's Bilona Ghee`,
+  description: `Nani's Bilona Ghee Love Purity Deliciousness A2 Cow Ghee Buffalo Ghee Shop Now.`,
 }
 const cards = [
   {
