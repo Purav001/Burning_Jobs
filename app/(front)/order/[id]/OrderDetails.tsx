@@ -397,7 +397,7 @@ export default function OrderDetails({
                       {' '}
                       Shipping{' '}
                       <span className="italic text-gray-500 text-xs md:text-base">
-                        Free for 2 Week (till 01 June)
+                      Delivery charges - free
                       </span>
                     </div>
                     <div className="font-semibold text-[#4F4A45] text-xs md:text-base">

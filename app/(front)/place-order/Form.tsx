@@ -254,7 +254,7 @@ const Form = () => {
                     <div className="font-semibold text-[#4F4A45] text-xs md:text-base">
                       Shipping
                       <span className="ml-1 italic text-gray-500 text-xs md:text-base">
-                        Free for 2 Week (till 01 June)
+                        Delivery charges - free
                       </span>
                     </div>
 
