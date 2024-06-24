@@ -5,8 +5,8 @@
 1. Clone repo
 
    ```shell
-    $ git clone git@github.com:basir/next-amazona-v2.git
-    $ cd next-amazona-v2
+    $ git clone git@github.com:Purav001/Burning_Jobs.git
+    $ cd Burning_Jobs
    ```
 
 2. Create .env File
