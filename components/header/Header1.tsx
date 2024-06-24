@@ -72,20 +72,20 @@ const Header = () => {
               Our Story
             </a>
             <Link
-              href="/contact-us"
-              className={`${
-                pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6`}
-            >
-              Contact Us
-            </Link>
-            <Link
               href="/ghee-making"
               className={`${
                 pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-white'
               } font-bold mr-6`}
             >
               Ghee Making Process
+            </Link>
+            <Link
+              href="/contact-us"
+              className={`${
+                pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6`}
+            >
+              Contact Us
             </Link>
           </div>
           <Menu />

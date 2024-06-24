@@ -32,7 +32,7 @@ const Menu = () => {
       <div>
         <ul className="flex items-stretch">
           <li>
-            <Link
+              {/*<Link
               className="btn btn-ghost rounded-btn text-xs md:text-base"
               href="/cart"
             >
@@ -42,7 +42,7 @@ const Menu = () => {
                   {items.reduce((a, c) => a + c.qty, 0)}{' '}
                 </div>
               )}
-            </Link>
+              </Link> */}
           </li>
           {session && session.user ? (
             <>
