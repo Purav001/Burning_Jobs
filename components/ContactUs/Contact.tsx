@@ -109,8 +109,7 @@ const Contact: FC = () => {
               <option selected>Choose Your Slot</option>
               <option value="8-12">8:00AM - 11:59AM </option>
               <option value="12-4">12:00PM - 03:59PM </option>
-              <option value="4-8">04:00PM - 07:59PM</option>
-              <option value="8-11">08:00PM - 11:00PM</option>
+              <option value="4-8">04:00PM - 05:59PM</option>
             </select>
           </div>
           <div className="mb-5">
