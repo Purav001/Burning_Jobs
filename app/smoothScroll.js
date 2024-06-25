@@ -1,4 +1,4 @@
-// useSmoothScroll.js
+
 import { useEffect } from 'react';
 
 function smoothScroll(delay = 300) {

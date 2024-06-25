@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 import ProductItem from '@/components/products/ProductItem'
 import SocialItem from '@/components/socials/SocialItem'
 import productService from '@/lib/services/productService'
@@ -17,6 +17,8 @@ import MainCarousel from '@/components/MainCarousel'
 import MainCarousel1 from '@/components/MainCarousel1'
 import Hero from '@/components/Hero/Hero'
 import About from './about-us/page'
+import smoothScroll from '../smoothScroll'
+
 // import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
@@ -136,6 +138,7 @@ export default async function Home() {
   const latestBanners = await productService.getBanners()
   const latestFaqs = await productService.getFaq()
   const photoGallery = await productService.getPhotos()
+  
   return (
     <>
       {/* <CompleteProcessLoopVideo></CompleteProcessLoopVideo> */}
