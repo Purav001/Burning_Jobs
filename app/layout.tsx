@@ -37,21 +37,23 @@ export default function RootLayout({
                       <div>
                         <div className="mb-6 md:mb-0">
                           <a href="/" className="flex items-center">
-                            <span className="self-center text-base md:text-2xl font-semibold whitespace-nowrap text-white">
-                              Nani&apos;s Bilona Ghee
+                            <span className="self-center text-base md:text-2xl font-semibold whitespace-nowrap text-[#fbbf24]">
+                              Burning Jobs <br/><br/>
                             </span>
                           </a>
                         </div>
                         <div className="mb-5 md:mb-0">
                           <h1 className="text-white font-semibold text-sm md:text-base">
-                            Manufacturing address:{' '}
+                            Office address:{' '}
                           </h1>
                           <h2 className="text-gray-300 text-xs md:text-base">
-                            Nani&apos;s Bilona Ghee, JE Colony, Sirsa, Haryana -
-                            125055
+                          Exemplar Global Resource Pvt Ltd,<br/>Hollywood Plaza, SCO-6, 1st Floor,<br/>VIP Road, Zirakpur-140603 (Mohali/Chandigarh)
                           </h2>
                           <h2 className="text-gray-300 text-xs md:text-base">
-                            Tel: +91 8198985878
+                            Tel: 01762-428437
+                          </h2>
+                          <h2 className="text-gray-300 text-xs md:text-base">
+                          Email- burningjobs@exemplar.co.in
                           </h2>
                         </div>
                       </div>
@@ -94,7 +96,7 @@ export default function RootLayout({
                           <ul className="text-white font-medium">
                             <li className="mb-1 md:mb-4">
                               <a
-                                href="https://www.instagram.com/nani_bilona_ghee/"
+                                href="https://www.instagram.com/burningjobs/"
                                 className="hover:underline text-xs md:text-sm"
                               >
                                 Instagram
@@ -102,7 +104,7 @@ export default function RootLayout({
                             </li>
                             <li>
                               <a
-                                href="https://www.facebook.com/NaniBilonaGhee/"
+                                href="https://www.facebook.com/"
                                 className="hover:underline text-xs md:text-sm"
                               >
                                 Facebook
@@ -164,7 +166,7 @@ export default function RootLayout({
                             </li>
                             <li>
                               <a
-                                href="https://wa.me/917303290341"
+                                href="https://wa.me/9041441616"
                                 className="hover:underline text-xs md:text-sm"
                               >
                                 WhatsApp

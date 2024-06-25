@@ -119,7 +119,7 @@ const Menu = () => {
                 type="button"
                 onClick={() => signIn()}
               >
-                Sign in
+                Log in
               </button>
             </li>
           )}

@@ -4,7 +4,6 @@ import React from 'react'
 import Menu from './Menu'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import { usePathname } from 'next/navigation'
-
 const Header = () => {
   const pathname = usePathname()
 
@@ -12,7 +11,7 @@ const Header = () => {
   const scrollToTop = () => {
     scroll.scrollToTop()
   }
-
+  
   return (
     <header>
       <nav style={{ backgroundColor: '#1b2528' }}>
@@ -55,6 +54,14 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
+            <a
+                href="#About"
+                className={`${
+                  pathname == '/about-us' ? 'text-[#fbbf24]' : 'text-white'
+                } font-bold mr-6`}
+              >
+                About Us
+              </a>
             <a
               href="/products"
               className={`${

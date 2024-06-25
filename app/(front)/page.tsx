@@ -15,6 +15,8 @@ import VideoCarousel from '@/components/videoCarousel/VideoCarousel'
 import CustomerReviewCarousel from '@/components/CustomerReviewCarousel'
 import MainCarousel from '@/components/MainCarousel'
 import MainCarousel1 from '@/components/MainCarousel1'
+import Hero from '@/components/Hero/Hero'
+import About from './about-us/page'
 // import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
 // import UseSlider from '@/components/slider/UseSlider'
@@ -125,6 +127,8 @@ const items: CarouselItem[] = [
   // Add more items as needed
 ]
 
+
+
 export default async function Home() {
   const featuredProducts = await productService.getFeatured()
   const latestProducts = await productService.getLatest()
@@ -136,6 +140,7 @@ export default async function Home() {
     <>
       {/* <CompleteProcessLoopVideo></CompleteProcessLoopVideo> */}
       {/* <MainCarousel></MainCarousel> */}
+      <Hero></Hero>
       <MainCarousel1></MainCarousel1>
 
       <h2
@@ -151,6 +156,7 @@ export default async function Home() {
       </div>
 
       <VideoCarousel></VideoCarousel>
+      <About></About>
 
       <div style={{ backgroundColor: '#fffbe8' }} className="pt-10 pb-10 mt-10">
         <div

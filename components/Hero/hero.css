@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    display: block;
+}
+.p-2{
+    padding: 0;
+}
+.pt-4{
+    padding-top: 0;
+}
+.mx-auto{
+    margin-left: 0;
+    margin-right: 0;
+}
+.section_hero {
+    height: 55vw;
+    background-color: #fff;
+    background-image: url('./back2.webp');
+    background-position: 50%;
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-attachment: scroll;
+    padding-top: 182px;
+    padding-bottom: 160px;
+    overflow: hidden;
+}
+
+.padding-global {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+.container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+.container-large {
+    width: 100%;
+    max-width: 88.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero_wrapper {
+    display: flex;
+    position: relative;
+}
+
+.hero_wrapper {
+    display: flex;
+    position: relative;
+}
+.hero_content-wrapper{
+    z-index: 1;
+    width: 628px;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+}
+.hero_heading-wrapper {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    flex-direction: column;
+    display: flex;
+}
+.banner_wrapper {
+    width: 282px;
+    color: #fff;
+    background-color: rgba(255, 220, 84, .2);
+    border-radius: 4px;
+    padding: 2px 12px;
+    font-size: 1rem;
+    line-height: 160%;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+strong {
+    font-weight: bold;
+}
+
+
+h1 {
+    color: #fff;
+    letter-spacing: -1.44px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+.text-color-yellow {
+    color: #ffdc54;
+}
+.text-color-white {
+    color: #fff;
+}
+.hero_button-wrapper {
+    max-width: 466px;
+    grid-column-gap: 48px;
+    grid-row-gap: 48px;
+    flex-direction: column;
+    margin-top: 24px;
+    display: flex;
+}
+
+.button {
+    color: #b75806 !important;
+    text-align: center!important;
+    background-color: #fff!important;
+    border-radius: 50px!important;
+    padding: 24px 3rem!important;
+    font-size: 20px!important;
+    font-weight: 700!important;
+    line-height: 130%!important;
+}
+.w-button {
+    color: #fff;
+    line-height: inherit;
+    cursor: pointer;
+    background-color: #3898ec;
+    border: 0;
+    border-radius: 0;
+    padding: 9px 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+a {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.hero_image-wrapper {
+    width: 1050px;
+    height: 382.375px;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: auto;
+    right: 0%;
+}
+.image {
+    z-index: 1;
+    width: auto;
+    height: 584px;
+    display: none;
+    top: -17%;
+    right: 0%;
+}
+
+
+.image-2 {
+    object-fit: contain;
+}
+/* img{
+    max-width: 100%;
+    display: inline-block;
+    border: 0;
+} */
+/* img{
+    overflow-clip-margin: content-box;
+    width: 746px;
+} */
+
+@media screen and (max-width: 991px) {
+    .section_hero {
+        height: auto;
+        background-image: url('./back.webp');
+        background-position: 50% 0;
+        background-size: auto 110%;
+        padding-top: 140px;
+        padding-bottom: 2rem;
+    }
+    .hero_wrapper {
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero_wrapper {
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .image {
+        height: auto;
+        max-height: none;
+        max-width: 600px;
+        min-height: auto;
+        margin-bottom: -46px;
+        display: block;
+        position: static;
+    }
+}
+@media screen and (max-width: 767px) {
+    .section_hero {
+        padding-bottom: 3rem;
+    }
+    .padding-global {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .image-2 {
+        object-fit: contain;
+    }
+    .image {
+        width: auto;
+        height: auto;
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .section_hero {
+        background-size: cover;
+        padding-top: 120px;
+        overflow: hidden;
+    }
+    .button {
+        padding: 1rem;
+        font-size: 16px;
+    }
+    .image {
+        width: 100%;
+    }
+}
+
