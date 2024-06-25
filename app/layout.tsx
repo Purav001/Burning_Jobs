@@ -200,6 +200,7 @@ export default function RootLayout({
             </div>
           </div>
         </Providers>
+        
       </body>
     </html>
   )
