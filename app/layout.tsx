@@ -1,3 +1,4 @@
+
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -6,11 +7,13 @@ import DrawerButton from '@/components/DrawerButton'
 import Sidebar from '@/components/Sidebar'
 import Header from '@/components/header/Header1'
 import Link from 'next/link'
+import { useEffect } from 'react';
+import smoothScroll from './smoothScroll'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: `Nani's Bilona Ghee`,
+  title: `Burning Jobs`,
 
   description: `Unleash the Power of Pure Ghee: Nani's Bilona Offers A2 Cow & Buffalo Ghee Nationwide`,
 }
