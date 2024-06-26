@@ -42,7 +42,7 @@ const servicesData2 = [
 
 const Services = () => {
     return (
-        <section className="section_services">
+        <section id="Services" className="section_services">
             <div className="padding-global">
                 <div id="Services" className="container-large">
                     <div className="services_wrapper">
