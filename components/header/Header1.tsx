@@ -4,6 +4,7 @@ import React from 'react'
 import Menu from './Menu'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import { usePathname } from 'next/navigation'
+// import './header.css'
 const Header = () => {
   const pathname = usePathname()
 
@@ -17,7 +18,7 @@ const Header = () => {
       <nav style={{ backgroundColor: '#1b2528' }}>
         {' '}
         {/* 1. Set background color of navbar */}
-        <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white">
+        <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white padding-global">
           {' '}
           {/* 2. Set text color to white */}
           <div className="flex items-center">
@@ -40,11 +41,11 @@ const Header = () => {
               </svg>
             </label>
             <Link href="/" className="flex items-center">
-              {/* <img
+              <img
                 src="/images/logo-white.png"
                 alt="Logo"
                 className="h-10 w-auto font-bold mr-4"
-              /> */}
+              />
               <span
                 className="text-xs lg:text-lg md:text-lg font-extrabold tracking-tight"
                 style={{ color: '#daa407' }}

@@ -18,6 +18,7 @@ import MainCarousel1 from '@/components/MainCarousel1'
 import Hero from '@/components/Hero/Hero'
 import About from './about-us/page'
 import smoothScroll from '../smoothScroll'
+import Services from '@/components/services/page'
 
 // import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
@@ -144,9 +145,9 @@ export default async function Home() {
       {/* <CompleteProcessLoopVideo></CompleteProcessLoopVideo> */}
       {/* <MainCarousel></MainCarousel> */}
       <Hero></Hero>
-      <MainCarousel1></MainCarousel1>
+      {/* <MainCarousel1></MainCarousel1> */}
 
-      <h2
+      {/* <h2
         className="mb-4 text-2xl md:text-3xl font-extrabold leading-none tracking-tight text-[#1b2528] md:text-4xl lg:text-5xl text-center py-6"
         id="product-section"
       >
@@ -156,7 +157,8 @@ export default async function Home() {
         {latestProducts.map((product) => (
           <ProductItem key={product.slug} product={convertDocToObj(product)} />
         ))}
-      </div>
+      </div> */}
+      <Services></Services>
 
       {/* <VideoCarousel></VideoCarousel> */}
       <About></About>

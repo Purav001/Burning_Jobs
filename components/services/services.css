@@ -1,0 +1,214 @@
+.p-2{
+    padding: 0;
+}
+.pt-4{
+    padding-top: 0;
+}
+.mx-auto{
+    margin-left: 0;
+    margin-right: 0;
+}
+.section_services {
+    padding-top: 0;
+    padding-bottom: 160px;
+}
+.padding-global {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+.container-large {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+.container-large {
+    width: 100%;
+    max-width: 88.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.services_wrapper {
+    grid-column-gap: 64px;
+    grid-row-gap: 64px;
+    flex-direction: column;
+    display: flex;
+}
+.services_heading-wrapper {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+}
+h2 {
+    color: #7a380d;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+h2 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+
+.services_card-wrapper {
+    grid-column-gap: 16px;
+    grid-row-gap: 32px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.services_card {
+    max-width: 450px;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    background-color: #fffadd;
+    border-radius: 32px;
+    flex-direction: column;
+    display: flex;
+}
+.services_card-wrapper._1 {
+    grid-template-columns: 1fr 1fr;
+    margin-top: -47px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.services_card-image {
+    max-width: 450px;
+    border-radius: 32px;
+    flex: 0 auto;
+    overflow: hidden;
+}
+.image-10 {
+    width: 450px;
+    height: 200px;
+    object-fit: cover;
+}
+img {
+    max-width: 100%;
+    display: inline-block;
+vertical-align: middle;
+}
+.services_card-content {
+    height: 100%;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+}
+.services_card_heading-wrapper {
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    flex-direction: column;
+    display: flex;
+}
+
+h3 {
+    color: #181818;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.text-weight-light {
+    color: #4a4a4a;
+    font-weight: 300;
+}
+.services_card_button-wrapper {
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    color: #221528;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.button {
+    color: #b75806;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 24px 3rem;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 130%;
+}
+@media screen and (max-width: 991px) {
+    .section_services {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .services_card {
+        max-width: 450px;
+    }
+    .services_card-wrapper {
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        flex-flow: column wrap;
+        align-items: center;
+        display: flex;
+    }
+}
+@media screen and (max-width: 767px) {
+    .padding-global {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .services_wrapper {
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+    }
+    .services_card-wrapper {
+        display: flex;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 479px) {
+    .section_services {
+        padding-top: 0;
+        padding-bottom: 3rem;
+    }
+    .services_card-wrapper {
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+    }
+    .services_card-content {
+        height: auto;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .services_card_heading-wrapper {
+        height: auto;
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
+    }
+    .services_card_button-wrapper {
+        margin-top: 16px;
+    }
+    .services_card-wrapper._1 {
+        margin-top: 0;
+    }
+}
