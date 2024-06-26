@@ -158,7 +158,7 @@ export default async function Home() {
         ))}
       </div>
 
-      <VideoCarousel></VideoCarousel>
+      {/* <VideoCarousel></VideoCarousel> */}
       <About></About>
 
       <div style={{ backgroundColor: '#fffbe8' }} className="pt-10 pb-10 mt-10">
@@ -185,9 +185,9 @@ export default async function Home() {
 
       <WhatsAppWidget></WhatsAppWidget>
 
-      <Slider photos={photoGallery}></Slider>
+      {/* <Slider photos={photoGallery}></Slider> */}
 
-      <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions>
+      {/* <FrequentlyAskedQuestions AllFaq={latestFaqs}></FrequentlyAskedQuestions> */}
     </>
   )
 }
