@@ -79,57 +79,86 @@ const cards = [
 ]
 
 interface CarouselItem {
-  title: string
+  name: string
+  company: string
   description: string
-  image: string
+  imageUrl: string
+  imageSizes: {
+    size: number;
+    url: string; 
+  }[];
 }
 
 const items: CarouselItem[] = [
   {
-    title: 'Kiran Yadav',
-    description:
-      "Nani's Bilona Ghee has become a staple in my kitchen! The aroma and taste remind me of the ghee my grandmother used to make. Knowing it's crafted from Sahiwal cow's milk using the traditional bilona method gives me confidence in its purity and quality.",
-    image: '/images/customers/customer1.jpeg',
+    name: 'Akhil',
+    company: 'Capgemini',
+    description: 'I got placed in Capgemini as Data Privacy Consultant with 100% hike. Thank you Diksha Mam for your mentorship and guidance. I would definitely recommend her interview preparation and resume building services to all the job seekers!',
+    imageUrl: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png',
+    imageSizes: [
+      { size: 500, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-500.png' },
+      { size: 800, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-800.png' },
+      { size: 972, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png' },
+    ],
   },
   {
-    title: 'Rahul Jakhar',
-    description:
-      "I've tried various brands claiming to offer authentic A2 cow ghee, but none match the richness and texture of Nani's Bilona Ghee. It's evident that they prioritize traditional methods and high-quality ingredients. My morning chai wouldn't be the same without it!",
-    image: '/images/customers/customer2.jpeg',
+    name: 'Akhil',
+    company: 'Capgemini',
+    description: 'I got placed in Capgemini as Data Privacy Consultant with 100% hike. Thank you Diksha Mam for your mentorship and guidance. I would definitely recommend her interview preparation and resume building services to all the job seekers!',
+    imageUrl: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png',
+    imageSizes: [
+      { size: 500, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-500.png' },
+      { size: 800, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-800.png' },
+      { size: 972, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png' },
+    ],
   },
   {
-    title: 'Ranju jha',
-    description:
-      "As a health-conscious consumer, finding pure A2 cow ghee was a priority for me. Nani's Bilona Ghee not only meets but exceeds my expectations. Its golden hue and smooth consistency speak volumes about its craftsmanship. I use it in cooking, and it elevates the flavor of every dish!",
-    image: '/images/customers/customer3.jpeg',
+    name: 'Akhil',
+    company: 'Capgemini',
+    description: 'I got placed in Capgemini as Data Privacy Consultant with 100% hike. Thank you Diksha Mam for your mentorship and guidance. I would definitely recommend her interview preparation and resume building services to all the job seekers!',
+    imageUrl: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png',
+    imageSizes: [
+      { size: 500, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-500.png' },
+      { size: 800, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-800.png' },
+      { size: 972, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png' },
+    ],
   },
   {
-    title: 'Vishwajeet bhori',
-    description:
-      "Nani's Bilona Ghee has a distinct taste that sets it apart from other brands. Its nutty flavor and creamy texture add depth to my meals. I appreciate the care they put into sourcing Sahiwal cow's milk and using traditional methods. It's a product I trust for its purity and authenticity.",
-    image: '/images/customers/customer4.jpeg',
+    name: 'Akhil',
+    company: 'Capgemini',
+    description: 'I got placed in Capgemini as Data Privacy Consultant with 100% hike. Thank you Diksha Mam for your mentorship and guidance. I would definitely recommend her interview preparation and resume building services to all the job seekers!',
+    imageUrl: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png',
+    imageSizes: [
+      { size: 500, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-500.png' },
+      { size: 800, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-800.png' },
+      { size: 972, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png' },
+    ],
   },
   {
-    title: 'Naveen sihag',
-    description:
-      "I've been incorporating more Ayurvedic practices into my lifestyle, and Nani's Bilona Ghee fits perfectly into that philosophy. It's not just ghee; it's a holistic experience. I feel nourished knowing I'm consuming a product crafted with mindfulness and reverence for tradition.",
-    image: '/images/customers/customer5.jpeg',
+    name: 'Akhil',
+    company: 'Capgemini',
+    description: 'I got placed in Capgemini as Data Privacy Consultant with 100% hike. Thank you Diksha Mam for your mentorship and guidance. I would definitely recommend her interview preparation and resume building services to all the job seekers!',
+    imageUrl: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png',
+    imageSizes: [
+      { size: 500, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-500.png' },
+      { size: 800, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-800.png' },
+      { size: 972, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png' },
+    ],
   },
   {
-    title: 'Neelam Raghav',
-    description:
-      "Nani's Bilona Ghee has become a kitchen essential for me. Whether I'm sautéing vegetables or drizzling it over warm rotis, its rich flavor enhances every dish. I appreciate their commitment to preserving the purity of A2 cow ghee through the traditional bilona method.",
-    image: '/images/customers/customer6.jpeg',
-  },
-  {
-    title: 'Sourav',
-    description:
-      "Nani's Bilona Ghee has earned a permanent spot in my pantry. Its purity and flavor are unmatched by any other brand I've tried. I love supporting a company that values tradition and quality, and it's evident in every spoonful of this delicious ghee.",
-    image: 'images/customers/customer7.jpg',
+    name: 'Akhil',
+    company: 'Capgemini',
+    description: 'I got placed in Capgemini as Data Privacy Consultant with 100% hike. Thank you Diksha Mam for your mentorship and guidance. I would definitely recommend her interview preparation and resume building services to all the job seekers!',
+    imageUrl: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png',
+    imageSizes: [
+      { size: 500, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-500.png' },
+      { size: 800, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322-p-800.png' },
+      { size: 972, url: 'https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca39bb57893213f35ec9a0_Akhil-fotor-2023080216322.png' },
+    ],
   },
 
   // Add more items as needed
-]
+];
 
 
 
@@ -155,21 +184,9 @@ export default async function Home() {
       <About></About>
       <Features></Features>
 
-      <div style={{ backgroundColor: '#fffbe8' }} className="pt-10 pb-10 mt-10">
-        <div
-          className="container m-auto"
-          style={{ backgroundColor: '#fffbe8' }}
-        >
-          <h1
-            className="text-2xl md:text-3xl font-bold mb-4 text-center text-[#1b2528]"
-            id="customer-review-section"
-          >
-            Customer Reviews
-          </h1>
+      
           <CustomerReviewCarousel items={items} />
-        </div>
-      </div>
-
+        
       <div className="my-8 m-auto pt-5" style={{ backgroundColor: '#ffffff' }}>
         <h1 className="text-2xl md:text-4xl font-bold mb-4 text-center text-[#1b2528]">
           Benefits of A2 Cow Ghee

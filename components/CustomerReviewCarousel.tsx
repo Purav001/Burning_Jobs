@@ -8,14 +8,20 @@ import Rating from './products/Rating'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import QuoteIcon from './QuoteIcon'
 
 // import required modules
 import { Pagination, Navigation } from 'swiper/modules'
 
 interface CarouselItem {
-  title: string
+  name: string
+  company: string
   description: string
-  image: string
+  imageUrl: string
+  imageSizes: {
+    size: number;
+    url: string; 
+  }[];
 }
 
 interface CarouselProps {
@@ -50,32 +56,49 @@ const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
       navigation={true}
       modules={[Pagination, Navigation]}
     >
-      {items.map((item, index) => (
+      <section id="Testimonials" className="section_testimonials">
+        <div className="padding-global">
+          <div className="container-large">
+            <div className="testimonials_heading-wrapper">
+              <h2>What Our Members Said</h2>
+              <div className="find-banner-text text-weight-normal">Our Results Speak For Us</div>
+            </div>
+          </div>
+          <div className="center slick-initialized slick-slider slick-dotted">
+            <div className="slick-list draggable" style={{ padding: '0px 80px' }}>
+              <div className="slick-track" style={{ opacity: 1, width: '5868px', transform: 'translate3d(-978px, 0px, 0px)' }}>
+
+      {items.map((testimonial, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-white shadow-lg rounded-lg p-4 card card-compact">
-            <div className="card-body">
-              <p className="text-gray-600 font-semibold text-xs md:text-base">
-                {item.description}
-              </p>
-              <div className="grid grid-cols-2 mt-5">
-                <div className="flex justify-end mr-5">
-                  <img
-                    src={item.image}
-                    className="w-10 h-10 md:w-20 md:h-20 rounded-full"
-                    alt="Avatar"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-xs md:text-lg font-bold mt-2 text-[#1b2528]">
-                    {item.title}
-                  </h3>
-                  {/* <Rating rating={5} disabled /> */}
-                </div>
+              <div key={index} className="swiper-slide slick-slide slick-cloned" tabIndex={-1} role="tabpanel" style={{ width: '309px' }}>
+                    <div>
+                      <div className="quote w-embed">
+                        <QuoteIcon />
+                      </div>
+                      <p className="testimonials_para">{testimonial.description}</p>
+                    </div>
+                    <div className="testimonials_image-wrapper">
+                      <img
+                        src={testimonial.imageUrl}
+                        srcSet={testimonial.imageSizes.map((size: { url: any; size: any }) => `${size.url} ${size.size}w`).join(', ')}
+                        loading="lazy"
+                        width="100"
+                        sizes="(max-width: 479px) 100vw, 100px"
+                        alt=""
+                      />
+                      <div className="testimonials_name-wrapper">
+                        <div className="testimonials_name">{testimonial.name}</div>
+                        <div>{`Placed in ${testimonial.company} | 100% Hike`}</div>
+                      </div>
+                    </div>
+              </div>
+        </SwiperSlide>
+      ))}
               </div>
             </div>
           </div>
-        </SwiperSlide>
-      ))}
+        </div>        
+      </section>
     </Swiper>
   )
 }
