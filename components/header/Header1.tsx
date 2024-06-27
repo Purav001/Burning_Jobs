@@ -57,7 +57,7 @@ const Header = () => {
           <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
             
           <ScrollLink
-              to="About"
+              to='About'
               spy={true}
               smooth={true}
               offset={0}
