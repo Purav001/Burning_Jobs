@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 const FindCard = ({ heading, text, icon }) => {
   return (
-    <div className="find-card">
-      <div className="find-card-icon">{icon}</div>
-      <div className="find-card-text">
-        <h3 className="find-card-heading">{heading}</h3>
-        <p className="find-card-paragraph">{text}</p>
+    <div className="find-card padding-medium">
+      <div className="find_card_heading_wrapper">
+        <h3 className="find_card-heading">{heading}</h3>
+        <div className="find_icon">{icon}</div>
       </div>
+      <p className="find_text">{text}</p>
     </div>
   );
 };
