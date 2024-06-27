@@ -56,7 +56,7 @@ const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
       navigation={true}
       modules={[Pagination, Navigation]}
     >
-      <section id="Testimonials" className="section_testimonials">
+      {/* <section id="Testimonials" className="section_testimonials">
         <div className="padding-global">
           <div className="container-large">
             <div className="testimonials_heading-wrapper">
@@ -66,7 +66,7 @@ const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
           </div>
           <div className="center slick-initialized slick-slider slick-dotted">
             <div className="slick-list draggable" style={{ padding: '0px 80px' }}>
-              <div className="slick-track" style={{ opacity: 1, width: '5868px', transform: 'translate3d(-978px, 0px, 0px)' }}>
+              <div className="slick-track" style={{ opacity: 1, width: '5868px', transform: 'translate3d(-978px, 0px, 0px)' }}> */}
 
       {items.map((testimonial, index) => (
         <SwiperSlide key={index}>
@@ -94,11 +94,11 @@ const CustomerReviewCarousel: React.FC<CarouselProps> = ({ items }) => {
               </div>
         </SwiperSlide>
       ))}
-              </div>
+              {/* </div>
             </div>
           </div>
         </div>        
-      </section>
+      </section> */}
     </Swiper>
   )
 }
