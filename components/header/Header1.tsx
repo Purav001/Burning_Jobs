@@ -56,37 +56,44 @@ const Header = () => {
           </div>
           <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
             <a
-                href="#About"
+                href={`/Courses` ? `/#About`:`#About`}
                 className={`${
-                  pathname == '#about-us' ? 'text-[#fbbf24]' : 'text-white'
+                  pathname == '#About' ? 'text-[#fbbf24]' : 'text-white'
                 } font-bold mr-6`}
               >
                 About Us
               </a>
               <a
-              href="#Services"
+              href={`/Courses` ? `/#Services`:`#Services`}
               className={`${
                 pathname == '#Services' ? 'text-[#fbbf24]' : 'text-white'
               } font-bold mr-6`}
             >
               Services
             </a>
-            {/* <a
+            <a
               href="/products"
               className={`${
                 pathname == '/products' ? 'text-[#fbbf24]' : 'text-white'
               } font-bold mr-6`}
             >
-              Products
-            </a> */}
-            <a
+              Courses
+            </a>
+            {/* <Link href="../app/(front)/Courses/course" className={`${
+                  pathname == '/Courses' ? 'text-[#fbbf24]' : 'text-white'
+                } font-bold mr-6`}>
+              
+                Courses
+              
+            </Link> */}
+            {/* <a
               href="/our-story"
               className={`${
                 pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-white'
               } font-bold mr-6`}
             >
               Our Story
-            </a>
+            </a> */}
             <Link
               href="/ghee-making"
               className={`${

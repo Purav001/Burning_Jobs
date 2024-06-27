@@ -146,19 +146,9 @@ export default async function Home() {
       {/* <CompleteProcessLoopVideo></CompleteProcessLoopVideo> */}
       {/* <MainCarousel></MainCarousel> */}
       <Hero></Hero>
-      {/* <MainCarousel1></MainCarousel1> */}
+      
+      <MainCarousel1></MainCarousel1>
 
-      {/* <h2
-        className="mb-4 text-2xl md:text-3xl font-extrabold leading-none tracking-tight text-[#1b2528] md:text-4xl lg:text-5xl text-center py-6"
-        id="product-section"
-      >
-        Latest Products
-      </h2>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center m-auto mb-10">
-        {latestProducts.map((product) => (
-          <ProductItem key={product.slug} product={convertDocToObj(product)} />
-        ))}
-      </div> */}
       <Services></Services>
 
       {/* <VideoCarousel></VideoCarousel> */}

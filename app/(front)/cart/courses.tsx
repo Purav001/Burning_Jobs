@@ -19,10 +19,10 @@ const Courses =()=>{
                 </p>
                 <div className="mt-5 justify-center flex">
                 <Link
-                    href="/#About"
+                    href="/products"
                     className="bg-primary py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none rounded-lg border border-gray-200 hover:bg-[#1b2528] hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-100"
                 >
-                    About us 
+                    View Products
                 </Link>
                 </div>
             </div>
