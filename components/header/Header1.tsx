@@ -103,14 +103,27 @@ const Header = () => {
             >
               Our Story
             </a> */}
-            <Link
+            
+            <ScrollLink
+              to="Testimonials"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className={`${
+                pathname === '/#Testimonials' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6 cur`}
+            >
+              Testimonials
+            </ScrollLink>
+            {/* <Link
               href="/ghee-making"
               className={`${
                 pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-white'
               } font-bold mr-6`}
             >
               Ghee Making Process
-            </Link>
+            </Link> */}
             <Link
               href="/contact-us"
               className={`${

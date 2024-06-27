@@ -12,19 +12,14 @@ import dynamic from 'next/dynamic'
 import GheeMaking from '@/components/GheeMaking'
 import CustomerReviewVideo from '@/components/CustomerReviewVideo'
 import VideoCarousel from '@/components/videoCarousel/VideoCarousel'
-import CustomerReviewCarousel from '@/components/CustomerReviewCarousel'
+import CustomerReviewCarousel from '@/components/testimonials/CustomerReviewCarousel'
 import MainCarousel from '@/components/MainCarousel'
 import MainCarousel1 from '@/components/MainCarousel1'
 import Hero from '@/components/Hero/Hero'
 import About from './about-us/page'
-import smoothScroll from '../smoothScroll'
 import Services from '@/components/services/page'
 import Features from '@/components/Features/features'
-
-
-// import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
-// import Slider from '@/components/slider/Slider'
-// import UseSlider from '@/components/slider/UseSlider'
+import TestiHeading from '@/components/testimonials/testiHeading'
 import Contact from '@/components/ContactUs/Contact'
 
 const Slider = dynamic(() => import('@/components/slider/Slider'), {
@@ -32,8 +27,8 @@ const Slider = dynamic(() => import('@/components/slider/Slider'), {
 })
 
 export const metadata: Metadata = {
-  title: `Nani's Bilona Ghee`,
-  description: `Nani's Bilona Ghee Love Purity Deliciousness A2 Cow Ghee Buffalo Ghee Shop Now.`,
+  title: `Burning Jobs`,
+  description: `Our client centric approach make us the best.`,
 }
 const cards = [
   {
@@ -185,23 +180,15 @@ export default async function Home() {
       <About></About>
       <Features></Features>
 
-      {/* <section id="Testimonials" className="section_testimonials">
-        <div className="padding-global">
-          <div className="container-large">
-            <div className="testimonials_heading-wrapper">
-              <h2>What Our Members Said</h2>
-              <div className="find-banner-text text-weight-normal">Our Results Speak For Us</div>
-            </div>
-          </div>
+      <TestiHeading></TestiHeading>
           <div className="center slick-initialized slick-slider slick-dotted">
             <div className="slick-list draggable" style={{ padding: '0px 80px' }}>
-              <div className="slick-track" style={{ opacity: 1, width: '5868px', transform: 'translate3d(-978px, 0px, 0px)' }}> */}
+              <div className="slick-track" style={{ opacity: 1, width: '100vw', transform: 'translate3d(-80px, 0px, 0px)' }}>
                 <CustomerReviewCarousel items={items} />
-              {/* </div>
+              </div>
             </div>
           </div>
-        </div>        
-      </section> */}
+      
         
       <div className="my-8 m-auto pt-5" style={{ backgroundColor: '#ffffff' }}>
         <h1 className="text-2xl md:text-4xl font-bold mb-4 text-center text-[#1b2528]">

@@ -1,8 +1,8 @@
 import Contact from '@/components/ContactUs/Contact'
 
 export const metadata = {
-  title: `Contact Us - Nani's Bilona Ghee`,
-  description: `Have questions about A2 cow ghee or Indian buffalo ghee? Contact Nani's Bilona, your trusted ghee supplier! We offer nationwide delivery.`,
+  title: `Contact Us - Burning Jobs`,
+  description: `Have questions? Contact Burnig Jobs, your trusted Employment Agency! `,
 }
 
 export default async function ContactUs() {

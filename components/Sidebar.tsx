@@ -20,23 +20,34 @@ const Sidebar = () => {
       <li>
         <a
           onClick={closeDrower}
-          href="/products"
+          href="#About"
           className={`${
             pathname == '/products' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
           } font-bold mr-6`}
         >
-          Products
+          About Us
         </a>
       </li>
       <li>
         <a
           onClick={closeDrower}
-          href="/our-story"
+          href="#Services"
           className={`${
             pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
           } font-bold mr-6`}
         >
-          Our Story
+          Services
+        </a>
+      </li>
+      <li>
+        <a
+          onClick={closeDrower}
+          href="/products"
+          className={`${
+            pathname == '/products' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
+          } font-bold mr-6`}
+        >
+          Courses
         </a>
       </li>
       <li>
@@ -50,17 +61,7 @@ const Sidebar = () => {
           Contact Us
         </a>
       </li>
-      <li>
-        <a
-          onClick={closeDrower}
-          href="/ghee-making"
-          className={`${
-            pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-[#1b2528]'
-          } font-bold mr-6`}
-        >
-          Ghee Making Process
-        </a>
-      </li>
+      
     </ul>
   )
 }
