@@ -19,6 +19,7 @@ import Hero from '@/components/Hero/Hero'
 import About from './about-us/page'
 import smoothScroll from '../smoothScroll'
 import Services from '@/components/services/page'
+import Features from '@/components/Features/features'
 
 // import CompleteProcessLoopVideo from '@/components/CompleteProcessLoopVideo'
 // import Slider from '@/components/slider/Slider'
@@ -162,6 +163,7 @@ export default async function Home() {
 
       {/* <VideoCarousel></VideoCarousel> */}
       <About></About>
+      <Features></Features>
 
       <div style={{ backgroundColor: '#fffbe8' }} className="pt-10 pb-10 mt-10">
         <div
