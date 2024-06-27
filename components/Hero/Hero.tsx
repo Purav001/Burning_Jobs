@@ -3,6 +3,7 @@ import React from "react";
 import './hero.css'
 const Hero = () => {
     return(
+        <div className="pos">
         <aside className="section_hero">
             <div className="padding-global">
                 <div className="container-large">
@@ -27,6 +28,7 @@ const Hero = () => {
                 </div>
             </div>
         </aside>
+        </div>
     );
 };
 

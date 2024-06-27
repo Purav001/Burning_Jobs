@@ -31,6 +31,7 @@
     "hooks": "^0.3.2",
     "imagemin": "^8.0.1",
     "imagemin-jpegtran": "^7.0.0",
+    "mongodb": "^6.7.0",
     "mongoose": "^8.0.3",
     "next": "14.0.4",
     "next-auth": "5.0.0-beta.4",

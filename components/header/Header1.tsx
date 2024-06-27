@@ -15,7 +15,7 @@ const Header = () => {
   
   return (
     <header>
-      <nav style={{ backgroundColor: '#1b2528' }}>
+       <nav style={{ backgroundColor: '#1b2528' }}>{/*  */}
         {' '}
         {/* 1. Set background color of navbar */}
         <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white padding-global">

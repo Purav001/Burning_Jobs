@@ -190,12 +190,12 @@ export default async function Home() {
           </div>
       
         
-      <div className="my-8 m-auto pt-5" style={{ backgroundColor: '#ffffff' }}>
+      {/* <div className="my-8 m-auto pt-5" style={{ backgroundColor: '#ffffff' }}>
         <h1 className="text-2xl md:text-4xl font-bold mb-4 text-center text-[#1b2528]">
           Benefits of A2 Cow Ghee
         </h1>
         <Card cards={cards} />
-      </div>
+      </div> */}
 
       <WhatsAppWidget></WhatsAppWidget>
 

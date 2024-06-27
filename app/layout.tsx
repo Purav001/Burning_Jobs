@@ -9,7 +9,7 @@ import Header from '@/components/header/Header1'
 import Link from 'next/link'
 import { useEffect } from 'react';
 import smoothScroll from './smoothScroll'
-
+import Footer from '@/components/footer/footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -37,7 +37,8 @@ export default function RootLayout({
                 <Header />
                 <main className="flex-grow p-2 pt-4">{children}</main>
 
-                <footer className="bg-[#1b2528]">
+                <Footer></Footer>
+                {/* <footer className="bg-[#1b2528]">
                   <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
                     <div className="md:flex md:justify-between">
                       <div>
@@ -187,13 +188,13 @@ export default function RootLayout({
                       <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                         © 2024{' '}
                         <a href="" className="hover:underline">
-                          Nani&apos;s Bilona Ghee
+                          Burning Jobs
                         </a>
                         . All Rights Reserved.
                       </span>
                     </div>
                   </div>
-                </footer>
+                </footer> */}
               </div>
             </div>
             <div className="drawer-side z-10">
