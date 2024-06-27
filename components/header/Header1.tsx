@@ -4,7 +4,7 @@ import React from 'react'
 import Menu from './Menu'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import { usePathname } from 'next/navigation'
-// import './header.css'
+import './header.css'
 const Header = () => {
   const pathname = usePathname()
 
@@ -55,22 +55,31 @@ const Header = () => {
             </Link>
           </div>
           <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
-            <a
-                href={`/Courses` ? `/#About`:`#About`}
-                className={`${
-                  pathname == '#About' ? 'text-[#fbbf24]' : 'text-white'
-                } font-bold mr-6`}
-              >
-                About Us
-              </a>
-              <a
-              href={`/Courses` ? `/#Services`:`#Services`}
+            
+          <ScrollLink
+              to="About"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
               className={`${
-                pathname == '#Services' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6`}
+                pathname === '/#About' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6 cur`}
+            >
+              About Us
+            </ScrollLink>
+            <ScrollLink
+              to="Services"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              className={`${
+                pathname === '/#Services' ? 'text-[#fbbf24]' : 'text-white'
+              } font-bold mr-6 cur`}
             >
               Services
-            </a>
+            </ScrollLink>
             <a
               href="/products"
               className={`${

@@ -147,7 +147,7 @@ export default async function Home() {
       {/* <MainCarousel></MainCarousel> */}
       <Hero></Hero>
       
-      <MainCarousel1></MainCarousel1>
+      {/* <MainCarousel1></MainCarousel1> */}
 
       <Services></Services>
 
