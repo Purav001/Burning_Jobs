@@ -5,7 +5,7 @@ const Footer = () =>{
         <div className="clr" style={{ backgroundColor: '#1b2528' }}>
         <div className="padding-global">
         <footer className=" bg-white light:bg-gray-900" style={{ backgroundColor: '#1b2528' }}>
-            <div className="mx-auto w-full max-w-screen-xxxl p-4 py-6 lg:py-8">
+            <div className="mx-auto w-full max-w-screen-xxxl p-4 py-6 lg:py-8" >{/* style={{color: '#fff'}} */}
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="" className="flex items-center">
