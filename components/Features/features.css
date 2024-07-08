@@ -101,7 +101,7 @@ align-self: end;
 }
 
 .find_card-heading {
-    color: var(--black);
+    color: #181818;
     font-family: Sora, sans-serif;
     font-size: 25px;
     font-weight: 700;

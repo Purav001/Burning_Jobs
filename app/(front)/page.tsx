@@ -6,6 +6,7 @@ import Features from '@/components/Features/features'
 import CustomerReviewCarousel from "@/components/testimonials/CustomerReviewCarousel";
 import TestiHeading from "@/components/testimonials/testiHeading";
 import services from '@/lib/services/services'
+import Summary from '@/components/summary/page'
 import { Metadata } from "next";
 
 export const metadata : Metadata = {
@@ -102,6 +103,7 @@ export default async function Home() {
     <Services />
     <AboutUs />
     <Features />
+    <Summary />
     <TestiHeading />
     <div className="center slick-initialized slick-slider slick-dotted">
       <div className="slick-list draggable" style={{ padding: '0px 80px' }}>
