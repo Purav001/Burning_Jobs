@@ -1,9 +1,8 @@
 import React from 'react';
 import './about.css';
-import Header from '@/components/header/Header1'
 const AboutUs = ({ }) => {
     
-  return (
+return (
     <main className='main-wrapper'>
         <aside id='About' className='section_mentor'>
             <div className='padding-global'>
@@ -42,7 +41,7 @@ const AboutUs = ({ }) => {
             </div>
         </aside>
     </main>
-  );
+);
 };
 
 export default AboutUs;

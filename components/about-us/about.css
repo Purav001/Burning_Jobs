@@ -1,19 +1,4 @@
-*{
-    box-sizing: border-box;
-}
-html{
-    display: block;
-}
-.p-2{
-    padding: 0;
-}
-.pt-4{
-    padding-top: 0;
-}
-.mx-auto{
-    margin-left: 0;
-    margin-right: 0;
-}
+
 /* .body {
     font-family: Sora, sans-serif;
     font-weight: 400;
@@ -34,10 +19,6 @@ html{
     position: relative;
 }
 
-.padding-global {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-}
 .container-medium {
     width: 100%;
     max-width: 73rem;

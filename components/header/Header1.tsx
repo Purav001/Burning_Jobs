@@ -6,138 +6,138 @@ import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import { usePathname } from 'next/navigation'
 import './header.css'
 const Header = () => {
-  const pathname = usePathname()
+const pathname = usePathname()
 
-  console.log(pathname)
-  const scrollToTop = () => {
+console.log(pathname)
+const scrollToTop = () => {
     scroll.scrollToTop()
-  }
-  
-  return (
+}
+
+return (
     <header>
-       <nav style={{ backgroundColor: '#1b2528' }}>{/*  */}
+    <nav style={{ backgroundColor: '#1b2528' }}>{/*  */}
         {' '}
         {/* 1. Set background color of navbar */}
         <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white padding-global">
-          {' '}
-          {/* 2. Set text color to white */}
-          <div className="flex items-center">
+        {' '}
+        {/* 2. Set text color to white */}
+        <div className="flex items-center">
             <label
-              htmlFor="my-drawer"
-              className="btn btn-square btn-ghost md:hidden"
+            htmlFor="my-drawer"
+            className="btn btn-square btn-ghost md:hidden"
             >
-              <svg
+            <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 className="inline-block w-4 h-4                                                                                                                    stroke-current"
-              >
+            >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
                 ></path>
-              </svg>
+            </svg>
             </label>
             <Link href="/" className="flex items-center">
-              <img
+            {/* <img
                 src="/images/logo-white.png"
                 alt="Logo"
                 className="h-10 w-auto font-bold mr-4"
-              />
-              <span
+            /> */}
+            <span
                 className="text-xs lg:text-lg md:text-lg font-extrabold tracking-tight"
                 style={{ color: '#daa407' }}
-              >
-                Burning Jobs
-              </span>
-            </Link>
-          </div>
-          <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
-            
-          <ScrollLink
-              to='About'
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className={`${
-                pathname === '/#About' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6 cur`}
             >
-              About Us
+                Burning Jobs
+            </span>
+            </Link>
+        </div>
+        <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
+            
+        <ScrollLink
+            to='About'
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className={`${
+                pathname === '/#About' ? 'text-[#fbbf24]' : 'text-white'
+            } font-bold mr-6 cur`}
+            >
+            About Us
             </ScrollLink>
             <ScrollLink
-              to="Services"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className={`${
+            to="Services"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className={`${
                 pathname === '/#Services' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6 cur`}
+            } font-bold mr-6 cur`}
             >
-              Services
+            Services
             </ScrollLink>
             <a
-              href="/products"
-              className={`${
+            href="/products"
+            className={`${
                 pathname == '/products' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6`}
+            } font-bold mr-6`}
             >
-              Courses
+            Courses
             </a>
             {/* <Link href="../app/(front)/Courses/course" className={`${
-                  pathname == '/Courses' ? 'text-[#fbbf24]' : 'text-white'
+                pathname == '/Courses' ? 'text-[#fbbf24]' : 'text-white'
                 } font-bold mr-6`}>
-              
+            
                 Courses
-              
+            
             </Link> */}
             {/* <a
-              href="/our-story"
-              className={`${
+            href="/our-story"
+            className={`${
                 pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6`}
+            } font-bold mr-6`}
             >
-              Our Story
+            Our Story
             </a> */}
             
             <ScrollLink
-              to="Testimonials"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              className={`${
+            to="Testimonials"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className={`${
                 pathname === '/#Testimonials' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6 cur`}
+            } font-bold mr-6 cur`}
             >
-              Testimonials
+            Testimonials
             </ScrollLink>
             {/* <Link
-              href="/ghee-making"
-              className={`${
+            href="/ghee-making"
+            className={`${
                 pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6`}
+            } font-bold mr-6`}
             >
-              Ghee Making Process
+            Ghee Making Process
             </Link> */}
             <Link
-              href="/contact-us"
-              className={`${
+            href="/contact-us"
+            className={`${
                 pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-white'
-              } font-bold mr-6`}
+            } font-bold mr-6`}
             >
-              Contact Us
+            Contact Us
             </Link>
-          </div>
-          <Menu />
         </div>
-      </nav>
+        <Menu />
+        </div>
+    </nav>
     </header>
-  )
+)
 }
 
 export default Header

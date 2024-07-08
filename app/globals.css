@@ -15,9 +15,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-html{
-  scroll-behavior: smooth;
-}
+/* *{
+  background: #fff;
+} */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -26,59 +26,47 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  padding-top: 60px;
+    background: #fff;
+}
+.btn-ghost {
+  text-transform: none !important;
 }
 
-.btn {
-  text-transform: none;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.padding-global{
+  padding-left: 2.5em;
+  padding-right: 2.5em;
 }
 
-/* Add a fixed position to the header */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
+
+
+@media screen and (max-width: 767px){
+  .padding-global{
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+}
+.container-large {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.container-large {
   width: 100%;
-  z-index: 1000; /* Adjust z-index as needed to ensure the header appears above other elements */
+  max-width: 88.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  75% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
+.text-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.shake-on-hover:hover {
-  animation: shake 0.5s ease-in-out;
-}
-
-.blur {
-  filter: blur(
-    8px
-  ); /* You can adjust the pixel value based on your preference */
-}
-@layer base {
-  html {
-    @apply text-[#4f4f4f];
-  }
-  html.dark {
-    @apply text-neutral-50;
-    @apply bg-neutral-800;
-  }
-}
-
-.active {
-  color: #fbbf24;
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
 }

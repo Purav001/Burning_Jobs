@@ -1,348 +1,61 @@
 import bcrypt from 'bcryptjs'
 
 const data = {
-  // users: [
-  //   {
-  //     name: 'John',
-  //     email: 'admin@example.com',
-  //     password: bcrypt.hashSync('123456'),
-  //     isAdmin: true,
-  //   },
-  //   {
-  //     name: 'Jane',
-  //     email: 'user@example.com',
-  //     password: bcrypt.hashSync('123456'),
-  //     isAdmin: false,
-  //   },
-  // ],
-  products: [
-    {
-      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | 500ML',
-      slug: 'a2-cow-ghee-500ml',
-      category: 'Ghee',
-      image: '/images/products/a2-cow-ghee-500ml/1.png',
-      size: '500 ml',
-      price: 899,
-      brand: "Nani's Bilona Ghee",
-      rating: 4.5,
-      numReviews: 3,
-      countInStock: 20,
-      description:
-        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
-      isFeatured: true,
-      banner: '/images/banner2.jpg',
-      images: [
+    users: [
         {
-          url: '/images/products/a2-cow-ghee-500ml/1.png',
-          altText: 'Alt text 1',
+            name : 'Sunil',
+            email: 'admin@exemplar.com',
+            passward: bcrypt.hashSync('EXEzkp321'),
+            isAdmin: true,
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/2.png',
-          altText: 'Alt text 1',
+            name : 'Purav',
+            email: 'user@exemplar.com',
+            passward: bcrypt.hashSync('123456'),
+            isAdmin: false,
+        }
+    ],
+    services: [
+        {   
+            id: 1,
+            imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp",
+            imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-500.webp 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-800.webp 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp 902w",
+            title: "Ultimate Interview Preparation Course",
+            description: "Get more than 200 sample answers that will fit any job role. Now, you have well-crafted...",
+            link: "/interview"
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/3.png',
-          altText: 'Alt text 1',
+            id: 2,
+            imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2).png",
+            imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2).png 1344w",
+            title: "ATS Friendly Resume (Experienced)",
+            description: "Resume is the first step to landing your dream job. A recruiter or a talent acquisition...",
+            link: "https://dikshaarora.com/services/resume-building"
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/4.png',
-          altText: 'Alt text 1',
+            id: 3,
+            imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3).png",
+            imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3)-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3)-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3)-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3).png 1344w",
+            title: "LinkedIn Profile Optimisation",
+            description: "LinkedIn is the most powerful modern day tool to build a strong Personal Brand and a...",
+            link: "https://dikshaarora.com/web/checkout/641215caf6895898d1ec5619"
         },
         {
-          url: '/images/products/a2-cow-ghee-500ml/5.png',
-          altText: 'Alt text 1',
-        },
-      ],
-      source: 'Shaiwal Cow',
-      making: 'Ayurvedic Bilona Method',
-      origin_country: 'India',
-    },
-    {
-      name: 'Organic Buffalo Ghee | Ayurvedic bilona method | 500ML',
-      slug: 'organic-buffalo-ghee-500ml',
-      category: 'Ghee',
-      image: '/images/products/buffalo-ghee-500ml/1.png',
-      size: '500 ml',
-      price: 799,
-      brand: "Nani's Bilona Ghee",
-      rating: 4.5,
-      numReviews: 3,
-      countInStock: 20,
-      description:
-        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
-      isFeatured: true,
-      banner: '/images/banner2.jpg',
-      images: [
-        {
-          url: '/images/products/buffalo-ghee-500ml/1.png',
-          altText: 'Alt text 1',
+            id: 4,
+            imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344.webp",
+            imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344-p-500.webp 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344-p-800.webp 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344.webp 902w",
+            title: "Building A Perfect ATS Friendly Resume (Freshers)",
+            description: "Resume is the first step to landing your dream job. A recruiter or a talent acquisition...",
+            link: "https://dikshaarora.com/services/resume-freshers"
         },
         {
-          url: '/images/products/buffalo-ghee-500ml/2.png',
-          altText: 'Alt text 1',
+            id: 5,
+            imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame.png",
+            imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-1600.png 1600w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame.png 1803w",
+            title: "Master Program With Live Sessions",
+            description: "One-One Job Interview Preparation Program target is to ensure that you head confidently for your interview and emerge as a strong potential candidate who is the right fit for the job ",
+            link: "#"
         },
-        {
-          url: '/images/products/buffalo-ghee-500ml/3.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-500ml/4.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-500ml/5.png',
-          altText: 'Alt text 1',
-        },
-      ],
-      source: 'Buffalo',
-      making: 'Ayurvedic Bilona Method',
-      origin_country: 'India',
-    },
-    {
-      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | 1L',
-      slug: 'a2-cow-ghee-1liter',
-      category: 'Ghee',
-      image: '/images/products/a2-cow-ghee-1l/1.png',
-      size: '1 liter',
-      price: 1699,
-      brand: "Nani's Bilona Ghee",
-      rating: 4.5,
-      numReviews: 3,
-      countInStock: 20,
-      description:
-        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
-      isFeatured: true,
-      banner: '/images/banner2.jpg',
-      images: [
-        { url: '/images/products/a2-cow-ghee-1l/1.png', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/2.png', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/3.png', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/4.png', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/5.png', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/6.png', altText: 'Alt text 1' },
-        { url: '/images/products/a2-cow-ghee-1l/7.png', altText: 'Alt text 1' },
-      ],
-      source: 'Shaiwal Cow',
-      making: 'Ayurvedic Bilona Method',
-      origin_country: 'India',
-    },
-    {
-      name: 'Organic Buffalo Ghee | Ayurvedic bilona method | 1L',
-      slug: 'organic-buffalo-ghee-1liter',
-      category: 'Ghee',
-      image: '/images/products/buffalo-ghee-1l/1.png',
-      size: '1 liter',
-      price: 1499,
-      brand: "Nani's Bilona Ghee",
-      rating: 4.5,
-      numReviews: 3,
-      countInStock: 20,
-      description:
-        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
-      isFeatured: true,
-      banner: '/images/banner2.jpg',
-      images: [
-        {
-          url: '/images/products/buffalo-ghee-1l/1.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-1l/2.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-1l/3.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-1l/4.png',
-          altText: 'Alt text 1',
-        },
-      ],
-      source: 'Buffalo',
-      making: 'Ayurvedic Bilona Method',
-      origin_country: 'India',
-    },
-    {
-      name: 'Organic Buffalo Ghee | Ayurvedic bilona method | COMBO 1L + 500ML',
-      slug: 'organic-buffalo-ghee-combo',
-      category: 'Ghee',
-      image: '/images/products/buffalo-ghee-combo/1.png',
-      size: '1 liter',
-      price: 2199,
-      brand: "Nani's Bilona Ghee",
-      rating: 4.5,
-      numReviews: 3,
-      countInStock: 20,
-      description:
-        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
-      isFeatured: true,
-      banner: '/images/banner2.jpg',
-      images: [
-        {
-          url: '/images/products/buffalo-ghee-combo/1.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-combo/2.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-combo/3.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/buffalo-ghee-combo/4.png',
-          altText: 'Alt text 1',
-        },
-      ],
-      source: 'Buffalo',
-      making: 'Ayurvedic Bilona Method',
-      origin_country: 'India',
-    },
-    {
-      name: 'A2 Organic Cow Ghee | Ayurvedic bilona method | COMBO 1L + 500ML',
-      slug: 'a2-cow-ghee-combo',
-      category: 'Ghee',
-      image: '/images/products/a2-cow-ghee-combo/1.png',
-      size: '500 ml',
-      price: 2499,
-      brand: "Nani's Bilona Ghee",
-      rating: 4.5,
-      numReviews: 3,
-      countInStock: 20,
-      description:
-        "Discover the essence of tradition and wellness with Nani Bilona A2 Cow Ghee. Inspired by Nani's homemade ghee, our journey began to share this delightful and healthy secret. Unlike other cow breeds, Sahiwal Cow's hump holds the Surya Ketu Nadi, absorbing energy to create the prized Gold Salt in the milk and ghee. Endorsed by Veda's for immune-boosting properties, our A2 Cow Ghee is a natural superfood. Crafted without additives, each jar of Nani Bilona A2 Cow Ghee embodies the purity and richness of tradition. Elevate your culinary experience with Nani Bilona – where tradition converges with wellness in every golden drop.",
-      isFeatured: true,
-      banner: '/images/banner2.jpg',
-      images: [
-        {
-          url: '/images/products/a2-cow-ghee-combo/1.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/a2-cow-ghee-combo/2.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/a2-cow-ghee-combo/3.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/a2-cow-ghee-combo/4.png',
-          altText: 'Alt text 1',
-        },
-        {
-          url: '/images/products/a2-cow-ghee-combo/5.png',
-          altText: 'Alt text 1',
-        },
-      ],
-      source: 'Shaiwal Cow',
-      making: 'Ayurvedic Bilona Method',
-      origin_country: 'India',
-    },
-  ],
-  socials: [
-    {
-      name: 'Insta1',
-      slug: 'Insta1',
-      image: '/images/S1.png',
-    },
-    {
-      name: 'Insta2',
-      slug: 'Insta2',
-      image: '/images/S2.png',
-    },
-  ],
-  banners: [
-    {
-      name: 'Label front',
-      slug: 'label-front',
-      image: '/images/banner3.png',
-    },
-    {
-      name: 'Label Back',
-      slug: 'label-back',
-      image: '/images/banner4.png',
-    },
-  ],
-
-  faqs: [
-    {
-      question: 'Why is Nani Bilona Ghee costly as compared to other ghee?',
-      answer:
-        'Nani Bilona A2 Desi Cow Ghee is made entirely from the milk extracted from desi cows. The indigenous cow gives around 2-3 litres of milk per day which is more nutritious than foreign breeds that produce more milk. The cows are neither forced nor injected with hormones to enhance milk production. Our ghee is bi-directionally bilona churned with a wooden churner. This is why our A2 cow ghee has a grainy texture, thicker consistency, tempting aroma, superior flavour, and is much healthier. Hence, A2 Desi Cow Ghee is costlier and better than regular ghee.',
-    },
-    {
-      question: 'What should the consistency of my ghee be?',
-      answer:
-        'Generally, the consistency of ghee depends on the temperature at which you store it. At room temperature, it usually remains soft, and during winters, it solidifies. Depending on the temperature outside the jar, this process may happen quickly or slowly. It is perfectly normal for ghee to be liquid, solid, or a combination of consistencies.',
-    },
-    {
-      question: 'How can we identify pure cow ghee?',
-      answer:
-        'The easiest method to check the purity is to do a pan test. Add a teaspoon of ghee to a pan and heat it. If the ghee starts melting immediately and turns dark brown, it is pure. However, if it takes time to melt and is yellow in colour, then it is adulterated.',
-    },
-    {
-      question: 'What are cows being fed?',
-      answer:
-        'Our cows graze freely and are given natural fodder. The buttermilk obtained in ghee making is also given to our cows. We believe in a cruelty-free environment, and therefore we do not inject hormones in cows.',
-    },
-    {
-      question:
-        'How is the taste of your ghee different from any other ghee in the market?',
-      answer:
-        'Our ghee is obtained by churning curd and not cream (malai). So the nutritional content is more as compared to others. Therefore our ghee tastes a lot tastier and aromatic because it preserves the all-natural nourishment of ghee.',
-    },
-  ],
-
-  photos: [
-    {
-      id: 1,
-      name: 'photo1',
-      image: '/images/gallery/IMG_9685.JPG',
-      height: '40',
-      width: '40',
-      public_id: '1',
-      blurDataUrl: '/images/gallery/IMG_9685.JPG',
-    },
-    {
-      id: 2,
-      name: 'photo2',
-      image: '/images/gallery/IMG_9770.JPG',
-      height: '40',
-      width: '40',
-      public_id: '2',
-      blurDataUrl: '/images/gallery/IMG_9685.JPG',
-    },
-    {
-      id: 3,
-      name: 'photo3',
-      image: '/images/gallery/IMG_9782.JPG',
-      height: '40',
-      width: '40',
-      public_id: '3',
-      blurDataUrl: '/images/gallery/IMG_9685.JPG',
-    },
-    {
-      id: 4,
-      name: 'photo5',
-      image: '/images/gallery/IMG_9821.JPG',
-      height: '40',
-      width: '40',
-      public_id: '4',
-      blurDataUrl: '/images/gallery/IMG_9685.JPG',
-    },
-    {
-      id: 5,
-      name: 'photo6',
-      image: '/images/gallery/IMG_9828.JPG',
-      height: '40',
-      width: '40',
-      public_id: '5',
-      blurDataUrl: '/images/gallery/IMG_9685.JPG',
-    },
-  ],
+    ]
 }
-
 export default data
