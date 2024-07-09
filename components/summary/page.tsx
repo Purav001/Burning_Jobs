@@ -44,7 +44,7 @@ return (
                 </p>
                 </div>
             </div>
-            <div className="learn-grid_img-wrapper second"></div>
+            <div className="learn-grid_img-wrapper first sec"></div>
             </div>
             
         </div>

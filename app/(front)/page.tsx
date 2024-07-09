@@ -102,10 +102,11 @@ export default async function Home() {
     <>
     <Hero />
     <Services />
-    <AboutUs />
-    <Features />
     <Summary />
     <SectionWorkshop />
+    <AboutUs />
+    <Features />
+    
     <TestiHeading />
     <div className="center slick-initialized slick-slider slick-dotted">
       <div className="slick-list draggable" style={{ padding: '0px 80px' }}>

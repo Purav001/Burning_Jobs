@@ -75,6 +75,12 @@
     .section-heading {
         padding-bottom: 30px;
     }
+    .section-workshop_item {
+        padding: 30px;
+    }
+    .section-workshop_grid, .bonus-grid, .bonus-grid-copy {
+        grid-template-columns: 1fr;
+    }
     .section-workshop_icon {
         width: 80px;
         height: 80px;
