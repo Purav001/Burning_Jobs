@@ -48,7 +48,7 @@ return (
             /> */}
             <span
                 className="text-xs lg:text-lg md:text-lg font-extrabold tracking-tight"
-                style={{ color: '#daa407' }}
+                style={{ color: '#ffdc54' }}
             >
                 Burning Jobs
             </span>
@@ -56,81 +56,59 @@ return (
         </div>
         <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
             
-        <ScrollLink
-            to='About'
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className={`${
-                pathname === '/#About' ? 'text-[#fbbf24]' : 'text-white'
-            } font-bold mr-6 cur`}
+            <ScrollLink
+                to='About'
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                className={`${
+                    pathname === '/About' ? 'text-[#ffdc54]' : 'text-white'
+                } font-bold mr-6 cur`}
             >
-            About Us
+                About Us
             </ScrollLink>
             <ScrollLink
-            to="Services"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className={`${
-                pathname === '/#Services' ? 'text-[#fbbf24]' : 'text-white'
-            } font-bold mr-6 cur`}
+                to="Services"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                className={`${
+                    pathname === '/Services' ? 'text-[#ffdc54]' : 'text-white'
+                } font-bold mr-6 cur`}
             >
-            Services
+                Services
             </ScrollLink>
             <a
-            href="/products"
-            className={`${
-                pathname == '/products' ? 'text-[#fbbf24]' : 'text-white'
-            } font-bold mr-6`}
+                href="/products"
+                className={`${
+                    pathname == '/products' ? 'text-[#ffdc54]' : 'text-white'
+                } font-bold mr-6`}
             >
-            Courses
-            </a>
-            {/* <Link href="../app/(front)/Courses/course" className={`${
-                pathname == '/Courses' ? 'text-[#fbbf24]' : 'text-white'
-                } font-bold mr-6`}>
-            
                 Courses
-            
-            </Link> */}
-            {/* <a
-            href="/our-story"
-            className={`${
-                pathname == '/our-story' ? 'text-[#fbbf24]' : 'text-white'
-            } font-bold mr-6`}
-            >
-            Our Story
-            </a> */}
+            </a>
             
             <ScrollLink
-            to="Testimonials"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className={`${
-                pathname === '/#Testimonials' ? 'text-[#fbbf24]' : 'text-white'
-            } font-bold mr-6 cur`}
+                to="Testimonials"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                className={`${
+                    pathname === '/#Testimonials' ? 'text-[#ffdc54]' : 'text-white'
+                } font-bold mr-6 cur`}
             >
-            Testimonials
+                Testimonials
             </ScrollLink>
-            {/* <Link
-            href="/ghee-making"
-            className={`${
-                pathname == '/ghee-making' ? 'text-[#fbbf24]' : 'text-white'
-            } font-bold mr-6`}
-            >
-            Ghee Making Process
-            </Link> */}
+            
             <Link
-            href="/contact-us"
-            className={`${
-                pathname == '/contact-us' ? 'text-[#fbbf24]' : 'text-white'
-            } font-bold mr-6`}
+                href="/contact-us"
+                className={`${
+                    pathname == '/contact-us' ? 'text-[#ffdc54]' : 'text-white'
+                } font-bold mr-6`}
             >
-            Contact Us
+                Contact Us
             </Link>
         </div>
         <Menu />

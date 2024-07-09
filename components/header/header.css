@@ -7,3 +7,6 @@
 .cur {
     cursor: pointer !important;
 }
+.active {
+    color: #ffdc54;
+}
