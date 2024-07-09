@@ -82,9 +82,9 @@ return (
                 Services
             </ScrollLink>
             <a
-                href="/Courses"
+                href=""
                 className={`${
-                    pathname == '/Courses' ? 'text-[#ffdc54]' : 'text-white'
+                    pathname == '' ? 'text-[#ffdc54]' : 'text-white'
                 } font-bold mr-6`}
             >
                 Courses

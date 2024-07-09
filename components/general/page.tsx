@@ -5,7 +5,7 @@ const TestiHeading = () => {
         <section  className="section_testimonials">
             <div className="padding-global">
                 <div className="container-large">
-                        <div className="testimonials_heading-wrapper">
+                    <div className="testimonials_heading-wrapper">
                         <h2>Burning Jobs</h2>
                         <div className="find-banner-text text-weight-normal">A brand of <strong>Exemplar Global Resources Pvt Ltd</strong></div>
                     </div>
@@ -23,6 +23,9 @@ const TestiHeading = () => {
                         <div className="gold-gradient">1000+</div>
                         <p className="text-size-small">CANDIDATES are Placed at Top Companies</p>
                     </div>
+                </div>
+                <div className="testimonials_heading-wrapper">
+                    <div className="find-banner-text text-weight-normal">For all latest Job Postings <strong>follow us on Instagram</strong></div>
                 </div>
             </div>
             

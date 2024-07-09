@@ -2,7 +2,7 @@ import React from "react";
 import './services.css'
 const servicesData = [
     {
-        imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp",
+        imageSrc: "/images/",
         imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-500.webp 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-800.webp 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp 902w",
         title: "Ultimate Interview Preparation Course",
         description: "Get more than 200 sample answers that will fit any job role. Now, you have well-crafted...",
