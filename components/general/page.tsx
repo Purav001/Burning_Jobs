@@ -26,6 +26,8 @@ const TestiHeading = () => {
                 </div>
                 <div className="testimonials_heading-wrapper">
                     <div className="find-banner-text text-weight-normal">For all latest Job Postings <strong>follow us on Instagram</strong></div>
+                    <div className="find-banner-text text-weight-normal"><a href="https://www.instagram.com/burningjobs/" target="_blank" style={{color:'#7a380d'}}><strong>@burningjobs</strong></a></div>
+                    
                 </div>
             </div>
             
