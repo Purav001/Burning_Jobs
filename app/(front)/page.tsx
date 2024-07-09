@@ -9,6 +9,7 @@ import services from '@/lib/services/services'
 import Summary from '@/components/summary/page'
 import SectionWorkshop from '@/components/offerings/page'
 import { Metadata } from "next";
+import General from '@/components/general/page'
 
 export const metadata : Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME ,
@@ -104,6 +105,7 @@ export default async function Home() {
     <Services />
     <Summary />
     <SectionWorkshop />
+    <General />
     <AboutUs />
     <Features />
     

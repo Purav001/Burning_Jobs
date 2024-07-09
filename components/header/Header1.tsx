@@ -5,6 +5,7 @@ import Menu from './Menu'
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 import { usePathname } from 'next/navigation'
 import './header.css'
+import Contact from '@/components/ContactUs/Contact'
 const Header = () => {
 const pathname = usePathname()
 
@@ -81,9 +82,9 @@ return (
                 Services
             </ScrollLink>
             <a
-                href="/products"
+                href="/Courses"
                 className={`${
-                    pathname == '/products' ? 'text-[#ffdc54]' : 'text-white'
+                    pathname == '/Courses' ? 'text-[#ffdc54]' : 'text-white'
                 } font-bold mr-6`}
             >
                 Courses
@@ -103,7 +104,7 @@ return (
             </ScrollLink>
             
             <Link
-                href="/contact-us"
+                href='/contact-us'
                 className={`${
                     pathname == '/contact-us' ? 'text-[#ffdc54]' : 'text-white'
                 } font-bold mr-6`}

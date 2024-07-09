@@ -21,7 +21,8 @@ const AdminLayout = async ({
   }
 
   return (
-    <div className="relative flex flex-grow">
+    
+    <div className="relative flex flex-grow" style={{paddingTop:'64px'}}>
       <div className="w-full grid md:grid-cols-5">
         <div className="bg-base-200">
           <ul className="menu">
@@ -62,6 +63,7 @@ const AdminLayout = async ({
         <div className="md:col-span-4 px-4">{children} </div>
       </div>
     </div>
+
   )
 }
 

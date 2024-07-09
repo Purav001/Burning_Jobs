@@ -70,6 +70,7 @@ const Form = () => {
     }
   }
   return (
+    <div style={{paddingTop:'100px'}}>
     <div className="max-w-sm  mx-auto card bg-base-300 my-4">
       <div className="card-body">
         <h1 className="card-title">Register</h1>
@@ -168,6 +169,7 @@ const Form = () => {
           </Link>
         </div>
       </div>
+    </div>
     </div>
   )
 }

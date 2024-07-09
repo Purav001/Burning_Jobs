@@ -53,7 +53,7 @@ const Form = () => {
     })
   }
   return (
-    <div>
+    <div style={{paddingTop:'100px'}}>
       {session && session.user && (
         <div className="h-full flex justify-center items-center w-full">
           <Lottie options={defaultOptions} height={200} width={200} />
