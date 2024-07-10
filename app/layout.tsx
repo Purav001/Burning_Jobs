@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header/Header1";
 import Footer from "@/components/footer/footer";
 import Providers from "@/components/Providers";
+import DrawerButton from "@/components/DrawerButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <div className="drawer bg-white">
+          <DrawerButton />
+          <div className="drawer-content">
         <Providers>
           <div className="min-h-screen flex flex-col">
           
@@ -29,7 +33,8 @@ export default function RootLayout({
           
           </div>
         </Providers>
-        
+          </div>
+        </div>
         </body>
     </html>
   );
