@@ -73,7 +73,7 @@ const Form = () => {
     <div style={{paddingTop:'100px'}}>
     <div className="max-w-sm  mx-auto card bg-base-300 my-4">
       <div className="card-body">
-        <h1 className="card-title">Register</h1>
+        <h1 className="card-title text-center">Register</h1>
         <form onSubmit={handleSubmit(formSubmit)}>
           <div className="my-2">
             <label className="label" htmlFor="name">
@@ -161,7 +161,7 @@ const Form = () => {
           </div>
         </form>
 
-        <div className="divider"> </div>
+        <div className="divider"></div>
         <div>
           Already have an account?{' '}
           <Link className="link" href={`/signin?callbackUrl=${callbackUrl}`}>

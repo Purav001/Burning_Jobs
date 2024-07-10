@@ -10,6 +10,7 @@ import Summary from '@/components/summary/page'
 import SectionWorkshop from '@/components/offerings/page'
 import { Metadata } from "next";
 import General from '@/components/general/page'
+import WhatsAppWidget from '@/components/WhatsAppWidget'
 
 export const metadata : Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME ,
@@ -117,6 +118,7 @@ export default async function Home() {
         </div>
       </div>
     </div>
+    <WhatsAppWidget />
     </>
   );
 }

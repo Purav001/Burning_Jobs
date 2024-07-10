@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const WhatsAppWidget: React.FC = () => {
   const handleToggle = () => {
-    const whatsappLink = 'https://wa.me/9041441616'
+    const whatsappLink = 'https://wa.me/917986573918'
     window.open(whatsappLink, '_blank')
   }
 

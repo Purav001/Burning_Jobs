@@ -1,0 +1,7 @@
+.hov{
+    fill: #fff;
+    transition: all .3s;
+}
+.hov:hover{
+    fill: #ffdc54;
+}
