@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
-
+let client;
+let clientPromise: any;
 async function dbConnect() {
   try {
     await mongoose.connect(process.env.MONGODB_URI!)
@@ -10,3 +11,8 @@ async function dbConnect() {
 }
 
 export default dbConnect
+export async function connectToDatabase() {
+  const client = await clientPromise;
+  const db = client.db();
+  return { client, db };
+}

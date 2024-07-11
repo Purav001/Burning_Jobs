@@ -66,6 +66,7 @@ background-color: var(--first-color);
 padding: 9rem 0 2rem;
 height: 100vh;
 display: grid;
+justify-content: center;
 }
 
 .home__container {

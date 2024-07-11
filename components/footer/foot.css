@@ -1,7 +1,13 @@
+
 .hov{
     fill: #fff;
     transition: all .3s;
 }
 .hov:hover{
     fill: #ffdc54;
+}
+@media screen and (max-width: 767px){
+    /* a{
+        justify-content: center;
+    } */
 }

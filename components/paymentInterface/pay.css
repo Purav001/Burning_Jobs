@@ -1,0 +1,28 @@
+.payment_summary-cutout:before {
+    height: 12px;
+    top: 110%;
+    background: linear-gradient(-135deg, #e6e9f2 8px, transparent 0) 0 8px, linear-gradient(135deg, #e6e9f2 8px, transparent 0) 0 8px;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: 16px 16px;
+}
+.payment_summary-cutout:after, .payment_summary-cutout:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.payment_summary-cutout:after {
+    height: 16px;
+    top: 100%;
+    background: linear-gradient(-135deg, #f5f7f9 8px, transparent 0) 0 8px, linear-gradient(135deg, #f5f7f9 8px, transparent 0) 0 8px;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: 16px 16px;
+}
+@media screen and (max-width:767px){
+    .response{
+        justify-content: center;
+    }
+}
