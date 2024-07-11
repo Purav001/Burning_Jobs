@@ -54,7 +54,7 @@ const data = {
             imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-1600.png 1600w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame.png 1803w",
             title: "Master Program With Live Sessions",
             description: "One-One Job Interview Preparation Program target is to ensure that you head confidently for your interview and emerge as a strong potential candidate who is the right fit for the job ",
-            link: "#"
+            link: "https://dikshaarora.com/services/resume-freshers"
         },
     ]
 }

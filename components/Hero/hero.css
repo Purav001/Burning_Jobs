@@ -189,6 +189,9 @@ a {
         flex-direction: column;
         align-items: center;
     }
+    .hero_content-wrapper {
+        width: auto;
+    }    
     .image {
         height: auto;
         max-height: none;
@@ -224,6 +227,10 @@ a {
         background-size: cover;
         padding-top: 120px;
         overflow: hidden;
+    }
+    .hero_content-wrapper {
+        grid-column-gap: 16px;
+        grid-row-gap: 16px;
     }
     .button {
         padding: 1rem;

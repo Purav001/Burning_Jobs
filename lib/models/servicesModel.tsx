@@ -8,6 +8,7 @@ const serviceSchema = new mongoose.Schema(
         title: {type: String, required: true},
         description: {type: String, required: true},
         link: {type: String, required: true},
+        price: {type: Number, required: true},
     },
     {
         timestamps: true,
@@ -25,4 +26,5 @@ export type Service = {
     title: string
     description: string
     link: string
+    price: number
 }
