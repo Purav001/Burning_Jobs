@@ -18,7 +18,7 @@ return (
     <nav >{/*  */}
         {' '}
         {/* 1. Set background color of navbar */}
-        <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white padding-global  " style={{ backgroundColor: '#1b2528', zIndex: '99'}}>
+        <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white padding-global  fixed" style={{ backgroundColor: '#1b2528', zIndex: '99'}}>
         {' '}
         {/* 2. Set text color to white */}
         <div className="flex items-center">
