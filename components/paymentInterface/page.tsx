@@ -25,7 +25,7 @@ const InterviewCourse = ({id} : {id:Number}) => {
     useEffect(() => {
         const fetchData = async () => {
         try {
-            const response = await axios.get(`/api/pay/${id}`);
+            const response = await axios.get(`api/services/[id]/${id}`);
             setData(response.data);
         } catch (error) {
             
