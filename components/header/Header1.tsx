@@ -16,10 +16,10 @@ const scrollToTop = () => {
 return (
     <header>
     <nav >{/*  */}
-        {' '}
+        
         {/* 1. Set background color of navbar */}
-        <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white padding-global  fixed" style={{ backgroundColor: '#1b2528', zIndex: '99'}}>
-        {' '}
+        <div className="navbar justify-between items-center lg:px-6 md:px-6 text-white padding-global  fixed" style={{ backgroundColor: '#1b2528', zIndex:'100'}}> {/*  */}
+        
         {/* 2. Set text color to white */}
         <div className="flex items-center">
             <label
@@ -41,11 +41,12 @@ return (
             </svg>
             </label>
             <Link href="/" className="flex items-center">
-            {/* <img
+            <img
                 src="/images/logo-white.png"
                 alt="Logo"
                 className="h-10 w-auto font-bold mr-4"
-            /> */}
+                style={{height:'3rem'}}
+            />
             <span
                 className="text-xs lg:text-lg md:text-lg font-extrabold tracking-tight"
                 style={{ color: '#ffdc54' }}
@@ -68,6 +69,7 @@ return (
             >
                 About Us
             </ScrollLink>
+            
             <ScrollLink
                 to="Services"
                 spy={true}
@@ -80,6 +82,7 @@ return (
             >
                 Services
             </ScrollLink>
+            
             <a
                 href="/courses"
                 className={`${

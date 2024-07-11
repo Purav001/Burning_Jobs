@@ -1,6 +1,6 @@
 import { cache } from 'react'
 import dbConnect from '../dbConnect'
-import servicesModel, {Service} from '@/lib/models/servicesModel'
+import servicesModel, { Service } from '@/lib/models/servicesModel'
 
 export const revalidate = 3600
 
@@ -19,7 +19,7 @@ const getByid = cache(async (id : Number) => {
 const getBySlug = cache(async (title: string) => {
     await dbConnect()
     const services = await servicesModel.findOne({ title }).lean()
-    return services as unknown as Service[]
+    return services as unknown as Service
 })
 
 const services = {

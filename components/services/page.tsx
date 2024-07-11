@@ -73,7 +73,7 @@ const Services = () => {
                                             <p className="text-weight-light">{service.description}</p>
                                         </div>
                                         <div className="services_card_button-wrapper">
-                                            <a href={`/pay?id=${service.id}`} className="button is-secondary w-button">Register Now</a>
+                                            <a href={`/pay/${service.title}`} className="button is-secondary w-button">Register Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@ const Services = () => {
                                                 <p className="text-weight-light">{service.description}</p>
                                             </div>
                                             <div className="services_card_button-wrapper">
-                                                <a href={`/pay?id=${service.id}`} className="button is-secondary w-button">Register Now</a>
+                                                <a href={`/service?id=${service.id}`} className="button is-secondary w-button">Register Now</a>
                                             </div>
                                         </div>
                                     </div>

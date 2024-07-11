@@ -1,3 +1,15 @@
+// import PAY from '@/components/paymentInterface/page' 
+
+// export async function Details({
+//     params
+// }:{
+//     params: {title : string}
+// }){
+//     return(
+//         <PAY params={{ title: params.title }} />
+//     )
+// }
+
 import productService from '@/lib/services/services'
 import { convertDocToObj } from '@/lib/utils'
 

@@ -21,11 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="drawer bg-white">
-          <DrawerButton />
-          <div className="drawer-content">
         <Providers>
-          <div className="page-wrapper">
+          <div className="min-h-screen w-full flex flex-col">
           
             <Header />
             {children}
@@ -33,8 +30,6 @@ export default function RootLayout({
           
           </div>
         </Providers>
-          </div>
-        </div>
         </body>
     </html>
   );
