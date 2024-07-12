@@ -1,7 +1,7 @@
-
-
 import productService from '@/lib/services/services'
 import { convertDocToObj } from '@/lib/utils'
+import Coupon from '@/components/buttons/coupon'
+import Gst from '@/components/buttons/gst'
 export async function generateMetadata({
     params,
 }: {
@@ -74,58 +74,37 @@ export default async function ServiceDetails ({
                 <h1 className="text-[#050505] font-semibold text-lg mb-2 font-['Poppins']">Payment Details</h1>
                 <p className="text-[#656565] text-sm">Complete your purchase by providing your payment details.</p>
             </div>
-            <div className="mb-4">
-                <button className="flex bg-white items-center px-3 cursor-pointer w-full h-[44px] gap-x-2 border-[0.5px] border-[#e6e9f2] rounded-md shadow-sm"
-                title="Click here to apply coupon">
-                <img alt="" loading="lazy" width="24" height="24" decoding="async"
-                    src="/_next/static/media/coupon.4b281d07.svg" className="h-[22px]" style={{ color: 'transparent' }} />
-                <p className="text-[15px] text-[#050505] font-medium">Have a coupon?</p>
-                <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round"
-                    strokeLinejoin="round" className="text-[#3f3f3f] text-xl ml-auto" height="1em" width="1em"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                </button>
+            <div>
+                <Coupon />
             </div>
+            
             <div className="relative payment_summary bg-white rounded-b-md shadow-sm border-[0.5px] border-[#e6e9f2] mb-4">
                 <div className="payment_summary-cutout relative bg-transparent h-4 z-[1] m-[-20px_0px_24px]">
                 </div>
                 <div className="flex flex-col gap-y-3">
                 <div className="px-3 md:px-6">
-                    <p className="text-[#3f3f3f] font-medium mb-1">Service</p>
+                    <p className="text-[#3f3f3f] font-medium mb-1"><strong>Service</strong></p>
                     <div className="flex flex-col gap-y-1">
                     <div className="flex justify-between text-sm gap-x-12 lg:gap-x-16 items-center">
                         <div className="text-[#656565]">
                         <p className="text-xs">{service.title}</p>
                         </div>
-                        <div className="text-[#3f3f3f] font-medium">₹{service.price-(service.price*100/18)}</div>
+                        <div className="text-[#3f3f3f] font-medium"><strong>₹{service.price-(service.price*18/100)}</strong></div>
                     </div>
                     </div>
                 </div>
                 <div className="flex justify-between text-sm gap-x-12 lg:gap-x-16 px-3 md:px-6">
-                    <div className="text-[#3f3f3f] font-medium">GST</div>
-                    <div className="text-[#3f3f3f] font-medium">₹{service.price*100/18}</div>
+                    <div className="text-[#3f3f3f] font-medium"><strong>GST</strong></div>
+                    <div className="text-[#3f3f3f] font-medium"><strong>₹{service.price*18/100}</strong></div>
                 </div>
                 <div className="flex justify-between text-sm border-t border-[#ced0d4] py-3 gap-x-12 lg:gap-x-16 px-3 md:px-6 border-dashed">
-                    <div className="text-[#050505] font-medium">Amount to be paid :</div>
+                    <div className="text-[#050505] font-medium"><strong>Amount to be paid :</strong></div>
                     <span className="text-[#050505] font-semibold text-right">₹{service.price}</span>
                 </div>
                 </div>
             </div>
-            <div className="mb-4">
-                <button className="flex bg-white items-center pl-[14px] pr-3 cursor-pointer w-full h-[44px] gap-x-[10px] border-[0.5px] border-[#e6e9f2] rounded-md shadow-sm"
-                title="Click here to add your GST informations">
-                <img alt="" loading="lazy" width="16" height="20" decoding="async"
-                    src="/_next/static/media/gst.14f74afd.svg" className="h-[18px]" style={{ color: 'transparent' }} />
-                <p className="text-[15px] text-[#050505] font-medium">Add GST <small>(optional)</small></p>
-                <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round"
-                    strokeLinejoin="round" className="text-[#3f3f3f] text-xl ml-auto" height="1em" width="1em"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                </button>
+            <div>
+                <Gst />
             </div>
             <div className="w-full lg:my-8 p-4 pt-6 md:p-0 z-10 md:z-auto">
                 <button
