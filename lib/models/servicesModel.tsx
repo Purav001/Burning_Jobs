@@ -5,6 +5,7 @@ export type Service = {
     imageSrc: string
     imageSrcSet: string
     title: string
+    slug: string
     description: string
     link: string
     price: number
@@ -13,6 +14,7 @@ export type Service = {
 const serviceSchema = new mongoose.Schema(
     {
         title: {type: String, required: true},
+        slug: {type: String, required: true},
         id: {type: Number, require: true},
         imageSrc: {type: String, required: true},
         imageSrcSet: {type: String, required: true},

@@ -16,15 +16,21 @@ const getByid = cache(async (id : Number) => {
     const services = await servicesModel.findOne({ id }).lean()
     return services as unknown as Service[]
 })
-const getBySlug = cache(async (title: string) => {
+const getBySlug = cache(async (slug: string) => {
     await dbConnect()
-    const services = await servicesModel.findOne({ title }).lean()
+    const services = await servicesModel.findOne({ slug }).lean()
     return services as unknown as Service
 })
+const getCategories = cache(async () => {
+    await dbConnect()
+    const categories = await servicesModel.find().distinct('category')
+    return categories
+  })
 
 const services = {
     getLatest,
     getByid,
     getBySlug,
+    getCategories,
 }
 export default services

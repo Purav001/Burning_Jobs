@@ -1,18 +1,7 @@
-// import PAY from '@/components/paymentInterface/page' 
 
-// export async function Details({
-//     params
-// }:{
-//     params: {title : string}
-// }){
-//     return(
-//         <PAY params={{ title: params.title }} />
-//     )
-// }
 
 import productService from '@/lib/services/services'
 import { convertDocToObj } from '@/lib/utils'
-
 export async function generateMetadata({
     params,
 }: {
@@ -20,7 +9,7 @@ export async function generateMetadata({
 }) {
     const service = await productService.getBySlug(params.title)
     if (!service) {
-    return { title: 'Product not found' }
+    return { title: `${params.title}` }
     }
     return {
     title: service.title + `Burning Jobs`,
