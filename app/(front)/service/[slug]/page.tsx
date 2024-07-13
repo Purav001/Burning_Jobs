@@ -3,6 +3,7 @@ import { convertDocToObj } from '@/lib/utils'
 import Coupon from '@/components/buttons/coupon'
 import Gst from '@/components/buttons/gst'
 import PayButton from '@/components/buttons/pay'
+import './pay.css'
 export async function generateMetadata({
     params,
 }: {
@@ -21,11 +22,10 @@ export async function generateMetadata({
 export default async function ServiceDetails ({
     params,
 } : {
-    params: {title : string}
+    params: {slug : string}
 }){
+    const service = await productService.getBySlug(params.slug)
     
-    const service = await productService.getBySlug(params.title)
-    // const latestProducts = await productService.getLatest()
     // const relatedProducts = latestProducts.filter(
     //     (curservice) => curservice.title !== service.title
     // )
@@ -86,6 +86,7 @@ export default async function ServiceDetails ({
             
             <div className="relative payment_summary bg-white rounded-b-md shadow-sm border-[0.5px] border-[#e6e9f2] mb-4">
                 <div className="payment_summary-cutout relative bg-transparent h-4 z-[1] m-[-20px_0px_24px]">
+                    
                 </div>
                 <div className="flex flex-col gap-y-3">
                 <div className="px-3 md:px-6">
