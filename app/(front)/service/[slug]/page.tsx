@@ -32,6 +32,10 @@ export default async function ServiceDetails ({
     if(!service){
         return <div>Product not found</div>
     }
+    const paymentDetail = {
+        params:{price: service.price}
+        
+    }
     return (
     <div className="response grid grid-cols-1 md:grid-cols-2 bg-white md:min-h-screen overflow-x-hidden pt-10" style={{minHeight: '100%'}}>
         <div className=" bg-white md:px-6 lg:px-12 xl:px-16 2xl:px-20 min-h-screen">
@@ -119,7 +123,7 @@ export default async function ServiceDetails ({
                     className="max-h-[14px]" style={{ color: 'transparent' }} />
                 </div>
             </div> */}
-                <PayButton />
+                <PayButton params={paymentDetail.params}/>
             </div>
         </div>
         </div>
