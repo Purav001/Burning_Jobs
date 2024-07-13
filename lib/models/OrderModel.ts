@@ -18,7 +18,6 @@ const orderSchema = new mongoose.Schema(
         price: { type: Number, required: true },
       },
     ],
-    paymentMethod: { type: String, required: true },
     paymentResult: { id: String, status: String, email_address: String },
     price: { type: Number, required: true },
     isPaid: { type: Boolean, required: true, default: false },
@@ -41,7 +40,6 @@ export type Order = {
     contactNumber: string
     email: string
   }
-  paymentMethod: string
   paymentResult?: { id: string; status: string; email_address: string }
   price: number
   isPaid: boolean

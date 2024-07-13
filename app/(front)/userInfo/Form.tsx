@@ -34,7 +34,7 @@ useEffect(() => {
 
 const formSubmit: SubmitHandler<ShippingAddress> = async (form) => {
     saveShippingAddrress(form)
-    router.push('/')
+    router.push('/place-order')
 }
 
 const FormInput = ({

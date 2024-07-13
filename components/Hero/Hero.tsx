@@ -13,7 +13,7 @@ const Hero = () => {
                                     <div>Most Followed <strong>Interview Coach</strong>
                                 </div>
                             </div>
-                            <h1>“I am committed to building your career and <span className="text-color-yellow">amplifying your Career growth.</span>” - Diksha Arora</h1>
+                            <h1>“I am committed to building your career and <span className="text-color-yellow">amplifying your Career growth.</span>” <br/>- Sunil Kumar</h1>
                             </div>
                             <p className="text-color-white">Our Results Speak For Us</p>
                             <div className="hero_button-wrapper">

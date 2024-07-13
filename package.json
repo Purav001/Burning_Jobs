@@ -55,7 +55,7 @@
     "react-whirlpool": "^0.1.14",
     "styled-components": "^6.1.8",
     "swiper": "^11.1.0",
-    "swr": "^2.2.4",
+    "swr": "^2.2.5",
     "tailwind-merge": "^2.2.2",
     "tw-elements": "^1.1.0",
     "zustand": "^4.4.7"
