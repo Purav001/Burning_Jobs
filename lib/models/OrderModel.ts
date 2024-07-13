@@ -25,8 +25,6 @@ const orderSchema = new mongoose.Schema(
     },
     paymentMethod: { type: String, required: true },
     paymentResult: { id: String, status: String, email_address: String },
-    itemsPrice: { type: Number, required: true },
-    taxPrice: { type: Number, required: true },
     totalPrice: { type: Number, required: true },
     isPaid: { type: Boolean, required: true, default: false },
     paidAt: { type: Date },
@@ -50,8 +48,6 @@ export type Order = {
   }
   paymentMethod: string
   paymentResult?: { id: string; status: string; email_address: string }
-  itemsPrice: number
-  taxPrice: number
   totalPrice: number
   isPaid: boolean
   paidAt?: string
@@ -61,7 +57,6 @@ export type Order = {
 export type OrderItem = {
   title: string
   price: number
-  qty: number
 }
 
 export type ShippingAddress = {

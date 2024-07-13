@@ -9,7 +9,7 @@ const servicesData = [
         title: "Ultimate Interview Preparation Course",
         slug: "UltimateInterview",
         description: "Get more than 200 sample answers that will fit any job role. Now, you have well-crafted...",
-        link: "/interview"
+        link: "This course has been designed to provide both freshers and experience holders with an all-round preparation for acing their job interviews. You will learn all aspects related to job interviews which includes the right technique to open your interview, most frequently asked interview questions and 200+ sample answers that will fit any job role. Most important, learn the exact strategy that you need to negotiate your salary so that you get what is rightfully yours. Once you will complete the course, you will walk into the interview room well prepared to handle any tricky situation. ",
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ const servicesData = [
         title: "ATS Friendly Resume (Experienced)",
         slug: "ATSExperienced",
         description: "Resume is the first step to landing your dream job. A recruiter or a talent acquisition...",
-        link: "https://dikshaarora.com/services/resume-building"
+        link: "Before a resume reaches the hands of a hiring manager, it often must pass an ATS — Applicant Tracking System. An ATS is a software used by recruiters to collect, sort, scan, and rank the resumes they receive for open positions. Even a well qualified candidate might fail to get an interview call if the resume does not satisfy the ATS. Using the right keywords in the resume as per the job description is essential to have your resume short listed. Since, your resume reaches the recruiter before you, it is essential that your resume is the perfect reflection of your skill set.",
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ const servicesData = [
         title: "LinkedIn Profile Optimisation",
         slug: 'Linkedin',
         description: "LinkedIn is the most powerful modern day tool to build a strong Personal Brand and a...",
-        link: "https://dikshaarora.com/web/checkout/641215caf6895898d1ec5619"
+        link: "LinkedIn is the most powerful modern day tool to build a strong Personal Brand and a strong Professional Network to accelerate career growth. It helps job seekers come in the notice of Recruiters and makes the entire process of job search easier. ",
     },
 ];
 const servicesData2 = [
@@ -38,7 +38,7 @@ const servicesData2 = [
         title: "Building A Perfect ATS Friendly Resume (Freshers)",
         slug: "ATSFreshers",
         description: "Resume is the first step to landing your dream job. A recruiter or a talent acquisition...",
-        link: "https://dikshaarora.com/services/resume-freshers"
+        link: "Before a resume reaches the hands of a hiring manager, it often must pass an ATS — Applicant Tracking System. An ATS is a software used by recruiters to collect, sort, scan, and rank the resumes they receive for open positions. Even a well qualified candidate might fail to get an interview call if the resume does not satisfy the ATS. Using the right keywords in the resume as per the job description is essential to have your resume short listed. Since, your resume reaches the recruiter before you, it is essential that your resume is the perfect reflection of your skill set.",
     },
     {
         id: 5,
@@ -47,7 +47,7 @@ const servicesData2 = [
         title: "Master Program With Live Sessions",
         slug: 'MasterProgram',
         description: "One-One Job Interview Preparation Program target is to ensure that you head confidently for your interview and emerge as a strong potential candidate who is the right fit for the job ",
-        link: "#"
+        link: "The 'Master Program with Live Sessions' is a comprehensive career advancement package designed to help both freshers and experienced professionals excel in their interview process. With personalized coaching from Diksha Arora, it includes one-on-one interview preparation sessions, mock interview, an ATS-friendly resume and cover letter, LinkedIn profile optimization, and a customized set of interview Q&A tailored to your specific job role. Additionally, you’ll receive a downloadable PDF for convenient revision, ensuring you are fully prepared to succeed in your career pursuits.",
     },
 ];
 
@@ -102,7 +102,7 @@ const Services = () => {
                                                 <p className="text-weight-light">{service.description}</p>
                                             </div>
                                             <div className="services_card_button-wrapper">
-                                                <a href={`/service?id=${service.slug}`} className="button is-secondary w-button">Register Now</a>
+                                                <a href={`/service/${service.slug}`} className="button is-secondary w-button">Register Now</a>
                                             </div>
                                         </div>
                                     </div>

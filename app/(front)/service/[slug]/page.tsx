@@ -5,11 +5,11 @@ import Gst from '@/components/buttons/gst'
 export async function generateMetadata({
     params,
 }: {
-    params: { title: string }
+    params: { slug: string }
 }) {
-    const service = await productService.getBySlug(params.title)
+    const service = await productService.getBySlug(params.slug)
     if (!service) {
-    return { title: `${params.title}` }
+    return { title: `${params.slug}` }
     }
     return {
     title: service.title + `Burning Jobs`,
@@ -23,7 +23,7 @@ export default async function ServiceDetails ({
     params: {title : string}
 }){
     const service = await productService.getBySlug(params.title)
-    const latestProducts = await productService.getLatest()
+    // const latestProducts = await productService.getLatest()
     // const relatedProducts = latestProducts.filter(
     //     (curservice) => curservice.title !== service.title
     // )
@@ -46,7 +46,7 @@ export default async function ServiceDetails ({
                 </div>
             <div className="service_description mt-16 mb-4 font-[Inter]">
                 <p className='text-[#000]'>
-                {service.description}
+                {service.link}
                 </p>
             </div>
             <div className='divider'></div>
