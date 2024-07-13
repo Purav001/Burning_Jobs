@@ -2,6 +2,7 @@ import productService from '@/lib/services/services'
 import { convertDocToObj } from '@/lib/utils'
 import Coupon from '@/components/buttons/coupon'
 import Gst from '@/components/buttons/gst'
+import PayButton from '@/components/buttons/pay'
 export async function generateMetadata({
     params,
 }: {
@@ -22,6 +23,7 @@ export default async function ServiceDetails ({
 } : {
     params: {title : string}
 }){
+    
     const service = await productService.getBySlug(params.title)
     // const latestProducts = await productService.getLatest()
     // const relatedProducts = latestProducts.filter(
@@ -106,8 +108,9 @@ export default async function ServiceDetails ({
             <div>
                 <Gst />
             </div>
-            <div className="w-full lg:my-8 p-4 pt-6 md:p-0 z-10 md:z-auto">
+            {/* <div className="w-full lg:my-8 p-4 pt-6 md:p-0 z-10 md:z-auto">
                 <button
+                onClick={() => router.push('/userInfo')}
                 className="w-full py-3 flex justify-center gap-x-2 items-center bg-[#feca3a] hover:bg-[rgba(254,194,27,1)] focus:bg-[rgba(248,183,1,1)] active:bg-[rgba(248,183,1,1)] text-black text-base font-medium rounded-md transition-colors shadow disabled:bg-[#b2b2b2] disabled:opacity-75">
                 <span>Proceed to pay ₹{service.price}</span>
                 </button>
@@ -115,7 +118,8 @@ export default async function ServiceDetails ({
                 <img alt="" loading="lazy" width="341" height="19" decoding="async" src="/images/services/pay.svg"
                     className="max-h-[14px]" style={{ color: 'transparent' }} />
                 </div>
-            </div>
+            </div> */}
+                <PayButton />
             </div>
         </div>
         </div>

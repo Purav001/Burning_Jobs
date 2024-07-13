@@ -2,9 +2,7 @@ const CheckoutSteps = ({ current = 0 }) => {
     return (
     <ul className="steps steps-horizontal w-full mt-4 m-auto ">
         {[
-            'User Login', 
-            'User Info',
-            'Payment Method', 
+            'User Info', 
             'Place Order',
         ].map(
         (step, index) => (
