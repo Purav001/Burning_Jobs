@@ -2,6 +2,7 @@ const CheckoutSteps = ({ current = 0 }) => {
     return (
     <ul className="steps steps-horizontal w-full mt-4 m-auto ">
         {[
+            'Cart',
             'User Info', 
             'Place Order',
         ].map(

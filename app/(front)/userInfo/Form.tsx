@@ -70,7 +70,7 @@ const FormInput = ({
 return (
     <div className="grid  justify-items-center m-auto w-full" style={{paddingTop:'100px'}}>
     <div className="w-full">
-        <CheckoutSteps current={0} />
+        <CheckoutSteps current={1} />
     </div>
     <div className="max-w mx-auto card bg-[#1b2528] mt-4 mb-10 max-w-sm  ">
         <div className="card-body">
