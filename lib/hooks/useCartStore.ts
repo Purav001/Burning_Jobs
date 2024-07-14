@@ -5,20 +5,19 @@ import { persist } from 'zustand/middleware'
 
 type Cart = {
   items: OrderItem[]
+  shippingAddress: ShippingAddress
   itemsPrice: number
   totalPrice: number
-
-  shippingAddress: ShippingAddress
 }
 const initialState: Cart = {
   items: [],
-  itemsPrice: 0,
-  totalPrice: 0,
   shippingAddress: {
     fullName: '',
     contactNumber: '',
     email: '',
   },
+  itemsPrice: 0,
+  totalPrice: 0,
 }
 
 export const cartStore = create<Cart>()(
@@ -32,7 +31,6 @@ export default function useCartService() {
     items,
     itemsPrice,
     totalPrice,
-
     shippingAddress,
   } = cartStore()
   return {

@@ -1,15 +1,17 @@
 import { auth } from '@/lib/auth'
 import dbConnect from '@/lib/dbConnect'
 import OrderModel, { OrderItem } from '@/lib/models/OrderModel'
-import servicesModel from '@/lib/models/servicesModel'
+import ServicesModel from '@/lib/models/servicesModel'
 import { round2 } from '@/lib/utils'
 
 const calcPrices = (orderItems: OrderItem[]) => {
 // Calculate the items price
-const price = round2(
-    orderItems.reduce((acc, item) => acc + item.price , 0)
+const itemsPrice = round2(
+    orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
 )
-return { price }
+// Calculate the total price
+const totalPrice = round2(itemsPrice)
+return { itemsPrice, totalPrice }
 }
 
 export const POST = auth(async (req: any) => {
@@ -25,7 +27,7 @@ const { user } = req.auth
 try {
     const payload = await req.json()
     await dbConnect()
-    const dbProductPrices = await servicesModel.find(
+    const dbProductPrices = await ServicesModel.find(
     {
         _id: { $in: payload.items.map((x: { _id: string }) => x._id) },
     },
@@ -38,12 +40,13 @@ try {
     _id: undefined,
     }))
 
-    const { price } =
+    const { itemsPrice,  totalPrice } =
     calcPrices(dbOrderItems)
 
     const newOrder = new OrderModel({
     items: dbOrderItems,
-    price,
+    itemsPrice,
+    totalPrice,
     shippingAddress: payload.shippingAddress,
     user: user._id,
     })

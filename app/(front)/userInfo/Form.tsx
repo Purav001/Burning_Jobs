@@ -16,14 +16,7 @@ const {
     setValue,
     formState: { errors, isSubmitting },
 } = useForm<ShippingAddress>({
-    // defaultValues: {
-    //   fullName: '',
-    //   address: '',
-    //   city: '',
-    //   postalCode: '',
-    //   contactNumber: 0,
-    //   country: '',
-    // },
+    // add default values
 })
 
 useEffect(() => {
