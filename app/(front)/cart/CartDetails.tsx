@@ -47,7 +47,7 @@ return (
         </div>
         </div>
     ) : (
-        <div className="mx-10" style={{paddingTop: '100px', height: '100vh'}}>
+        <div className="mx-10" style={{paddingTop: '100px', height: 'auto'}}>
             <div className="w-full">
                 <CheckoutSteps current={0} />
             </div>
