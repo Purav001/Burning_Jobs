@@ -59,6 +59,7 @@ try {
     }
     )
 } catch (err: any) {
+    console.log(err.message)
     return Response.json(
     { message: err.message },
     {

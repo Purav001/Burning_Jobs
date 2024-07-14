@@ -9,15 +9,15 @@ const orderSchema = new mongoose.Schema(
     },
     items: [
       {
-        product: {
+        service: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'Product',
+          ref: 'Services',
           required: true,
         },
         title: { type: String, required: true },
         slug: { type: String, required: true },
         qty: { type: Number, required: true },
-        price: { type: Number, required: true },
+        price: {type: Number, required: true}
       },
     ],
     shippingAddress: {

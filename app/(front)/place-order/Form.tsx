@@ -11,8 +11,8 @@ import Image from 'next/image'
 const Form = () => {
 const router = useRouter()
 const {
-    shippingAddress,
     items,
+    shippingAddress,
     itemsPrice,
     totalPrice,
     clear,
@@ -27,8 +27,8 @@ const { trigger: placeOrder, isMutating: isPlacing } = useSWRMutation(
         'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-        shippingAddress,
         items,
+        shippingAddress,
         itemsPrice,
         totalPrice,
         }),
@@ -50,7 +50,6 @@ useEffect(() => {
     if (items.length === 0) {
     return router.push('/')
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [shippingAddress, router])
 
 const [mounted, setMounted] = useState(false)
