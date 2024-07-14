@@ -70,7 +70,7 @@ return (
                     <tr key={item.slug}>
                     <td>
                         <Link
-                        href={`/product/${item.slug}`}
+                        href={`/service/${item.slug}`}
                         className="flex items-center"
                         >
                         
@@ -115,12 +115,12 @@ return (
                 <div className="grid grid-cols-2 items-center justify-center flex mb-3">
                     <div className="grid grid-cols-2">
                     <div className="flex items-center justify-center">
-                        <Link href={`/product/${item.slug}`}>
+                        <Link href={`/service/${item.slug}`}>
                         
                         </Link>
                     </div>
                     <div className="flex items-center justify-center">
-                        <Link href={`/product/${item.slug}`}>
+                        <Link href={`/service/${item.slug}`}>
                         <span
                             className="px-2 font-semibold text-xs"
                             style={{ color: '#1b2528' }}
