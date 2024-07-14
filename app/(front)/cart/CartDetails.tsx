@@ -22,7 +22,7 @@ if (!mounted) return <></>
 return (
     <>
     {items.length === 0 ? (
-        <div>
+        <div style={{paddingTop: '100px', paddingBottom:'40px'}}>
             <div className="w-full">
                 <CheckoutSteps current={0} />
             </div>
@@ -47,7 +47,7 @@ return (
         </div>
         </div>
     ) : (
-        <div className="mx-10">
+        <div className="mx-10" style={{paddingTop: '100px', height: '100vh'}}>
             <div className="w-full">
                 <CheckoutSteps current={0} />
             </div>
@@ -61,7 +61,7 @@ return (
                 <thead>
                 <tr>
                     <th className="text-gray-600">Item</th>
-                    <th className="text-gray-600">Units</th>
+                    <th className="text-gray-600">Individuals</th>
                     <th className="text-gray-600">Price</th>
                 </tr>
                 </thead>

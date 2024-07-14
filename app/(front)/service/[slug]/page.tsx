@@ -4,6 +4,7 @@ import Coupon from '@/components/buttons/coupon'
 import Gst from '@/components/buttons/gst'
 import PayButton from '@/components/buttons/pay'
 import './pay.css'
+import AddToCart from '@/components/services/AddToCart'
 export async function generateMetadata({
     params,
 }: {
@@ -124,7 +125,14 @@ export default async function ServiceDetails ({
                     className="max-h-[14px]" style={{ color: 'transparent' }} />
                 </div>
             </div> */}
-                <PayButton params={paymentDetail.params}/>
+                <AddToCart
+                    item={{
+                    ...convertDocToObj(service),
+                    qty: 0,
+                    color: '',
+                    price: service.price,
+                    }}
+                />
             </div>
         </div>
         </div>
