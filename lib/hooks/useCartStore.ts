@@ -4,16 +4,16 @@ import { OrderItem, ShippingAddress } from '../models/OrderModel'
 import { persist } from 'zustand/middleware'
 
 type Cart = {
-  items: [],
-  price: number
+  items: OrderItem[]
+  itemsPrice: number
+  totalPrice: number
 
-  paymentMethod: string
   shippingAddress: ShippingAddress
 }
 const initialState: Cart = {
   items: [],
-  price: 0,
-  paymentMethod: '',
+  itemsPrice: 0,
+  totalPrice: 0,
   shippingAddress: {
     fullName: '',
     contactNumber: '',
@@ -29,24 +29,52 @@ export const cartStore = create<Cart>()(
 
 export default function useCartService() {
   const {
-    items: [],
-    price,
-    paymentMethod,
+    items,
+    itemsPrice,
+    totalPrice,
+
     shippingAddress,
   } = cartStore()
   return {
-    items: [],
-    price,
-    paymentMethod,
+    items,
+    itemsPrice,
+    totalPrice,
     shippingAddress,
+    increase: (item: OrderItem) => {
+      const exist = items.find((x) => x.slug === item.slug)
+      const updatedCartItems = exist
+        ? items.map((x) =>
+            x.slug === item.slug ? { ...exist, qty: exist.qty + 1 } : x
+          )
+        : [...items, { ...item, qty: 1 }]
+      const { itemsPrice, totalPrice } =
+        calcPrice(updatedCartItems)
+      cartStore.setState({
+        items: updatedCartItems,
+        itemsPrice,
+        totalPrice,
+      })
+    },
+    decrease: (item: OrderItem) => {
+      const exist = items.find((x) => x.slug === item.slug)
+      if (!exist) return
+      const updatedCartItems =
+        exist.qty === 1
+          ? items.filter((x: OrderItem) => x.slug !== item.slug)
+          : items.map((x) =>
+              x.slug === item.slug ? { ...exist, qty: exist.qty - 1 } : x
+            )
+      const { itemsPrice, totalPrice } =
+        calcPrice(updatedCartItems)
+      cartStore.setState({
+        items: updatedCartItems,
+        itemsPrice,
+        totalPrice,
+      })
+    },
     saveShippingAddrress: (shippingAddress: ShippingAddress) => {
       cartStore.setState({
         shippingAddress,
-      })
-    },
-    savePaymentMethod: (paymentMethod: string) => {
-      cartStore.setState({
-        paymentMethod,
       })
     },
     clear: () => {
@@ -60,7 +88,7 @@ export default function useCartService() {
 
 const calcPrice = (items: OrderItem[]) => {
   const itemsPrice = round2(
-      items.reduce((acc, item) => acc + item.price, 0)
+      items.reduce((acc, item) => acc + item.price * item.qty, 0)
     ),
     totalPrice = round2(itemsPrice)
   return { itemsPrice, totalPrice }

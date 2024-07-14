@@ -15,7 +15,10 @@ const orderSchema = new mongoose.Schema(
           required: true,
         },
         title: { type: String, required: true },
+        slug: { type: String, required: true },
         price: { type: Number, required: true },
+        qty: { type: Number, required: true },
+
       },
     ],
     paymentResult: { id: String, status: String, email_address: String },
@@ -49,7 +52,9 @@ export type Order = {
 
 export type OrderItem = {
   title: string
+  slug: string
   price: number
+  qty: number
 }
 
 export type ShippingAddress = {
