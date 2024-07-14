@@ -59,7 +59,7 @@ const FormInput = ({
         required: required && `${name} is required`,
         pattern,
         })}
-        className="input input-bordered w-full max-w-sm"
+        className="input input-bordered w-full bg-white text-gray-600 text-semibold text-xs md:text-base"
     />
     {errors[id]?.message && (
         <div className="text-error">{errors[id]?.message}</div>
@@ -72,23 +72,25 @@ return (
     <div className="w-full">
         <CheckoutSteps current={1} />
     </div>
-    <div className="max-w mx-auto card bg-[#1b2528] mt-4 mb-10 max-w-sm  ">
+    <div className="max-w mx-auto card bg-[#f6f1ee] mt-4 mb-10">
         <div className="card-body">
-        <h1 className="card-title m-auto  text-bold font-bold text-base md:text-base">
-            User Information
+        <h1 className="card-title m-auto text-[#4F4A45] text-bold text-base md:text-base">
+            Shipping Address
         </h1>
         <form
-            className="font-semibold"
+            className="text-[#4F4A45] font-semibold"
             onSubmit={handleSubmit(formSubmit)}
         >
             <FormInput name="Full Name" id="fullName" required />
             <FormInput name="Contact Number" id="contactNumber" required />
             <FormInput name="Email Id" id="email" required />
+
+
             <div className="mb-2 mt-10">
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="btn  w-full bg-[#feca3a] text-[#000] hover:bg-[#F6F1EE] hover:bg-[rgba(254,194,27,1)] text-sm md:text-base"
+                className="btn  w-full bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] text-sm md:text-base"
             >
                 {isSubmitting && (
                 <span className="loading loading-spinner"></span>

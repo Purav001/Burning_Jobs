@@ -84,7 +84,7 @@ return (
                     </td>
                     <td>
                         <button
-                        className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528] "
+                        className="btn bt bg-[#feca3a] text-black  hover:bg-[rgba(254,194,27,1)] "
                         type="button"
                         onClick={() => decrease(item)}
                         >
@@ -94,7 +94,7 @@ return (
                         {item.qty}
                         </span>
                         <button
-                        className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528]"
+                        className="btn bt bg-[#feca3a] text-black  hover:bg-[rgba(254,194,27,1)]"
                         type="button"
                         onClick={() => increase(item)}
                         >
@@ -132,7 +132,7 @@ return (
                     </div>
                     <div className="flex items-center justify-center">
                     <button
-                        className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528] px-2 py-1 text-xs"
+                        className="btn bt bg-[#feca3a] text-black  hover:bg-[rgba(254,194,27,1)] px-2 py-1 text-xs"
                         type="button"
                         onClick={() => decrease(item)}
                     >
@@ -143,7 +143,7 @@ return (
                         {item.qty}
                     </span>
                     <button
-                        className="btn bg-[#fbbf24] text-black hover:text-white hover:bg-[#1b2528] px-2 py-1 text-xs"
+                        className="btn bt bg-[#feca3a] text-black  hover:bg-[rgba(254,194,27,1)] px-2 py-1 text-xs"
                         type="button"
                         onClick={() => increase(item)}
                     >
@@ -163,19 +163,19 @@ return (
             <div>
             <div
                 className="card p-5 md:px-5 my-5 justify-center"
-                style={{ backgroundColor: '#1b2528' }}
+                style={{ backgroundColor: '#F6F1EE' }}
             >
                 <div>
-                <ul>
+                <ul >
                     <li>
-                    <div className="pb-3 text-sm md:text-xl text-white text-center  ">
+                    <div className="pb-3 text-sm md:text-xl text-[#4F4A45] text-center  ">
                         Subtotal : ₹{itemsPrice}
                     </div>
                     </li>
                     <li>
                     <button
                         onClick={() => router.push('/userInfo')}
-                        className="btn btn-primary w-full bg-white hover:text-white text-sm md:text-base"
+                        className="btn bg-[#4F4A45] text-[white] w-full  hover:bg-[transparent] hover:text-[black] text-sm md:text-base"
                     >
                         Proceed to Checkout
                     </button>

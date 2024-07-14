@@ -31,6 +31,9 @@ body {
 .btn-ghost {
   text-transform: none !important;
 }
+.bt{
+  border-color: transparent !important;
+}
 
 @layer utilities {
   .text-balance {
