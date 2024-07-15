@@ -11,7 +11,7 @@ const orderSchema = new mongoose.Schema(
       {
         service: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'Services',
+          ref: 'Service',
           required: true,
         },
         title: { type: String, required: true },
@@ -30,7 +30,6 @@ const orderSchema = new mongoose.Schema(
     totalPrice: { type: Number, required: true },
     isPaid: { type: Boolean, required: true, default: false },
     paidAt: { type: Date },
-    deliveredAt: { type: Date },
   },
   {
     timestamps: true,

@@ -35,8 +35,8 @@ try {
     )
     const dbOrderItems = payload.items.map((x: { _id: string }) => ({
     ...x,
-    product: x._id,
-    price: dbServicePrices.find((x) => x._id === x._id).price,
+    service: x._id,
+    // price: dbServicePrices.find((x) => x._id === x._id).price,
     _id: undefined,
     }))
 
