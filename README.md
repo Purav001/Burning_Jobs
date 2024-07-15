@@ -61,4 +61,3 @@ Welcome to version 2 of next.js amazona. it is coding course to build a full fun
    4. show product info in second column
    5. show add to cart action on third column
    6. add styles
-# naniBilonaGhee
