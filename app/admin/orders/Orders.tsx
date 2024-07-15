@@ -9,7 +9,7 @@ export default function Orders() {
   if (!orders) return 'Loading...'
 
   return (
-    <div>
+    <div className='text-black'>
       <h1 className="py-4 text-2xl">Orders</h1>
       <div className="overflow-x-auto">
         <table className="table">
@@ -20,7 +20,7 @@ export default function Orders() {
               <th>DATE</th>
               <th>TOTAL</th>
               <th>PAID</th>
-              <th>DELIVERED</th>
+              <th>{/* Table Formatting */}</th>
               <th>ACTION</th>
             </tr>
           </thead>
@@ -30,19 +30,17 @@ export default function Orders() {
                 <td>..{order._id.substring(20, 24)}</td>
                 <td>{order.user?.name || 'Deleted user'}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
-                <td>${order.totalPrice}</td>
+                <td>₹{order.totalPrice}</td>
                 <td>
                   {order.isPaid && order.paidAt
                     ? `${order.paidAt.substring(0, 10)}`
                     : 'not paid'}
                 </td>
+                <td>{/* Table Formatting */}</td>
                 <td>
-                  {order.isDelivered && order.deliveredAt
-                    ? `${order.deliveredAt.substring(0, 10)}`
-                    : 'not delivered'}
-                </td>
-                <td>
-                  <Link href={`/order/${order._id}`} passHref>
+                  <Link 
+                  className="bg-[#4F4A45] text-[#F6F1EE] hover:bg-[#F6F1EE] hover:text-[#4F4A45] px-2 py-2 rounded text-xs md:text-base"
+                  href={`/order/${order._id}`} passHref>
                     Details
                   </Link>
                 </td>
