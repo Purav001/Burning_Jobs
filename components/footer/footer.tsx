@@ -20,16 +20,16 @@ return (
             <nav>
                 <h6 className="text-[#ffdc54]" style={{fontWeight:'600'}}>Company</h6>
                 <a className="link link-hover text-[#fff]" href='#About'>About us</a>
-                <a className="link link-hover text-[#fff]" >Courses</a>
+                <a className="link link-hover text-[#fff]" href='/courses'>Courses</a>
                 <a className="link link-hover text-[#fff]" href='/contact-us'>Job Openings</a>
             </nav>
             <nav>
                 <h6 className="text-[#ffdc54]" style={{fontWeight:'600'}}>Services</h6>
-                <a className="link link-hover text-[#fff]">Interview Preperation</a>
-                <a className="link link-hover text-[#fff]">Resume building (Experienced)</a>
-                <a className="link link-hover text-[#fff]">Resume Building (Freshers)</a>
-                <a className="link link-hover text-[#fff]">Linkedin Optimisation</a>                
-                <a className="link link-hover text-[#fff]">Live Sessions</a>
+                <a className="link link-hover text-[#fff]" href='/services'>Interview Preperation</a>
+                <a className="link link-hover text-[#fff]"href='/services'>Resume building (Experienced)</a>
+                <a className="link link-hover text-[#fff]"href='/services'>Resume Building (Freshers)</a>
+                <a className="link link-hover text-[#fff]"href='/services'>Linkedin Optimisation</a>                
+                <a className="link link-hover text-[#fff]"href='/services'>Live Sessions</a>
 
             </nav>
             <nav>
