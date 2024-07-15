@@ -40,10 +40,6 @@ export const PUT = auth(async (...args: any) => {
     name,
     slug,
     price,
-    category,
-    image,
-    brand,
-    countInStock,
     description,
   } = await req.json()
 
@@ -55,10 +51,6 @@ export const PUT = auth(async (...args: any) => {
       product.name = name
       product.slug = slug
       product.price = price
-      product.category = category
-      product.image = image
-      product.brand = brand
-      product.countInStock = countInStock
       product.description = description
 
       const updatedProduct = await product.save()

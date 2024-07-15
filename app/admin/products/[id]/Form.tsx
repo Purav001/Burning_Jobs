@@ -5,7 +5,7 @@ import toast from 'react-hot-toast'
 import Link from 'next/link'
 import { ValidationRule, useForm } from 'react-hook-form'
 import { useEffect } from 'react'
-import { Product } from '@/lib/models/ProductModel'
+import { Service } from '@/lib/models/servicesModel'
 import { formatId } from '@/lib/utils'
 import { useRouter } from 'next/navigation'
 
@@ -35,17 +35,13 @@ export default function ProductEditForm({ productId }: { productId: string }) {
     handleSubmit,
     formState: { errors },
     setValue,
-  } = useForm<Product>()
+  } = useForm<Service>()
 
   useEffect(() => {
     if (!product) return
-    setValue('name', product.name)
+    setValue('title', product.name)
     setValue('slug', product.slug)
     setValue('price', product.price)
-    setValue('image', product.image)
-    setValue('category', product.category)
-    setValue('brand', product.brand)
-    setValue('countInStock', product.countInStock)
     setValue('description', product.description)
   }, [product, setValue])
 
@@ -62,7 +58,7 @@ export default function ProductEditForm({ productId }: { productId: string }) {
     required,
     pattern,
   }: {
-    id: keyof Product
+    id: keyof Service
     name: string
     required?: boolean
     pattern?: ValidationRule<RegExp>
@@ -109,7 +105,6 @@ export default function ProductEditForm({ productId }: { productId: string }) {
         }
       )
       const data = await res.json()
-      setValue('image', data.secure_url)
       toast.success('File uploaded successfully', {
         id: toastId,
       })
@@ -125,9 +120,9 @@ export default function ProductEditForm({ productId }: { productId: string }) {
       <h1 className="text-2xl py-4">Edit Product {formatId(productId)}</h1>
       <div>
         <form onSubmit={handleSubmit(formSubmit)}>
-          <FormInput name="Name" id="name" required />
+          <FormInput name="Name" id="title" required />
           <FormInput name="Slug" id="slug" required />
-          <FormInput name="Image" id="image" required />
+          {/* <FormInput name="Image" id="image" required />
           <div className="md:flex mb-6">
             <label className="label md:w-1/5" htmlFor="imageFile">
               Upload Image
@@ -140,12 +135,9 @@ export default function ProductEditForm({ productId }: { productId: string }) {
                 onChange={uploadHandler}
               />
             </div>
-          </div>
+          </div> */}
           <FormInput name="Price" id="price" required />
-          <FormInput name="Category" id="category" required />
-          <FormInput name="Brand" id="brand" required />
           <FormInput name="Description" id="description" required />
-          <FormInput name="Count In Stock" id="countInStock" required />
 
           <button
             type="submit"

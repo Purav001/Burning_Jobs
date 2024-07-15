@@ -1,5 +1,5 @@
 'use client'
-import { Product } from '@/lib/models/ProductModel'
+import { Service } from '@/lib/models/servicesModel'
 import { formatId } from '@/lib/utils'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -46,7 +46,7 @@ export default function Products() {
       if (!res.ok) return toast.error(data.message)
 
       toast.success('Product created successfully')
-      router.push(`/admin/products/${data.product._id}`)
+      router.push(`/admin/products/${data.product.id}`)
     }
   )
 
@@ -56,7 +56,7 @@ export default function Products() {
   return (
     <div>
       <div className="flex justify-between items-center">
-        <h1 className="py-4 text-2xl">Products</h1>
+        <h1 className="py-4 text-2xl">Services</h1>
         <button
           disabled={isCreating}
           onClick={() => createProduct()}
@@ -74,24 +74,18 @@ export default function Products() {
               <th>id</th>
               <th>name</th>
               <th>price</th>
-              <th>category</th>
-              <th>count in stock</th>
-              <th>rating</th>
               <th>actions</th>
             </tr>
           </thead>
           <tbody>
-            {products.map((product: Product) => (
-              <tr key={product._id}>
-                <td>{formatId(product._id!)}</td>
-                <td>{product.name}</td>
-                <td>${product.price}</td>
-                <td>{product.category}</td>
-                <td>{product.countInStock}</td>
-                <td>{product.rating}</td>
+            {products.map((product: Service) => (
+              <tr key={product.id}>
+                <td>{formatId(product.id.toString()!)}</td>
+                <td>{product.title}</td>
+                <td>₹{product.price}</td>
                 <td>
                   <Link
-                    href={`/admin/products/${product._id}`}
+                    href={`/admin/products/${product.id}`}
                     type="button"
                     className="btn btn-ghost btn-sm"
                   >
@@ -99,7 +93,7 @@ export default function Products() {
                   </Link>
                   &nbsp;
                   <button
-                    onClick={() => deleteProduct({ productId: product._id! })}
+                    onClick={() => deleteProduct({ productId: product.id.toString()! })}
                     type="button"
                     className="btn btn-ghost btn-sm"
                   >
