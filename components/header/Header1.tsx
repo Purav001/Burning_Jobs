@@ -58,11 +58,13 @@ return (
         <div className="flex flex-grow justify-center items-center hidden md:block mx-auto text-center">
             
             <ScrollLink
-                to='About'
+                to={`${
+                    pathname === '/' ?  'About' : '/about'
+                }`}
                 spy={true}
                 smooth={true}
                 offset={0}
-                duration={500}
+                duration={1000}
                 className={`${
                     pathname === '/About' ? 'text-[#ffdc54]' : 'text-white'
                 } font-bold mr-6 cur`}

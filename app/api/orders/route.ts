@@ -5,11 +5,9 @@ import ServicesModel from '@/lib/models/servicesModel'
 import { round2 } from '@/lib/utils'
 
 const calcPrices = (orderItems: OrderItem[]) => {
-// Calculate the items price
 const itemsPrice = round2(
     orderItems.reduce((acc, item) => acc + item.price * item.qty, 0)
 )
-// Calculate the total price
 const totalPrice = round2(itemsPrice)
 return { itemsPrice, totalPrice }
 }
