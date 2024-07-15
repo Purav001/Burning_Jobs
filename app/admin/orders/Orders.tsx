@@ -10,11 +10,11 @@ export default function Orders() {
 
   return (
     <div className='text-black'>
-      <h1 className="py-4 text-2xl">Orders</h1>
+      <h1 className="py-4 text-2xl font-bold">Orders</h1>
       <div className="overflow-x-auto">
         <table className="table">
           <thead>
-            <tr>
+            <tr style={{color:'black', fontSize:'14px'}}>
               <th>ID</th>
               <th>USER</th>
               <th>DATE</th>
