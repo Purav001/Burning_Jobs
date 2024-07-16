@@ -4,7 +4,7 @@ import Pay from '@/components/paymentInterface/page'
 const servicesData = [
     {
         id: 1,
-        imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp",
+        imageSrc: "/images/services/interview.png",
         imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-500.webp 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-800.webp 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp 902w",
         title: "Ultimate Interview Preparation Course",
         slug: "ultimate-interview",
@@ -13,7 +13,7 @@ const servicesData = [
     },
     {
         id: 2,
-        imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2).png",
+        imageSrc: "/images/services/interview.png",
         imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2).png 1344w",
         title: "ATS Friendly Resume (Experienced)",
         slug: "ats-experienced",
@@ -22,7 +22,7 @@ const servicesData = [
     },
     {
         id: 3,
-        imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3).png",
+        imageSrc: "/images/services/linkedin.png",
         imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3)-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3)-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3)-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0c384fc24b0a1d8a3bc7_Frame%20(3).png 1344w",
         title: "LinkedIn Profile Optimisation",
         slug: 'linkedin-profile',
@@ -33,7 +33,7 @@ const servicesData = [
 const servicesData2 = [
     {
         id: 4,
-        imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344.webp",
+        imageSrc: "/images/services/freshers.png",
         imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344-p-500.webp 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344-p-800.webp 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c6434d9807c6eb83de_Frame344.webp 902w",
         title: "Building A Perfect ATS Friendly Resume (Freshers)",
         slug: "ats-freshers",
@@ -42,7 +42,7 @@ const servicesData2 = [
     },
     {
         id: 5,
-        imageSrc: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame.png",
+        imageSrc: "/images/services/live.png",
         imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame-p-1600.png 1600w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64cb97c693daf9d341895669_Frame.png 1803w",
         title: "Master Program With Live Sessions",
         slug: 'master-program',
@@ -66,7 +66,7 @@ const Services = () => {
                                     <div className="services_card-image">
                                         <img 
                                             src={service.imageSrc}
-                                            srcSet={service.imageSrcSet}
+                                            // srcSet={service.imageSrcSet}
                                             sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 450px, (max-width: 1279px) 30vw, (max-width: 1919px) 31vw, 450px"
                                             alt="" 
                                             className="image-10" 
@@ -90,7 +90,7 @@ const Services = () => {
                                         <div className="services_card-image">
                                             <img 
                                                 src={service.imageSrc}
-                                                srcSet={service.imageSrcSet}
+                                                // srcSet={service.imageSrcSet}
                                                 sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 450px, (max-width: 1279px) 30vw, (max-width: 1919px) 31vw, 450px"
                                                 alt="" 
                                                 className="image-10" 
