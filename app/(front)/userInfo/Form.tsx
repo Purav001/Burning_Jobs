@@ -68,7 +68,7 @@ return (
     <div className="max-w mx-auto card bg-[#f6f1ee] mt-4 mb-10">
         <div className="card-body">
         <h1 className="card-title m-auto text-[#4F4A45] text-bold text-base md:text-base">
-            Shipping Address
+            User Information
         </h1>
         <form
             className="text-[#4F4A45] font-semibold"

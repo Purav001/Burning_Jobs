@@ -49,7 +49,7 @@ const data = {
             title: "Master Program With Live Sessions",
             slug: 'master-program',
             description: "One-One Job Interview Preparation Program target is to ensure that you head confidently for your interview and emerge as a strong potential candidate who is the right fit for the job ",
-            link: "The 'Master Program with Live Sessions' is a comprehensive career advancement package designed to help both freshers and experienced professionals excel in their interview process. With personalized coaching from Diksha Arora, it includes one-on-one interview preparation sessions, mock interview, an ATS-friendly resume and cover letter, LinkedIn profile optimization, and a customized set of interview Q&A tailored to your specific job role. Additionally, you’ll receive a downloadable PDF for convenient revision, ensuring you are fully prepared to succeed in your career pursuits.",
+            link: "The 'Master Program with Live Sessions' is a comprehensive career advancement package designed to help both freshers and experienced professionals excel in their interview process. With personalized coaching from Sunil Kumar, it includes one-on-one interview preparation sessions, mock interview, an ATS-friendly resume and cover letter, LinkedIn profile optimization, and a customized set of interview Q&A tailored to your specific job role. Additionally, you'll receive a downloadable PDF for convenient revision, ensuring you are fully prepared to succeed in your career pursuits.",
             price: 18500,
         },
     ]
