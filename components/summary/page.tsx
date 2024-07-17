@@ -25,22 +25,23 @@ return (
             <div className="learn-grid_two">
             <div className="learn-grid_two-left"></div>
             <div className="learn-grid_two-right">
-                <h3 className="learn-heading">Learn 200+ sample answers to the most frequently asked behavioral questions</h3>
+                <h3 className="learn-heading">Optimize Your LinkedIn Profile for Maximum Visibility</h3>
                 <p className="paragraph-46">
-                Interviewers are inclined to formulate questions aimed to test your critical thinking skills, judgement and problem-solving abilities, Decision-Making, Confidence, Job-Competence, Level of Commitment etc. 
-                In this course, you will learn the right technique to handle the most difficult interview questions with the help of 200+ sample answers that will fit any job role.
+                <br/>
+                Learn how to craft a compelling LinkedIn profile that stands out to recruiters and potential employers. This course will guide you through optimizing every section of your profile, from writing a powerful headline and summary to highlighting key skills and experiences. By implementing these strategies, you'll increase your profile's visibility and attract more professional opportunities.
+                <br/>
                 </p>
             </div>
             </div>
             
             <div className="learn-grid">
             <div className="learn-grid_left-2">
-                <h3 className="learn-heading">Master the Art of Salary Negotiation</h3>
+                <h3 className="learn-heading">Craft an ATS-Friendly Resume that Passes Screening Algorithms</h3>
                 <div>
                 <p className="paragraph-46">
-                    Learn effective techniques of Salary Negotiation to get what is rightfully yours. You will also be trained to conduct salary research to know your market worth. 
-                    Also, learn how to answer the most important interview questions related to salary negotiation - What is your current CTC? What are your salary expectations? 
-                    Furthermore, you will get access to the most professionally crafted Salary Negotiation Pitch that will increase your chances of getting you paid as per your skills, qualification and market worth.
+                    <br/>
+                Understand the intricacies of Applicant Tracking Systems (ATS) and learn how to create a resume that successfully passes automated screening processes. This course will teach you how to structure your resume, choose the right keywords, and format your document to ensure it gets noticed by both ATS algorithms and hiring managers. Enhance your chances of landing an interview by building a resume that stands out in the digital hiring landscape.
+                <br/>
                 </p>
                 </div>
             </div>
