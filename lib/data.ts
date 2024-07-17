@@ -15,6 +15,7 @@ const data = {
         {
             id: 2,
             imageSrc: "/images/services/experienced.png",
+            imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-500.webp 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-800.webp 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp 902w",
             title: "ATS Friendly Resume (Experienced)",
             slug: "ats-experienced",
             description: "Resume is the first step to landing your dream job. A recruiter or a talent acquisition...",
@@ -44,6 +45,7 @@ const data = {
         {
             id: 5,
             imageSrc: "/images/services/live.png",
+            imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-500.webp 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121-p-800.webp 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64c4a7c5a0442cfa0e10ec61_Frame121.webp 902w",
             title: "Master Program With Live Sessions",
             slug: 'master-program',
             description: "One-One Job Interview Preparation Program target is to ensure that you head confidently for your interview and emerge as a strong potential candidate who is the right fit for the job ",
