@@ -51,6 +51,31 @@ export default async function ServiceDetails ({
                     <p className="hidden md:block text-[#050505] text-3xl font-semibold">₹{service.price}</p>
                     <p className="text-[#656565] text-xs font-light">(inclusive of GST)</p>
                 </div>
+                <div className="mb-4">
+                <div className="service_slider relative w-full">
+                    <div className="service_slider-mask relative block overflow-hidden pt-[56.25%] whitespace-nowrap">
+                    <div className="
+                        service_slider-item 
+                        absolute 
+                        inset-0 w-full 
+                        overflow-hidden 
+                        rounded-md 
+                        bg-gray-900 
+                        duration-200 
+                        ease-in-out 
+                        opacity-100 
+                        visible"
+                    >
+                        <img 
+                        src={service.imageSrc}
+                        alt="" 
+                        className="absolute inset-0 object-cover object-center w-full" 
+                        id="img_0"
+                        />
+                    </div>
+                    </div>
+                </div>
+    </div>
             <div className="service_description mt-16 mb-4 font-[Inter]">
                 <p className='text-[#000]'>
                 {service.link}
