@@ -13,7 +13,7 @@ const servicesData = [
     },
     {
         id: 2,
-        imageSrc: "/images/services/interview.png",
+        imageSrc: "/images/services/experienced.png",
         imageSrcSet: "https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-500.png 500w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-800.png 800w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2)-p-1080.png 1080w, https://assets-global.website-files.com/64c40ba0d80b7fc4d6b7b4bb/64ca0b2ccde1577e5e3e63ea_Frame%20(2).png 1344w",
         title: "ATS Friendly Resume (Experienced)",
         slug: "ats-experienced",
