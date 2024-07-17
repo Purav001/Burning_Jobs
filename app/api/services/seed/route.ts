@@ -5,10 +5,10 @@
 // import servicesModel from '@/lib/models/servicesModel'
 
 // export const GET =async (request : NextRequest) => {
-//     const { users, services } = data
+//     const { services } = data
 //     await dbConnect()
-//     await UserModel.deleteMany()
-//     await UserModel.insertMany(users)
+//     // await UserModel.deleteMany()
+//     // await UserModel.insertMany(users)
 
 //     await servicesModel.deleteMany()
 //     await servicesModel.insertMany(services)
@@ -16,7 +16,7 @@
 //     return NextResponse.json(
 //         {
 //             message: "Data seeded successfully",
-//             users,
+//             // users,
 //             services,
 //         }
 //     )
